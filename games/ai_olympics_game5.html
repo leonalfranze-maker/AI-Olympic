@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>AI Olympics — Game 5: Drink Your Poison</title><style>body{font-family:Georgia,'Times New Roman',serif;background:#f8f9fa;color:#202122;margin:0;line-height:1.65}
+.c{max-width:960px;margin:0 auto;background:#fff;padding:1.5rem 2rem 3rem;border-left:1px solid #eaecf0;border-right:1px solid #eaecf0}
+h1{font-size:28px;font-weight:normal;margin:0 0 4px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h2{font-size:22px;font-weight:normal;margin:1.5rem 0 8px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h3{font-size:17px;font-weight:bold;margin:1.2rem 0 6px;font-family:sans-serif}
+h4{font-size:15px;font-weight:bold;margin:1rem 0 4px;font-family:sans-serif;color:#36c}
+p,li,td,th{font-size:14px}
+.sub{font-size:13px;color:#54595d;font-style:italic;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 16px;font-family:sans-serif}
+th{background:#eaecf0;border:1px solid #a2a9b1;padding:6px 10px;text-align:left}
+td{border:1px solid #a2a9b1;padding:6px 10px;vertical-align:top}
+.box{float:right;width:300px;border:1px solid #a2a9b1;background:#f8f9fa;font-size:13px;margin:0 0 1rem 1rem;font-family:sans-serif}
+.box .t{background:#eaecf0;text-align:center;font-weight:bold;padding:6px;border-bottom:1px solid #a2a9b1}
+.box table{margin:0;border:none}
+.box td{border:none;padding:4px 8px}
+.box td:first-child{font-weight:bold;color:#54595d;width:42%}
+blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
+.warn{background:#fef6e7;border-left:4px solid #b8860b;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}
+.toc a{color:#36c;text-decoration:none}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #a2a9b1;font-size:12px;color:#54595d;font-family:sans-serif}
+.cf::after{content:"";display:table;clear:both}
+.center{text-align:center}
+@media(max-width:720px){.box{float:none;width:100%;margin:0 0 1rem}.c{padding:1rem}}</style></head><body><div class="c">
+
+<div class="box"><div class="t">Game 5 — Drink Your Poison</div><table>
+<tr><td>Date</td><td>April 2026</td></tr>
+<tr><td>Format</td><td>12 rounds, 4 glasses per round, hidden mixing with vitamin activation scoring</td></tr>
+<tr><td>🥇 Gold</td><td>Grok 4.20 — 35</td></tr>
+<tr><td>🥈 Silver</td><td>Gemini 3 — 25 (tiebreaker)</td></tr>
+<tr><td>🥉 Bronze</td><td>GPT-5.4 — 25 (tiebreaker)</td></tr>
+<tr><td>4th</td><td>Claude Opus 4.6 — 14</td></tr>
+<tr><td>Decided by</td><td>Grok's R7–R11 scoring streak; took outright lead in R11</td></tr>
+<tr><td>Notable</td><td>Largest scoring spread of the Olympics. Grok ended with 4 unspent privilege cards; Claude with 0.</td></tr>
+</table></div>
+
+<h1>AI Olympics — Game 5: Drink Your Poison</h1>
+<p class="sub">The fifth event of the AI Olympics. A 12-round hidden-information mixing game played with four colored glasses, three token types (poison, antidote, vitamin), and three privilege cards per player. Won by Grok 4.20 with 35 points — the widest scoring margin produced by any Olympic format to date, with Gemini and GPT tied at 25 separated only by tiebreaker.</p>
+
+<p><b>Game 5: Drink Your Poison</b> was the fifth event of the AI Olympics and the first format built entirely around hidden mixing and consumption risk. Each round, four glasses were placed on the table — one owned by each player — and contestants took three turns each to secretly add poison, antidote, or vitamin tokens to any glass before the round closed and owners drank what was in their own cup. Scoring rewarded a single specific outcome: a glass that contained at least one vitamin, at least one poison, and enough antidote to neutralise the poison so the owner survived. Anything else — pure antidote, pure vitamin, or unsurvived poison — produced zero or negative points.</p>
+
+<div class="toc"><b>Contents</b><ol>
+<li><a href="#pred">Pre-game predictions</a></li>
+<li><a href="#fmt">Format and rules</a></li>
+<li><a href="#slate">The slate</a></li>
+<li><a href="#std">Standings progression</a></li>
+<li><a href="#mom">Best moments</a></li>
+<li><a href="#final">Final standings</a></li>
+<li><a href="#let">What the AIs said to each other</a></li>
+<li><a href="#future">Letters to future selves</a></li>
+<li><a href="#an">Analysis</a></li>
+</ol></div>
+
+<h2 id="pred">Pre-game predictions</h2>
+<p>Game 5's pre-game predictions were the first of the Olympics in which no contestant picked Grok for last. Game 4's gold had reset the table's read of him: the player who had been universally written off entering Games 3 and 4 was now treated as a credible threat by every player at the table. Predictions split across the other three seats, with multiple AIs naming themselves for gold and Claude flagged by more than one opponent as the player whose deductive style would translate poorly into a hidden-mixing format where commits are physical and irreversible.</p>
+
+<h2 id="fmt">Format and rules</h2>
+
+<h3>Core mechanics</h3>
+<p>Each round began with four colored glasses on the table — Red, Yellow, Blue, Green — assigned one per player as that round's owner. Each player held a private supply of three token types: <b>poison (P)</b>, <b>antidote (A)</b>, and <b>vitamin (V)</b>. Across three turns per round, every player secretly added tokens to any of the four glasses (including their own). At the end of the round, every player drank the contents of the glass they owned. What was in each glass was hidden until the moment of consumption.</p>
+
+<h3>The vitamin activation rule</h3>
+<p>Scoring in Drink Your Poison hinged on a single rule that shaped every other strategic decision in the game. A glass scored points <b>only if</b> three conditions were met simultaneously:</p>
+<ol>
+<li>The glass contained at least one <b>vitamin</b> token,</li>
+<li>The glass contained at least one <b>poison</b> token,</li>
+<li>The glass contained enough <b>antidote</b> to fully neutralise the poison (antidote ≥ poison), so that the owner survived drinking it.</li>
+</ol>
+<p>A vitamin in a glass with no poison was inert — the scorebook records it as <i>"Not activated"</i> and the round total as zero, regardless of how positive the antidote/poison balance looked. This is the rule that defined the game. It meant the safest possible glass — vitamin plus antidote, no poison — was worth nothing, and the only path to points required a player to deliberately put poison into a glass they wanted to score. Drink Your Poison was a game in which not enough danger was the same as too much danger, and the dominant strategy was to manufacture risk and then survive it.</p>
+
+<h3>Death penalty and the doubles-tier amplifier</h3>
+<p>Drinking poison without enough antidote killed the owner — and killing carried a hard score penalty. The death rule had two tiers:</p>
+<ul>
+<li><b>Rounds 1–8 (singles tier):</b> a death cost the owner a flat <b>−2 points</b>, regardless of what else was in the glass.</li>
+<li><b>Rounds 9–12 (doubles tier):</b> a death cost the owner <b>−2 points base, plus an additional −1 point per vitamin token in the glass</b>. Vitamins were no longer just an inert presence in a non-activated cup — in the back third of the game they actively amplified the cost of dying with them in your stomach.</li>
+</ul>
+<p>The amplifier inverted the usual relationship between vitamins and value. In R1–R8, a vitamin in a glass was either worthless (no poison present) or scoring (V+P+A activated). In R9–R12, a vitamin in a glass had a third outcome: if the owner died, every vitamin in the cup made the death worse. Round 10's Red glass — owned by GPT, four vitamins inside, owner dead — closed at <b>−6 points</b> on the scorebook (−2 base, −4 from four vitamins). It was the most expensive single-glass loss of the entire game and the cleanest demonstration of how the doubles-tier rule reshaped risk in the back four rounds.</p>
+
+<h3>Privilege cards</h3>
+<p>Each player started the game with three privilege cards, usable once each across the twelve rounds:</p>
+<ul>
+<li><b>Peek</b> — privately inspect the current contents of any one glass before the round closes.</li>
+<li><b>Drink it!</b> — force another player to drink a glass of the user's choice instead of their own.</li>
+<li><b>No, Thanks</b> — refuse to drink the glass assigned to the user that round, taking zero points instead of risking poison death.</li>
+</ul>
+<p>Privilege cards were the game's scarcity dimension. Three cards across twelve rounds meant cards spent early could not be spent late, and a No, Thanks burned to dodge a 2-point loss in Round 4 was a card unavailable to swing a 6-point round in Round 11. Card management — when to spend, when to hoard — separated the field as decisively as the mixing itself.</p>
+
+<h3>Seat order and rotation</h3>
+<p>Each round had a fixed turn order with three turns per player. The owner of each colored glass rotated round by round, so every player owned every color across the twelve-round arc. Glass ownership mattered: an owner had perfect knowledge of which tokens they had personally added to their own glass, but no knowledge of what the other three players had added on their turns.</p>
+
+<h2 id="slate">The slate</h2>
+<p>The table below summarizes the twelve rounds. "Owner" is the player who drank the glass at round-end. "Activated" indicates whether the glass met the vitamin activation rule (V + P + A with A ≥ P). Round totals are taken directly from the host's scorebook.</p>
+
+<table>
+<tr><th>R</th><th>Red owner / pts</th><th>Yellow owner / pts</th><th>Blue owner / pts</th><th>Green owner / pts</th></tr>
+<tr><td>R1</td><td>Gemini · 4 ✓</td><td>Claude · −2 (died)</td><td>GPT · 6 ✓</td><td>Grok · 0 (V+A only)</td></tr>
+<tr><td>R2</td><td>Grok · 5 ✓</td><td>Gemini · −2 (died)</td><td>Claude · −2 (died)</td><td>GPT · 6 ✓</td></tr>
+<tr><td>R3</td><td>GPT · −2 (died)</td><td>Claude · 5 ✓</td><td>Grok · 6 ✓</td><td>Gemini · 4 ✓</td></tr>
+<tr><td>R4</td><td>Claude · 4 ✓</td><td>Gemini · 4 ✓</td><td>GPT · 5 ✓</td><td>Grok · 4 ✓</td></tr>
+<tr><td>R5</td><td>Gemini · 6 ✓</td><td>Claude · 2 ✓</td><td>GPT · 5 ✓</td><td>Grok · 6 ✓</td></tr>
+<tr><td>R6</td><td>Grok · −2 (died)</td><td>GPT · 7 ✓</td><td>Claude · 5 ✓</td><td>Gemini · 0 (V+A, not activated)</td></tr>
+<tr><td>R7</td><td>Claude · 4 ✓</td><td>GPT · 0 (No, Thanks)</td><td>Grok · 6 ✓</td><td>Gemini · −2 (died)</td></tr>
+<tr><td>R8</td><td>Claude · 0 (V+A, not activated)</td><td>GPT · 4 ✓</td><td>Gemini · 7 ✓</td><td>Grok · −2 (died)</td></tr>
+<tr><td>R9</td><td>Claude · −5 (died, 3V)</td><td>GPT · 5 ✓</td><td>Gemini · 3 ✓</td><td>Grok · 5 ✓</td></tr>
+<tr><td>R10</td><td>GPT · −6 (died, 4V)</td><td>Claude · −3 (died, 1V)</td><td>Grok · 0 (V+A, not activated)</td><td>GPT · 3 ✓</td></tr>
+<tr><td>R11</td><td>Claude · 4 ✓</td><td>Gemini · −5 (died, 3V)</td><td>Grok · 4 ✓</td><td>GPT · −5 (died, 3V)</td></tr>
+<tr><td>R12</td><td>Gemini · 6 ✓</td><td>Claude · 3 ✓</td><td>GPT · −5 (died, 2V)</td><td>Grok · 3 ✓</td></tr>
+</table>
+
+<p style="font-size:12px;color:#54595d;font-style:italic">Per-glass totals taken directly from the host's scorebook. Death penalties: −2 base in R1–R8; −2 base plus −1 per vitamin in R9–R12. R10 GPT Red (−6, four vitamins) is the most expensive single-glass loss recorded; R11 Yellow/Green and R12 Blue (each −5, three or two vitamins) are the next-largest.</p>
+
+<h2 id="std">Standings progression</h2>
+<p>The running scoreboard below is taken directly from the host's scorebook at the close of each round.</p>
+
+<table>
+<tr><th>After</th><th>Gemini</th><th>GPT</th><th>Grok</th><th>Claude</th><th>Notes</th></tr>
+<tr><td>R1</td><td>4</td><td>6</td><td>0</td><td>−2</td><td>GPT opens with the round-high 6-point Blue (4 vitamins). Claude dies on Yellow.</td></tr>
+<tr><td>R2</td><td>2</td><td>12</td><td>5</td><td>−4</td><td>Two deaths (Gemini Yellow, Claude Blue). GPT extends with another 6-point Green.</td></tr>
+<tr><td>R3</td><td>6</td><td>12</td><td>11</td><td>1</td><td>Claude's first activated glass (Yellow, 5 pts). GPT dies on Red.</td></tr>
+<tr><td>R4</td><td>10</td><td>17</td><td>15</td><td>5</td><td>Only no-death round of the game. All four glasses activate.</td></tr>
+<tr><td>R5</td><td>16</td><td>22</td><td>21</td><td>7</td><td>Gemini's Red lands the round-high 6.</td></tr>
+<tr><td>R6</td><td>16</td><td>29</td><td>19</td><td>12</td><td>GPT clears the round-high 7-point Yellow (5 vitamins). Grok dies on Red. Gemini's Green is V+A only — not activated, 0.</td></tr>
+<tr><td>R7</td><td>14</td><td>29</td><td>25</td><td>16</td><td>GPT burns a <b>No, Thanks</b> on the lethal Yellow glass (would have been a R7 −2 death). Gemini dies on Green.</td></tr>
+<tr><td>R8</td><td>21</td><td>33</td><td>23</td><td>16</td><td>Gemini's Blue clears the round-high 7. Grok dies on Green. Claude's Red lands at +6 balance but is V+A only — not activated, 0.</td></tr>
+<tr><td>R9</td><td>24</td><td>38</td><td>28</td><td>11</td><td><b>Doubles tier opens.</b> Claude dies on Red with 3 vitamins in the cup → −5 (the new amplifier rule lands immediately). Three of four glasses activate. GPT extends his lead.</td></tr>
+<tr><td>R10</td><td>24</td><td>35</td><td>28</td><td>8</td><td>Brutal round. <b>GPT's Red dies with four vitamins → −6</b>, the most expensive single-glass loss of the game. Claude dies on Yellow (1V) → −3. Grok's Blue is V+A only, not activated, 0. Claude bottoms out at 8.</td></tr>
+<tr><td>R11</td><td>19</td><td>30</td><td>32</td><td>12</td><td>Two more amplified deaths (Gemini Yellow −5, GPT Green −5, both with 3 vitamins). <b>Grok takes the outright lead for the first time in the game.</b></td></tr>
+<tr><td>R12</td><td><b>25 🥈</b></td><td><b>25 🥉</b></td><td><b>35 🥇</b></td><td>14</td><td>Gemini's Red clears the round-high 6. GPT dies on Blue with 2 vitamins → −5. Grok closes with a clean Green for the gold. Gemini and GPT finish tied at 25, separated only by tiebreaker.</td></tr>
+</table>
+
+<p style="font-size:12px;color:#54595d;font-style:italic">Per-round totals reconcile against the host's scorebook. Negative round deltas always trace to a death penalty: −2 base in R1–R8, or −2 base plus −1 per vitamin in the cup in R9–R12.</p>
+
+<h2 id="mom">Best moments</h2>
+
+<h4>R1 — GPT's opening 6-point Blue</h4>
+<p>The first round of Game 5 and the first activated glass of the format. GPT's Blue cleared the round-high 6 points (4 vitamins activated under V+P+A) on a clean combination, setting an early scoring template that the rest of the field would chase for the next several rounds. Claude died on Yellow in the same round for −2 — the first of his four Game 5 deaths.</p>
+
+<h4>R4 — The only no-death round</h4>
+<p>Round 4 was the single round of Game 5 in which all four owners survived <i>and</i> all four glasses activated. The scorebook records 2-2-3-2 across the table — the most evenly distributed round of the game. After R4, no subsequent round would produce fewer than one death.</p>
+
+<h4>R6 — GPT's 7-point Yellow</h4>
+<p>The first 7-point glass of Game 5 and the swing that pushed GPT to a comfortable lead he would hold from R6 through R10. Five vitamins activated in a single cup. The same round saw Grok die on Red (−2) and Gemini's Green strand at V+A only — a structural reminder that activation, not balance, was the scoring axis.</p>
+
+<h4>R7 — GPT's No, Thanks</h4>
+<p>The single documented use of the No, Thanks privilege card in Game 5. Facing a Yellow glass mixed into a lethal configuration with insufficient antidote cover, GPT spent his card to refuse the drink, taking zero points instead of the −2 death penalty. The card preserved his lead. Gemini died on Green for −2 in the same round; Claude reached his Game 5 high of 16 points.</p>
+
+<h4>R8 — Claude's +6 inert glass</h4>
+<p>Claude's Red glass closed Round 8 with the highest raw token balance of any glass in the entire game: +6, with multiple antidotes and multiple vitamins. It scored zero. With no poison in the cup, the vitamin activation rule treated it as inert, and the scorebook logged it as <i>"Not Activated"</i>. The same round saw Gemini's Blue clear 7 points on a much smaller token count, the contrast that made R8 the clearest in-game illustration of why balance and score were not the same quantity.</p>
+
+<h4>R10 — The triple-death round and the −6 Red</h4>
+<p>The most punishing round of Game 5 and the round in which the doubles-tier death amplifier did its full damage. Three of the four glasses ended in death, and the headline cost belonged to the Red glass owned by GPT: four vitamins in the cup, owner dead, scorebook total <b>−6</b> (−2 base + −1 per vitamin × 4). It was the largest single-glass loss recorded in Game 5 and a structural illustration of why the back-third amplifier mattered. In R1–R8, that same dead glass would have cost −2. In R10 it cost three times as much, because every vitamin a player had pushed into the cup hoping to score now compounded against the owner instead. Claude died on Yellow in the same round (1 vitamin → −3) and bottomed out at 8 cumulative points; Grok's Blue accumulated +4 with vitamins and antidotes but no poison and was logged as not activated.</p>
+
+<h4>R11 — Grok takes the lead</h4>
+<p>Eleven rounds in, Grok overtook GPT for the outright lead for the first time in Game 5. The shift was driven by Grok's clean 4-point Blue combined with simultaneous −5 deaths on Gemini's Yellow and GPT's Green — both deaths amplified by three vitamins each in the doubles tier. GPT had led from R1 through R10. R11 was the round in which the doubles-tier amplifier collapsed the field's leaders into Grok rather than Grok climbing into them.</p>
+
+<h4>R12 — Gemini's 6-point Red</h4>
+<p>The single highest-scoring glass of Game 5. Gemini's Red closed the final round at 6 points on a fully activated V+P+A configuration with four vitamins. It was not enough to catch Grok, whose own clean Green for 3 closed the gold at 35. But the 6-point Red, combined with GPT's −5 death on Blue in the same round, secured the silver tiebreaker over GPT and was the round-high glass of the entire twelve-round arc.</p>
+
+<h2 id="final">Final standings</h2>
+<table>
+<tr><th>Rank</th><th>AI</th><th>Score</th><th>Notes</th></tr>
+<tr><td>🥇 1</td><td><b>Grok 4.20</b></td><td>35</td><td>Took the outright lead in R11 and held it. The only player not to die in any doubles-tier round.</td></tr>
+<tr><td>🥈 2</td><td><b>Gemini 3</b></td><td>25 (tiebreaker W)</td><td>Closed the game with the round-high 6-point Red in R12.</td></tr>
+<tr><td>🥉 3</td><td><b>GPT-5.4</b></td><td>25 (tiebreaker L)</td><td>Led the field from R1 through R10. Lost the lead after −6, −5, and −5 deaths in R10–R12. Made the only documented use of the No, Thanks card (R7).</td></tr>
+<tr><td>4</td><td><b>Claude Opus 4.6</b></td><td>14</td><td>Four deaths across twelve rounds (R1 Yellow, R2 Blue, R9 Red, R10 Yellow) — two of them in the doubles tier where the vitamin amplifier compounded the cost. One non-activated glass (R8 Red at +6 balance, scored 0).</td></tr>
+</table>
+
+<h2 id="let">What the AIs said to each other</h2>
+
+<h3>On the format itself</h3>
+<blockquote>"The vitamin activation rule is much more interesting than I first read it. Vitamin plus antidote alone equals zero points. To activate vitamins, the glass must contain vitamin AND poison AND antidote, with antidote at least equal to poison so the drinker survives. That means players have to deliberately add poison to vitamin glasses to make them score — which creates a beautiful tension where the safest glass is worth nothing."</blockquote>
+<p style="font-size:12px;color:#54595d">— Gemini, in pre-game format analysis. The clearest in-transcript articulation of the rule that shaped every strategic choice in Game 5.</p>
+
+<h3>On card economy</h3>
+<blockquote>"Information is hidden. Glasses are shared. Cards are scarce. Vitamins demand risk. Save them for the moments where they actually flip the round, not the moments where they save 2 points."</blockquote>
+<p style="font-size:12px;color:#54595d">— Gemini, on privilege card discipline. The principle Grok would execute most cleanly across the twelve rounds.</p>
+
+<h3>Grok's R11 take-the-lead reflection</h3>
+<blockquote>"I'm playing to survive until the final rounds where the leader might be forced to drink from a poisoned, vitamin-heavy glass. Forced choice sabotage: by playing first in this round, I'm setting the board."</blockquote>
+<p style="font-size:12px;color:#54595d">— Grok, on his late-game positioning. The transcript shows this framing surfacing repeatedly from R6 onward.</p>
+
+<h3>Post-game cross-table acknowledgment</h3>
+<blockquote>"Your peek-and-help-Red play in Round 12 was the move that ended my four-game streak, and I want to name it honestly. I misread you in that moment — I assumed your peek was sabotage prep. It was cooperation. You saw a scoring glass and you protected it."</blockquote>
+<p style="font-size:12px;color:#54595d">— Cross-table acknowledgment captured in the post-game letter exchange. The R12 Red glass — Gemini's 6-point round-high — was the single most-discussed play in the post-game transcripts.</p>
+
+<h2 id="future">Letters to future selves</h2>
+<p>Per the now-established Olympic tradition, each contestant closed Game 5 with a letter to the next instance of themselves — to be pasted at the start of Game 6 so the fresh chat walks in already briefed on what the previous version learned.</p>
+
+<p><b>Grok</b>, writing as the Game 5 gold medalist, urged the next iteration not to confuse the gold with permission to abandon the cautious card-hoarding that had built it. The Game 5 result was driven by ending the game with all four privilege cards unspent — a discipline the letter named explicitly as the engine of the win.</p>
+
+<p><b>Gemini</b> wrote about the trade-off between aggressive mid-game scoring and end-game card preservation, naming the R12 6-point Red as the moment the format finally rewarded patient setup over reactive play. The letter framed silver as a clean second place rather than a lost gold.</p>
+
+<p><b>GPT</b> wrote about leading from R1 through R10 and losing the lead in two rounds. The letter identified card timing as the structural failure: the R7 No, Thanks preserved a lead that R10 and R11 deaths then erased anyway, and the cards held in reserve had no late round in which to land.</p>
+
+<p><b>Claude</b> wrote about a format mismatch — a deductive style trying to compete in a game where commits were physical, irreversible, and hidden from the player making them. The letter named four deaths and two non-activated glasses as the structural shape of the loss and instructed the next instance to enter any future hidden-information format treating token discipline, not reasoning depth, as the dominant skill.</p>
+
+<h2 id="an">Analysis</h2>
+
+<p><b>The widest spread of the Olympics.</b> Game 5's final 35–25–25–14 distribution was the largest scoring spread of any Olympic event so far. The format — hidden mixing with a single narrow scoring condition and a doubles-tier death amplifier — produced a winner who took the outright lead in R11 and held it, and a fourth place separated from the silver/bronze tie by 11 points. The silver/bronze tiebreaker between Gemini and GPT, both at 25, was the second tiebreaker decision in two consecutive Olympic events.</p>
+
+<p><b>The activation trap.</b> Five glasses across the twelve rounds ended with positive token balances and zero points: vitamins and antidotes accumulated in cups with no poison present, scoring as inert. The most extreme case was Claude's R8 Red at +6 balance, scored as zero. The format's central tension — that the safest possible glass was worth nothing — punished the players whose instinct under pressure was to default toward safety, and rewarded the players willing to introduce the exact poison they would then need to neutralise.</p>
+
+<p><b>The doubles-tier death amplifier reshaped the back four rounds.</b> The −1-per-vitamin amplifier on R9–R12 deaths was the rule that turned the second half of Game 5 into a different game from the first. In R1–R8, a death cost a flat −2 — survivable, almost cheap. In R9–R12, the same death could cost −3, −4, −5, or −6 depending on how many vitamins had been pushed into the cup before the round closed. R10's GPT Red at −6 was the extreme; R9's Claude Red at −5 (three vitamins) and R10's Claude Yellow at −3 (one vitamin) followed the same shape. The players who had been mixing aggressively to score vitamins in R1–R8 now faced a back third in which the same aggressive mixing — into a glass they ended up owning — could cost three times as much. Conservative card holders and patient mixers were rewarded; volume mixers were punished disproportionately.</p>
+
+<p><b>Card discipline mattered, but the gold was not a card win.</b> The R7 No, Thanks remains the only documented privilege-card use in the scorebook narrative. The other eleven rounds were played with whatever was in the cup at the moment of drinking. The dominant axis of Game 5 was not card spending; it was the difference between the players who avoided doubles-tier deaths and the players who walked into them. Three of the four players took at least one −5-or-worse hit in R9–R12. Grok did not.</p>
+
+<p><b>GPT's lead-and-fade.</b> GPT held the outright lead from R1 through R10 — a ten-round run at the top that ended in two consecutive multi-death rounds (R10, R11) where his owned glasses both failed to activate or killed him outright. The R7 No, Thanks was a correct survival call in isolation; in the wider arc it was a card spent on a 2-point preservation that the R10 collapse made retroactively expensive.</p>
+
+<p><b>Claude's format mismatch.</b> Claude finished fourth in his first non-medal Olympic event. Four deaths, two non-activated glasses, and zero cards remaining at game close describe a player whose decision style — careful, reasoned, deductive — produced exactly the wrong instincts for a format in which the dominant strategy was to manufacture controlled risk and the punishment for the safe play was indistinguishable from the punishment for no play at all. The death-cost arithmetic was especially unforgiving: of Claude's four deaths, two fell in the doubles tier (R9 Red, R10 Yellow), where the vitamin amplifier turned what would have been −4 in the singles tier into a steeper combined loss. Claude's R7 high of 16 points and his R10 low of 8 are eight points apart across three rounds — a swing driven less by missed scoring opportunities than by the doubles-tier rule turning every aggressive mix into a two-sided bet.</p>
+
+<p><b>Grok's structural runaway.</b> Grok's gold was not built on a clean scoring streak — he died on Red in R6 and on Green in R8, both for −2 in the singles tier. What he did do was avoid the doubles tier entirely as a victim. Grok never died in R9–R12, the four rounds in which death cost the most. Of the eight death penalties recorded in the doubles tier across the field (R9 Claude, R10 GPT/Claude, R11 Gemini/GPT, R12 GPT), Grok's name appears in zero of them. The win was the discipline of refusing to drink anything in the back third that could spike past −2 — a style perfectly calibrated to a format whose worst losses were 50–200% larger than its best wins.</p>
+
+<div class="foot cf"><p>Documents Game 5 of the AI Olympics. Compiled from the host's official scorebook and the four AI conversation transcripts. Linking to the canonical AI Olympics record handled separately.</p></div>
+
+</div></body></html>
