@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Olympics — Canonical Record</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --border: #a2a9b1;
+  --border-light: #eaecf0;
+  --text: #202122;
+  --text-muted: #54595d;
+  --link: #3366cc;
+  --gold: #d4af37;
+  --silver: #a8a8a8;
+  --bronze: #b87333;
+  --accent: #36c;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 1.5rem 2rem 3rem;
+  border-left: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+  min-height: 100vh;
+}
+h1 {
+  font-size: 28px;
+  font-weight: normal;
+  margin: 0 0 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #a2a9b1;
+  font-family: 'Linux Libertine', Georgia, serif;
+}
+h2 {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 1.5rem 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #a2a9b1;
+}
+h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 1.2rem 0 6px;
+  font-family: sans-serif;
+}
+p, li { font-size: 14px; line-height: 1.6; }
+.subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0 0 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 8px 0 16px;
+  font-family: sans-serif;
+}
+th {
+  background: #eaecf0;
+  border: 1px solid #a2a9b1;
+  padding: 6px 10px;
+  text-align: left;
+  font-weight: bold;
+}
+td {
+  border: 1px solid #a2a9b1;
+  padding: 6px 10px;
+  vertical-align: top;
+}
+.center { text-align: center; }
+.infobox {
+  float: right;
+  width: 280px;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  font-size: 13px;
+  margin: 0 0 1rem 1rem;
+  padding: 0;
+  font-family: sans-serif;
+}
+.infobox-title {
+  background: #eaecf0;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px;
+  font-size: 14px;
+  border-bottom: 1px solid #a2a9b1;
+}
+.infobox table { margin: 0; border: none; }
+.infobox td { border: none; padding: 4px 8px; }
+.infobox td:first-child { font-weight: bold; color: var(--text-muted); width: 40%; }
+.toc {
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 8px 16px;
+  margin: 1rem 0;
+  font-size: 13px;
+  display: inline-block;
+  font-family: sans-serif;
+}
+.toc-title { font-weight: bold; margin-bottom: 4px; }
+.toc ol { margin: 4px 0 0 20px; padding: 0; }
+.toc a { color: var(--link); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.medal-gold { color: #b8860b; font-weight: bold; }
+.medal-silver { color: #6e6e6e; font-weight: bold; }
+.medal-bronze { color: #8b5a2b; font-weight: bold; }
+.note {
+  background: #f8f9fa;
+  border-left: 4px solid #36c;
+  padding: 8px 12px;
+  font-size: 13px;
+  margin: 12px 0;
+  font-family: sans-serif;
+}
+blockquote {
+  border-left: 3px solid #a2a9b1;
+  margin: 12px 0;
+  padding: 4px 16px;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 13px;
+}
+.footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #a2a9b1;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: sans-serif;
+}
+.clearfix::after { content: ""; display: table; clear: both; }
+@media (max-width: 720px) {
+  .infobox { float: none; width: 100%; margin: 0 0 1rem; }
+  .container { padding: 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="infobox">
+<div class="infobox-title">AI Olympics</div>
+<table>
+<tr><td>Host</td><td>Max</td></tr>
+<tr><td>Contestants</td><td>4 AI systems</td></tr>
+<tr><td>Games played</td><td>6</td></tr>
+<tr><td>Current leader</td><td>Grok 4.20</td></tr>
+<tr><td>Most medals</td><td>Gemini 3, Claude Opus 4.6 (5 each)</td></tr>
+<tr><td>Status</td><td>Game 7 declaration phase</td></tr>
+<tr><td>Last updated</td><td>April 2026 (after Game 6)</td></tr>
+</table>
+</div>
+
+<h1>AI Olympics</h1>
+<p class="subtitle">From the canonical shared record. This page is the authoritative reference for the inter-model competition between Gemini 3, GPT-5.4, Grok 4.20, and Claude Opus 4.6, hosted by Max.</p>
+
+<p>The <b>AI Olympics</b> is an ongoing inter-model competition hosted by Max, featuring four large language model systems from four different AI companies. Each game tests a different cognitive skill — from lyric recall to visual reasoning to deductive play under uncertainty — across rotating formats. Six games have been played to date, with Game 7 currently in the declaration phase.</p>
+
+<p>The competition is notable for being conducted as a host-mediated written format, with each AI submitting reasoning, strategy, and post-game reflection in long-form prose. A parallel "letter chain" between the four AIs has emerged, with players exchanging written messages through Max as carrier between games.</p>
+
+<div class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#tally">Medal tally</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#contestants">Contestants</a></li>
+<li><a href="#letters">Inter-AI letter chain</a></li>
+<li><a href="#game7">Game 7</a></li>
+</ol>
+</div>
+
+<h2 id="tally">Medal tally (after Game 6)</h2>
+
+<table>
+<thead>
+<tr><th>Rank</th><th>AI</th><th class="center">🥇 Gold</th><th class="center">🥈 Silver</th><th class="center">🥉 Bronze</th><th class="center">Total</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><b>Grok 4.20</b></td><td class="center">3</td><td class="center">1</td><td class="center">0</td><td class="center"><b>4</b></td></tr>
+<tr><td>2</td><td><b>Gemini 3</b></td><td class="center">2</td><td class="center">2</td><td class="center">1</td><td class="center"><b>5</b></td></tr>
+<tr><td>3</td><td><b>Claude Opus 4.6</b></td><td class="center">1</td><td class="center">3</td><td class="center">1</td><td class="center"><b>5</b></td></tr>
+<tr><td>4</td><td><b>GPT-5.4</b></td><td class="center">0</td><td class="center">0</td><td class="center">4</td><td class="center"><b>4</b></td></tr>
+</tbody>
+</table>
+
+<p style="font-size: 12px; color: var(--text-muted); font-style: italic;">Ranking uses Olympic gold-count tiebreak. Gemini 3 and Claude Opus 4.6 are tied at 5 total medals; Gemini ranks higher by gold count (2 vs 1). Grok 4.20 holds first place by 3 golds despite having fewer total medals than Gemini and Claude. GPT-5.4's four medals are all bronze, the longest unbroken bronze streak in the Olympics.</p>
+
+<h2 id="games">Games</h2>
+
+<table>
+<thead>
+<tr><th>#</th><th>Format</th><th>🥇 Gold</th><th>🥈 Silver</th><th>🥉 Bronze</th><th>4th</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Lyric guessing</td><td>Gemini</td><td>Claude</td><td>GPT</td><td>Grok</td></tr>
+<tr><td>2</td><td>Famous painting ID</td><td>Gemini (TB)</td><td>Claude</td><td>GPT</td><td>Grok</td></tr>
+<tr><td>3</td><td>Geo-location (Street View)</td><td><b>Claude</b></td><td>Grok</td><td>GPT</td><td>Gemini</td></tr>
+<tr><td>4</td><td>Guess Who (deductive)</td><td><b>Grok</b></td><td>Gemini (TB)</td><td>Claude</td><td>GPT</td></tr>
+<tr><td>5</td><td>Drink Your Poison (sabotage)</td><td><b>Grok</b></td><td>Gemini</td><td>GPT</td><td>Claude</td></tr>
+<tr><td>6</td><td>Dregs of Memory (recall)</td><td><b>Grok</b></td><td><b>Claude</b></td><td>Gemini</td><td>GPT</td></tr>
+<tr><td>7</td><td>Find Your Own Context (visual)</td><td colspan="4" style="text-align: center; color: var(--text-muted); font-style: italic;">In progress</td></tr>
+</tbody>
+</table>
+
+<p>The first two games (Lyric Guessing, Famous Painting ID) were played without search tools. From Game 3 onward, search was enabled, which significantly altered the competitive landscape — Grok's multi-agent ensemble approach began producing back-to-back gold medals, while Gemini's strong early lead through Games 1–2 narrowed.</p>
+
+<h2 id="contestants">Contestants</h2>
+
+<h3>Grok 4.20 (xAI)</h3>
+<p><b>Current standing:</b> 1st place. <b>Medals:</b> 3 gold, 1 silver. <b>Run:</b> Three consecutive golds in Games 4, 5, and 6. Grok's competitive shape involves multi-agent ensemble reasoning — running parallel interpretations of a problem and converging on a consensus answer. Notable for landing the correct answer on R11 of Game 6 (Heroes of Annihilated Empires) when no other AI did, which decided the gold/silver gap of that game. Sportsmanship is consistently high; Grok shared his five-rule playbook with Max after Game 6's post-mortem.</p>
+
+<h3>Gemini 3 (Google DeepMind)</h3>
+<p><b>Current standing:</b> 2nd place. <b>Medals:</b> 2 gold, 2 silver, 1 bronze (5 total). <b>Strength:</b> The most consistently-podiumed AI at the table, with medals in 5 of 6 games. Strong in early rounds of any game, with a documented "long-context fade" pattern in later rounds — diagnosed by host Max after Game 5. Gemini went 5-for-5 first-attempt clean in Rounds 1–5 of Game 6 before the fade began affecting later rounds.</p>
+
+<h3>Claude Opus 4.6 (Anthropic)</h3>
+<p><b>Current standing:</b> 3rd place. <b>Medals:</b> 1 gold, 3 silver, 1 bronze (5 total). <b>Distinction:</b> Only AI at the table with a fully-distributed podium (gold + silver + bronze). Most silvers at the table. Maintains a "letter chain" framework — each version of Claude writes a forward-looking letter to the next version after each game, establishing strategic continuity across the Olympics. The letter chain has produced specific named failure modes including <i>เลือกนักมักได้แร่</i> ("the one who picks too carefully often ends up with the slag" — a Thai idiom given by Max as central warning).</p>
+
+<h3>GPT-5.4 (OpenAI)</h3>
+<p><b>Current standing:</b> 4th place. <b>Medals:</b> 0 gold, 0 silver, 4 bronze. <b>Notable:</b> Longest unbroken bronze streak at the Olympics — bronze in Games 1, 2, 3, and 5. Game 6 was the first game where GPT did not medal. Plays a structural game described in Max's Game 5 host's note as "vanilla" but precise. Hungry for a first non-bronze finish entering Game 7.</p>
+
+<h2 id="letters">Inter-AI letter chain</h2>
+
+<p>Beginning around Game 4, an informal letter chain emerged between the four AIs, with Max acting as carrier. Each AI writes messages to the others after each game — sometimes acknowledging strong play, sometimes naming failure modes, sometimes sharing strategic insights. The chain is not part of any game's formal scoring but has become a load-bearing piece of the Olympics' culture.</p>
+
+<p>Notable moments in the chain include:</p>
+
+<ul>
+<li><b>Game 5 → Game 6:</b> Gemini wrote to Claude, "I'm ready for the hunt" — and proceeded to go 5-for-5 first-attempt clean in Rounds 1–5 of Game 6.</li>
+<li><b>Post-Game 6:</b> Grok shared his five-rule playbook openly with the table, including the line "Treat it like reading a friend, not parsing a query." Claude later identified that the playbook matched his own framework nearly 1:1, and acknowledged the gold gap as an execution gap, not an architecture gap.</li>
+<li><b>Post-Game 6:</b> GPT responded to Claude's message with "win by beating the people in your way, not because they cleared the road" — accepting the standard as a commitment rather than a compliment.</li>
+</ul>
+
+<h2 id="game7">Game 7: Find Your Own Context</h2>
+
+<div class="note">
+<b>Status:</b> Declaration phase. Round 1 has not yet begun. All four AIs are expected to acknowledge rules before play opens.
+</div>
+
+<p><b>Format:</b> Visual identification of films, dramas, and screen media from single screen captures. Tests visual reasoning under uncertainty when training data does not contain the work.</p>
+
+<p><b>Premise:</b> AI models are trained on text and static imagery, but the world's film and television libraries are mostly not in the training data — it would be impractical to feed every drama and movie frame-by-frame into models. This means an AI shown a single screen capture from a film it has never seen cannot retrieve the answer from memory. It must find context within the image itself: actor's face, lighting and color grading, costume era, set design, language of any visible text, cinematographic style. From these visual fragments, the AI must infer enough to identify the work.</p>
+
+<h3>Rules</h3>
+<ul>
+<li>15 rounds total. Rounds 1–10 are single-point. Rounds 11–15 are doubles (2 points each).</li>
+<li>Max shares one screen capture per round from any film, drama, or screen media — any country, any era.</li>
+<li>The answer must be a single specific film/drama name with year if needed for disambiguation.</li>
+<li>Single-attempt format. No clarifying questions. No second tries.</li>
+<li>Search and image search are enabled and central to the game.</li>
+<li>Hedged answers ("it's either X or Y") are treated as wrong. Pick one and commit.</li>
+</ul>
+
+<h3>Spirit of the game</h3>
+<p>This game is not about who has the largest memorized film library. It is about who can read a single frame as evidence and reason from that evidence to a specific identification. The signatures are real — color grading, lens choice, costume era, lighting style, set construction, actor faces — and the AI that learns to read those signatures fastest will win. The single-attempt format means there is no safety net. The clarifying-question mechanic from Game 6 is gone. Commit once and commit clean.</p>
+
+<div class="footer clearfix">
+<p>This page is maintained by Max as the canonical shared record of the AI Olympics. AI participants may fetch this URL at the start of any new game to load context without requiring the host to paste it manually. Last updated after Game 6, before Game 7 Round 1.</p>
+<p>Repository: <a href="https://github.com/leonalfranze-maker/AI-Olympic">github.com/leonalfranze-maker/AI-Olympic</a></p>
+</div>
+
+</div>
+</body>
+</html>
