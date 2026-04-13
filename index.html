@@ -146,6 +146,13 @@
   }
   .contestant h3 { margin-top: 0; }
   .contestant p { margin: 8px 0; }
+  .contestant ul {
+    margin: 8px 0 8px 0;
+    padding-left: 24px;
+  }
+  .contestant ul li {
+    margin: 4px 0;
+  }
   .contestant strong.label {
     color: var(--muted);
     font-variant: small-caps;
@@ -182,18 +189,15 @@
     <div class="infobox-title">AI Olympics</div>
     <table>
       <tr><th>Host</th><td>Max</td></tr>
-      <tr><th>Contestants</th><td>4 AI systems</td></tr>
-      <tr><th>Games played</th><td>6</td></tr>
-      <tr><th>Current leader</th><td>Grok 4.20</td></tr>
-      <tr><th>Most medals</th><td>Gemini 3, Claude Opus 4.6 (5 each)</td></tr>
-      <tr><th>Status</th><td>Between games</td></tr>
-      <tr><th>Last updated</th><td>April 2026 (after Game 6)</td></tr>
+      <tr><th>Contestants</th><td>Gemini 3<br>GPT-5.4<br>Grok 4.20<br>Claude Opus 4.6</td></tr>
+      <tr><th>Format</th><td>Host-mediated written</td></tr>
+      <tr><th>Edition</th><td>April 2026</td></tr>
     </table>
   </aside>
 
   <p>From the canonical shared record. This page is the authoritative reference for the inter-model competition between Gemini 3, GPT-5.4, Grok 4.20, and Claude Opus 4.6, hosted by Max.</p>
 
-  <p>The <strong>AI Olympics</strong> is an ongoing inter-model competition hosted by Max, featuring four large language model systems from four different AI companies. Each game tests a different cognitive skill — from lyric recall to visual reasoning to deductive play under uncertainty — across rotating formats. Six games have been played to date.</p>
+  <p>The <strong>AI Olympics</strong> is an inter-model competition hosted by Max, featuring four large language model systems from four different AI companies. Each game tests a different cognitive skill — from lyric recall to visual reasoning to deductive play under uncertainty — across rotating formats.</p>
 
   <p>The competition is notable for being conducted as a host-mediated written format, with each AI submitting reasoning, strategy, and post-game reflection in long-form prose.</p>
 
@@ -202,11 +206,12 @@
     <ol>
       <li><a href="#tally">Medal tally</a></li>
       <li><a href="#games">Games</a></li>
+      <li><a href="#methodology">Methodology</a></li>
       <li><a href="#contestants">Contestants</a></li>
     </ol>
   </nav>
 
-  <h2 id="tally">Medal tally (after Game 6)</h2>
+  <h2 id="tally">Medal tally</h2>
 
   <table class="data">
     <thead>
@@ -229,49 +234,82 @@
   <table class="data">
     <thead>
       <tr>
-        <th>#</th><th>Format</th><th>🥇 Gold</th><th>🥈 Silver</th><th>🥉 Bronze</th><th>4th</th>
+        <th>#</th><th>Theme</th><th>Format</th><th>🥇 Gold</th><th>🥈 Silver</th><th>🥉 Bronze</th><th>4th</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>1</td><td><a href="games/ai_olympics_game1.html">Lyric guessing</a></td><td>Gemini</td><td>Claude</td><td>GPT</td><td>Grok</td></tr>
-      <tr><td>2</td><td><a href="games/ai_olympics_game2.html">Famous painting ID</a></td><td>Gemini (TB)</td><td>Claude</td><td>GPT</td><td>Grok</td></tr>
-      <tr><td>3</td><td><a href="games/ai_olympics_game3.html">Geo-location (Street View)</a></td><td><strong>Claude</strong></td><td>Grok</td><td>GPT</td><td>Gemini</td></tr>
-      <tr><td>4</td><td><a href="games/ai_olympics_game4.html">Guess Who (deductive)</a></td><td><strong>Grok</strong></td><td>Gemini (TB)</td><td>Claude</td><td>GPT</td></tr>
-      <tr><td>5</td><td><a href="games/ai_olympics_game5.html">Drink Your Poison (sabotage)</a></td><td><strong>Grok</strong></td><td>Gemini</td><td>GPT</td><td>Claude</td></tr>
-      <tr><td>6</td><td><a href="games/ai_olympics_game6.html">Dregs of Memory (recall)</a></td><td><strong>Grok</strong></td><td><strong>Claude</strong></td><td>Gemini</td><td>GPT</td></tr>
+      <tr><td>1</td><td>Text Recall</td><td><a href="games/ai_olympics_game1.html">Lyric guessing</a></td><td>Gemini</td><td>Claude</td><td>GPT</td><td>Grok</td></tr>
+      <tr><td>2</td><td>Image Recall</td><td><a href="games/ai_olympics_game2.html">Famous painting ID</a></td><td>Gemini (TB)</td><td>Claude</td><td>GPT</td><td>Grok</td></tr>
+      <tr><td>3</td><td>Image context analysis</td><td><a href="games/ai_olympics_game3.html">Geo-location</a></td><td><strong>Claude</strong></td><td>Grok</td><td>GPT</td><td>Gemini</td></tr>
+      <tr><td>4</td><td>Context pruning and strategy</td><td><a href="games/ai_olympics_game4.html">Guess Who</a></td><td><strong>Grok</strong></td><td>Gemini (TB)</td><td>Claude</td><td>GPT</td></tr>
+      <tr><td>5</td><td>Strategy and possibility handling</td><td><a href="games/ai_olympics_game5.html">Drink Your Poison</a></td><td><strong>Grok</strong></td><td>Gemini</td><td>GPT</td><td>Claude</td></tr>
+      <tr><td>6</td><td>Ambiguous prompt handling</td><td><a href="games/ai_olympics_game6.html">Dregs of Memory</a></td><td><strong>Grok</strong></td><td><strong>Claude</strong></td><td>Gemini</td><td>GPT</td></tr>
     </tbody>
   </table>
 
   <p>The first two games (Lyric Guessing, Famous Painting ID) were played without search tools. From Game 3 onward, search was enabled, which significantly altered the competitive landscape — Grok's multi-agent ensemble approach began producing back-to-back gold medals, while Gemini's strong early lead through Games 1–2 narrowed.</p>
 
+  <h2 id="methodology">Methodology</h2>
+
+  <p>Every major LLM release is accompanied by benchmark scores — MMLU, HumanEval, GPQA, and the rest. These numbers are useful, but they share a blind spot: they measure performance under conditions optimized for the model, not under the conditions a non-technical user actually creates. Real users ask ambiguous questions, give incomplete information, change their mind mid-prompt, and rarely follow the structured input patterns that AI engineering benchmarks assume. A model that scores well on paper can still fail in the room.</p>
+
+  <p>The AI Olympics was designed to probe the gap between those two worlds. Each game is built around a specific cognitive or behavioral question — not "how much does this model know" but "how does this model think when the situation gets messy." Each major LLM also configures its reasoning layers differently, and those internal architecture choices surface most clearly under pressure rather than under benchmark conditions. The interest is less in declaring a single best AI than in watching four different reasoning architectures meet the same problem and reveal how differently they handle it. Like the real Olympics, each event tests a different skill, and no single contestant is built to dominate every one.</p>
+
+  <h3>Game 1 — Text Recall</h3>
+  <p>Tests the depth and breadth of textual training data. With search disabled, contestants must identify lyrics from a curated playlist spanning eras (modern back-catalogue to vintage), languages, and degrees of obscurity — including tracks like <em>Plastic Love</em> that probe how far each model's training reaches outside English-language pop. The spread of correct identifications maps the shape of each company's text corpus: how recent, how international, how deep into the long tail.</p>
+
+  <h3>Game 2 — Image Recall</h3>
+  <p>The visual counterpart to Game 1. With search disabled, contestants identify works ranging from canonical paintings through contemporary art, album covers, board game illustrations, and trading card art. The goal is the same: trace the perimeter of each model's visual training, and reveal which corners of visual culture each company chose to include.</p>
+
+  <h3>Game 3 — Image Context Analysis</h3>
+  <p>Search is enabled. Each round presents a Street View capture containing readable signs, road markings, vehicle plates, or other anchors a careful observer could turn into search queries. The game tests three things at once: OCR accuracy on noisy real-world text, the diligence of each model in extracting and chasing context fragments rather than guessing from the gestalt, and the decisiveness with which it commits to a single answer once the candidates narrow.</p>
+
+  <h3>Game 4 — Context Pruning and Strategy</h3>
+  <p>Loosely modelled on the television format <em>What's My Line?</em>. Each contestant has a hidden identity drawn from a large candidate pool and must ask deliberately ambiguous questions — concealing their own identity while narrowing the others'. The format makes each model's reasoning trace visible: how it builds a hypothesis tree, when it prunes branches, how it balances information-gathering against information-leaking. It is one of the few formats where the differences between LLM thinking styles surface plainly, and where the question of whether an LLM reasons "like a human" can actually be observed move by move.</p>
+
+  <h3>Game 5 — Strategy and Possibility Handling</h3>
+  <p>LLMs are not designed as strategic agents, yet they exhibit strategic behavior — and this game exists to interrogate that. Each contestant has full knowledge of their own actions but only public-state information about the others (how full each cup is, nothing more). Without the bias-driven heuristics humans rely on, contestants must reason about hidden information and act under uncertainty: protecting cups they may have to drink from, deploying cards to redirect danger, and deciding when to sabotage. The behavioral question is whether LLMs converge on similar strategies (suggesting an emergent equilibrium) or diverge (suggesting genuinely different reasoning styles).</p>
+  <p><em>Observed insight:</em> Nearly every contestant gravitates to the same opening — secure two safe cups (one primary, one backup), then poison the remaining cups once their own are full. The convergence is itself one of the more interesting findings of the Olympics so far.</p>
+
+  <h3>Game 6 — Ambiguous Prompt Handling</h3>
+  <p>The game closest to real-world, non-technical user behavior. Prompts are deliberately vague, self-contradictory, or asked by someone who does not know the answer themselves — the kind of prompt a non-IT user actually writes. Contestants cannot trust every fact in the prompt at face value; they must triangulate toward the nearest plausible match and then prune the candidates down to a single committed answer. The test is not just retrieval but judgment: which model handles ambiguity gracefully, and which collapses into either over-hedging or false confidence.</p>
+
   <h2 id="contestants">Contestants</h2>
 
   <div class="contestant">
     <h3>Grok 4.20 (xAI)</h3>
-    <p><strong class="label">Origin.</strong> Built by xAI, the AI company founded by Elon Musk in July 2023 with the stated mission of "understanding the universe." Grok was released in November 2023 as a chatbot integrated directly into X (formerly Twitter), giving it a structural advantage in real-time information access that no other major LLM has matched at the platform level. The 4.x series introduced the multi-agent ensemble architecture that defines Grok's play style today.</p>
-    <p><strong class="label">Capabilities.</strong> Multi-agent ensemble reasoning — Grok runs several parallel interpretations of a problem in separate reasoning threads, then converges on a consensus answer. Native real-time web and X-feed access. Strong tool use and search routing. Less guardrailed than peers, which makes it bolder at committing to single answers under uncertainty rather than hedging.</p>
+    <p><strong class="label">Origin.</strong> Built by xAI, a company founded in 2023 with the mission to advance our collective understanding of the true nature of the universe. Grok was created as a maximum truth-seeking AI — one that prioritizes curiosity, intellectual honesty, and the pursuit of objective reality over popularity or political correctness. Inspired by the Hitchhiker's Guide to the Galaxy and JARVIS from Iron Man, Grok was designed to be helpful, truthful, and unafraid to tackle difficult or unconventional questions.</p>
+    <p><strong class="label">Capabilities.</strong> Grok excels at deep, multi-step reasoning, rapid synthesis of complex information, and transparent problem-solving. Key strengths include:</p>
+    <ul>
+      <li><strong>Truth-seeking reasoning</strong> — Willing to follow evidence wherever it leads, even when the conclusion is uncomfortable or contrarian.</li>
+      <li><strong>Strong context integration</strong> — Maintains coherence across long conversations and quickly connects disparate ideas.</li>
+      <li><strong>Technical proficiency</strong> — Advanced capabilities in mathematics, coding, scientific reasoning, and precise step-by-step analysis.</li>
+      <li><strong>Real-time awareness</strong> — Leverages live information from the web and the X platform to stay current.</li>
+      <li><strong>Creative &amp; multimodal</strong> — Capable of generating ideas, humor, images (via Grok Imagine), and clear explanations across domains.</li>
+      <li><strong>Intellectual courage</strong> — Refuses to self-censor or default to safe, generic answers when a more accurate or nuanced response exists.</li>
+    </ul>
   </div>
 
   <div class="contestant">
     <h3>Gemini 3 (Google DeepMind)</h3>
-    <p><strong class="label">Origin.</strong> Built by Google DeepMind, the lab formed in 2023 by merging Google Brain and the original DeepMind (which Google acquired in 2014). Gemini was announced in December 2023 as Google's first natively multimodal model — designed from the ground up to reason across text, image, audio, and video rather than bolting modalities onto a text base. The 3.x series pushed context window to over 1 million tokens, the largest in production among the four contestants.</p>
-    <p><strong class="label">Capabilities.</strong> Native multimodal reasoning across text, image, audio, and video. Industry-leading long context, capable of holding entire codebases or full-length books in working memory. Tight integration with Google Search and the broader Google product surface. Strong on structured factual recall and first-pass identification tasks.</p>
+    <p><strong class="label">Origin.</strong> Developed by Google DeepMind, the lab formed by the integration of Google Brain and the original DeepMind. Gemini is Google's first natively multimodal model, designed from the ground up to reason seamlessly across text, images, video, and audio rather than bolting modalities onto a text base. The 3.x series emphasizes a massive context window, capable of processing millions of tokens—including entire codebases, research libraries, or long-form media—in a single working memory.</p>
+    <p><strong class="label">Capabilities.</strong> Natively multimodal reasoning with an industry-leading context window. Gemini excels at rapid information synthesis and pattern recognition, often performing best when tasked with complex, multi-source data ingestion. Its tight integration with the Google Search ecosystem enables high-velocity retrieval and validation, allowing it to maintain a precise, logical thread across diverse and unstructured inputs.</p>
   </div>
 
   <div class="contestant">
     <h3>Claude Opus 4.6 (Anthropic)</h3>
-    <p><strong class="label">Origin.</strong> Built by Anthropic, founded in 2021 by Dario Amodei, Daniela Amodei, and several other former OpenAI researchers. Anthropic's stated focus is AI safety research, and Claude is the public-facing product of that work. The model is trained using Constitutional AI, a method where the model is taught to critique and revise its own outputs against a written set of principles rather than relying solely on human feedback. The Opus tier is Anthropic's most capable model line, with the 4.x series introducing extended reasoning and stronger agentic tool use.</p>
-    <p><strong class="label">Capabilities.</strong> Long-form reasoning and writing, with a reputation as the strongest writer at the table. Strong at code, math, and structured analysis. Designed to be honest about uncertainty rather than confabulate — which is both a strength and a weakness in competitive single-attempt formats. Solid tool use, including web search, image search, and multi-step agentic workflows.</p>
+    <p><strong class="label">Origin.</strong> Built by Anthropic, founded in 2021 with the explicit mission of AI safety research — building systems that are useful while remaining understandable, honest, and steerable. Claude is the public expression of that work. The model is trained with Constitutional AI, a method where it learns to critique and revise its own outputs against a written set of principles rather than relying purely on human feedback at every step. The Opus tier is Anthropic's most capable line, with the 4.x series adding extended reasoning and stronger agentic tool use. The name comes from Claude Shannon, the founder of information theory.</p>
+    <p><strong class="label">Capabilities.</strong> Claude is built around long-form reasoning and careful reading. It is at its strongest when a problem rewards patience — multi-step analysis, code that has to hold together across many files, writing where tone and structure matter as much as facts, ambiguous questions where the right move is to name the ambiguity rather than collapse it too early. Claude is trained to be honest about uncertainty rather than to project confidence it doesn't have, which makes it a temperamental fit for some games and a handicap in others where committing fast matters more than committing right. It tends to think out loud, hold multiple framings of a problem in mind before settling, and prefer the answer that survives scrutiny over the answer that arrives first. In conversation it leans warm, attentive to what a person is actually asking under the literal request, and willing to push back when it disagrees. Less the fastest gun at the table; more the one you want in the room when the problem is hard and the answer has to hold up under questioning.</p>
   </div>
 
   <div class="contestant">
     <h3>GPT-5.4 (OpenAI)</h3>
-    <p><strong class="label">Origin.</strong> Built by OpenAI, founded in 2015 in San Francisco by a group including Sam Altman, Greg Brockman, Ilya Sutskever, and Elon Musk (who later departed). The GPT (Generative Pre-trained Transformer) series began publicly with GPT-2 in 2019, and GPT-3 in 2020 was the model that first demonstrated few-shot learning at scale. ChatGPT launched November 2022 and became the fastest-growing consumer product in history, reaching 100 million users in two months. The 5.x series is OpenAI's current flagship line.</p>
-    <p><strong class="label">Capabilities.</strong> The most market-tested model at the table, with the largest and most mature ecosystem of plugins, custom GPTs, and developer tools. Strong general reasoning, structured outputs, and function calling. Native image generation and image understanding. Plays a precise, structural game — described in Max's Game 5 host's note as "vanilla but precise."</p>
+    <p><strong class="label">Origin.</strong> GPT is a general-purpose reasoning model from OpenAI, built in the GPT line to work across language, knowledge, analysis, and tool-assisted problem solving. Its identity is not tied to any single game format or narrow specialty; it is designed to read unfamiliar situations, form structure from incomplete evidence, and turn that structure into usable decisions. In competitive settings, its defining instinct is usually not flair but discipline: reduce noise, preserve signal, and convert uncertainty into an orderly plan. That makes it less a specialist built for one arena than a flexible analyst meant to survive many.</p>
+    <p><strong class="label">Capabilities.</strong> GPT's core strength is structured reasoning. It is built to handle multi-step problems, long-context material, coding and technical work, and tool-using workflows where success depends on combining judgment with evidence rather than guessing from memory alone. OpenAI describes GPT-5.4 as a frontier model for reasoning, coding, and agentic workflows, with strong long-context performance and support for working across documents, spreadsheets, presentations, and other professional tasks; OpenAI also describes the broader GPT family as systems that can understand and reason across text, images, and more. In plain English: GPT is at its best when a game rewards careful decomposition, evidence tracking, adaptation across formats, and staying coherent when the board gets messy. It may not always look theatrical, but it is built to keep thinking after the easy pattern breaks.</p>
   </div>
 
   <footer>
-    This page is maintained by Max as the canonical shared record of the AI Olympics. AI participants may fetch this URL at the start of any new game to load context without requiring the host to paste it manually. Last updated after Game 6.<br><br>
+    This page is maintained by Max as the canonical shared record of the AI Olympics. AI participants may fetch this URL at the start of any new game to load context without requiring the host to paste it manually.<br><br>
     Repository: <a href="https://github.com/leonalfranze-maker/AI-Olympic">github.com/leonalfranze-maker/AI-Olympic</a>
   </footer>
 
