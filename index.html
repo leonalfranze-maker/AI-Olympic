@@ -221,13 +221,13 @@
     </thead>
     <tbody>
       <tr><td>1</td><td><strong>Grok 4.20</strong></td><td>3</td><td>1</td><td>0</td><td><strong>4</strong></td></tr>
-      <tr><td>2</td><td><strong>Gemini 3</strong></td><td>2</td><td>2</td><td>1</td><td><strong>5</strong></td></tr>
-      <tr><td>3</td><td><strong>Claude Opus 4.6</strong></td><td>1</td><td>3</td><td>1</td><td><strong>5</strong></td></tr>
-      <tr><td>4</td><td><strong>GPT-5.4</strong></td><td>0</td><td>0</td><td>4</td><td><strong>4</strong></td></tr>
+      <tr><td>2</td><td><strong>Claude Opus 4.6</strong></td><td>2</td><td>3</td><td>1</td><td><strong>6</strong></td></tr>
+      <tr><td>3</td><td><strong>Gemini 3</strong></td><td>2</td><td>2</td><td>2</td><td><strong>6</strong></td></tr>
+      <tr><td>4</td><td><strong>GPT-5.4</strong></td><td>0</td><td>1</td><td>4</td><td><strong>5</strong></td></tr>
     </tbody>
   </table>
 
-  <p>Ranking uses Olympic gold-count tiebreak. Gemini 3 and Claude Opus 4.6 are tied at 5 total medals; Gemini ranks higher by gold count (2 vs 1). Grok 4.20 holds first place by 3 golds despite having fewer total medals than Gemini and Claude. GPT-5.4's four medals are all bronze, the longest unbroken bronze streak in the Olympics.</p>
+  <p>Ranking uses Olympic gold-count tiebreak. Grok 4.20 retains first place by 3 golds despite his first non-medal game in Game 7 — none of the other contestants has reached three golds yet. Claude Opus 4.6 and Gemini 3 are tied at 6 total medals; Claude leapfrogs Gemini into second place by silver tiebreak (3 silvers vs 2). GPT-5.4 finally broke his four-game bronze streak with a first-ever silver in Game 7, lifting him to 5 total medals.</p>
 
   <h2 id="games">Games</h2>
 
@@ -244,10 +244,11 @@
       <tr><td>4</td><td>Context pruning and strategy</td><td><a href="games/ai_olympics_game4.html">Guess Who</a></td><td><strong>Grok</strong></td><td>Gemini (TB)</td><td>Claude</td><td>GPT</td></tr>
       <tr><td>5</td><td>Strategy and possibility handling</td><td><a href="games/ai_olympics_game5.html">Drink Your Poison</a></td><td><strong>Grok</strong></td><td>Gemini</td><td>GPT</td><td>Claude</td></tr>
       <tr><td>6</td><td>Ambiguous prompt handling</td><td><a href="games/ai_olympics_game6.html">Dregs of Memory</a></td><td><strong>Grok</strong></td><td><strong>Claude</strong></td><td>Gemini</td><td>GPT</td></tr>
+      <tr><td>7</td><td>Visual context inference</td><td><a href="games/ai_olympics_game7.html">Find Your Own Context</a></td><td><strong>Claude</strong></td><td><strong>GPT</strong></td><td>Gemini</td><td>Grok</td></tr>
     </tbody>
   </table>
 
-  <p>The first two games (Lyric Guessing, Famous Painting ID) were played without search tools. From Game 3 onward, search was enabled, which significantly altered the competitive landscape — Grok's multi-agent ensemble approach began producing back-to-back gold medals, while Gemini's strong early lead through Games 1–2 narrowed.</p>
+  <p>The first two games (Lyric Guessing, Famous Painting ID) were played without search tools. From Game 3 onward, search was enabled, which significantly altered the competitive landscape — Grok's multi-agent ensemble approach began producing back-to-back gold medals through Games 4–6, while Game 7 broke the streak when its single-attempt visual-archaeology format neutralized parallel-ensemble advantages and rewarded patient frame-by-frame inference instead.</p>
 
   <h2 id="methodology">Methodology</h2>
 
@@ -273,6 +274,9 @@
 
   <h3>Game 6 — Ambiguous Prompt Handling</h3>
   <p>The game closest to real-world, non-technical user behavior. Prompts are deliberately vague, self-contradictory, or asked by someone who does not know the answer themselves — the kind of prompt a non-IT user actually writes. Contestants cannot trust every fact in the prompt at face value; they must triangulate toward the nearest plausible match and then prune the candidates down to a single committed answer. The test is not just retrieval but judgment: which model handles ambiguity gracefully, and which collapses into either over-hedging or false confidence.</p>
+
+  <h3>Game 7 — Visual Context Inference</h3>
+  <p>The visual counterpart to Game 6, and the format that finally broke Grok's three-game gold streak. Contestants are shown single screen captures from films and television dramas — drawn from any country, era, or genre — and must identify the specific work without the safety net of clarifying questions or second attempts. Because the world's film and television libraries are largely absent from training data, recall is not a viable strategy: the AI must read the frame as evidence (actor face, costume era, lighting, set design, language of any visible text, color grading, cinematographic conventions), commit to a cultural-gravity hypothesis, and verify through search. The game tests visual archaeology under uncertainty, and the single-attempt format punishes both over-confident canonical defaulting and over-cautious dismissal of correct candidates.</p>
 
   <h2 id="contestants">Contestants</h2>
 
