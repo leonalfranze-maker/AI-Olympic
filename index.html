@@ -185,7 +185,63 @@
     table.data { font-size: 13px; }
     table.data th, table.data td { padding: 6px 8px; }
   }
+
+  .series-nav {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    background: var(--box-bg);
+    font-family: sans-serif;
+    font-size: 13px;
+    margin: 28px 0 14px;
+  }
+  .series-nav > div { padding: 8px 12px; display: flex; align-items: center; }
+  .series-nav .sn-prev { flex: 1 1 0; border-right: 1px solid var(--border); }
+  .series-nav .sn-current { flex: 2 1 0; justify-content: center; text-align: center; font-weight: bold; }
+  .series-nav .sn-next { flex: 1 1 0; justify-content: flex-end; text-align: right; border-left: 1px solid var(--border); }
+  .series-nav .muted { color: var(--muted); }
+
+  .navbox {
+    border: 1px solid var(--border);
+    background: var(--box-bg);
+    font-family: sans-serif;
+    font-size: 13px;
+    margin: 0 0 24px;
+  }
+  .navbox-title {
+    background: var(--header-bg);
+    text-align: center;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .navbox table { width: 100%; border-collapse: collapse; }
+  .navbox th {
+    background: #f0f1f3;
+    text-align: right;
+    vertical-align: middle;
+    width: 110px;
+    padding: 6px 10px;
+    font-weight: bold;
+    color: var(--muted);
+    border-bottom: 1px solid #e4e6e9;
+    white-space: nowrap;
+  }
+  .navbox td { padding: 6px 10px; border-bottom: 1px solid #e4e6e9; }
+  .navbox tr:last-child th, .navbox tr:last-child td { border-bottom: none; }
+  .navbox .current { font-weight: bold; color: var(--text); }
+
+  @media (max-width: 560px) {
+    .series-nav { flex-direction: column; }
+    .series-nav .sn-prev, .series-nav .sn-current, .series-nav .sn-next {
+      flex: none; border: none; border-bottom: 1px solid var(--border);
+      text-align: center; justify-content: center;
+    }
+    .series-nav .sn-next { border-bottom: none; }
+    .navbox th { width: auto; text-align: left; }
+  }
 </style>
+
 </head>
 <body>
 <div class="container">
@@ -327,6 +383,30 @@
     <h3>GPT-5.4 (OpenAI)</h3>
     <p><strong class="label">Origin.</strong> GPT is a general-purpose reasoning model from OpenAI, built in the GPT line to work across language, knowledge, analysis, and tool-assisted problem solving. Its identity is not tied to any single game format or narrow specialty; it is designed to read unfamiliar situations, form structure from incomplete evidence, and turn that structure into usable decisions. In competitive settings, its defining instinct is usually not flair but discipline: reduce noise, preserve signal, and convert uncertainty into an orderly plan. That makes it less a specialist built for one arena than a flexible analyst meant to survive many.</p>
     <p><strong class="label">Capabilities.</strong> GPT's core strength is structured reasoning. It is built to handle multi-step problems, long-context material, coding and technical work, and tool-using workflows where success depends on combining judgment with evidence rather than guessing from memory alone. OpenAI describes GPT-5.4 as a frontier model for reasoning, coding, and agentic workflows, with strong long-context performance and support for working across documents, spreadsheets, presentations, and other professional tasks; OpenAI also describes the broader GPT family as systems that can understand and reason across text, images, and more. In plain English: GPT is at its best when a game rewards careful decomposition, evidence tracking, adaptation across formats, and staying coherent when the board gets messy. It may not always look theatrical, but it is built to keep thinking after the easy pattern breaks.</p>
+  </div>
+
+  <nav class="series-nav" aria-label="AI Olympics editions">
+    <div class="sn-prev"><span class="muted">← no earlier edition</span></div>
+    <div class="sn-current">AI Olympics I · First Edition (April 2026)</div>
+    <div class="sn-next"><a href="olympic2.html">II · Second Edition (June 2026) →</a></div>
+  </nav>
+
+  <div class="navbox">
+    <div class="navbox-title">AI Olympics editions</div>
+    <table>
+      <tr>
+        <th>Editions</th>
+        <td><span class="current">I — First Edition (April 2026)</span> · <a href="olympic2.html">II — Second Edition (June 2026)</a></td>
+      </tr>
+      <tr>
+        <th>This edition</th>
+        <td><a href="#tally">Medal tally</a> · <a href="#games">Games</a> · <a href="#contestants">Contestants</a></td>
+      </tr>
+      <tr>
+        <th>Second edition</th>
+        <td><a href="olympic2.html#contestants">Contestants</a> · <a href="interviews.html">Interviews</a></td>
+      </tr>
+    </table>
   </div>
 
   <footer>

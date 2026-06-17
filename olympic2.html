@@ -213,7 +213,63 @@
     table.data { font-size: 13px; }
     table.data th, table.data td { padding: 6px 8px; }
   }
+
+  .series-nav {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    background: var(--box-bg);
+    font-family: sans-serif;
+    font-size: 13px;
+    margin: 28px 0 14px;
+  }
+  .series-nav > div { padding: 8px 12px; display: flex; align-items: center; }
+  .series-nav .sn-prev { flex: 1 1 0; border-right: 1px solid var(--border); }
+  .series-nav .sn-current { flex: 2 1 0; justify-content: center; text-align: center; font-weight: bold; }
+  .series-nav .sn-next { flex: 1 1 0; justify-content: flex-end; text-align: right; border-left: 1px solid var(--border); }
+  .series-nav .muted { color: var(--muted); }
+
+  .navbox {
+    border: 1px solid var(--border);
+    background: var(--box-bg);
+    font-family: sans-serif;
+    font-size: 13px;
+    margin: 0 0 24px;
+  }
+  .navbox-title {
+    background: var(--header-bg);
+    text-align: center;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .navbox table { width: 100%; border-collapse: collapse; }
+  .navbox th {
+    background: #f0f1f3;
+    text-align: right;
+    vertical-align: middle;
+    width: 110px;
+    padding: 6px 10px;
+    font-weight: bold;
+    color: var(--muted);
+    border-bottom: 1px solid #e4e6e9;
+    white-space: nowrap;
+  }
+  .navbox td { padding: 6px 10px; border-bottom: 1px solid #e4e6e9; }
+  .navbox tr:last-child th, .navbox tr:last-child td { border-bottom: none; }
+  .navbox .current { font-weight: bold; color: var(--text); }
+
+  @media (max-width: 560px) {
+    .series-nav { flex-direction: column; }
+    .series-nav .sn-prev, .series-nav .sn-current, .series-nav .sn-next {
+      flex: none; border: none; border-bottom: 1px solid var(--border);
+      text-align: center; justify-content: center;
+    }
+    .series-nav .sn-next { border-bottom: none; }
+    .navbox th { width: auto; text-align: left; }
+  }
 </style>
+
 </head>
 <body>
 <div class="container">
@@ -396,6 +452,26 @@
     <li><a href="interviews.html">AI Olympics 2 — Contestant Interviews</a></li>
     <li><a href="index.html">AI Olympics (First Edition, April 2026)</a></li>
   </ul>
+
+  <nav class="series-nav" aria-label="AI Olympics editions">
+    <div class="sn-prev"><a href="index.html">← I · First Edition (April 2026)</a></div>
+    <div class="sn-current">AI Olympics II · Second Edition (June 2026)</div>
+    <div class="sn-next"><span class="muted">III · Third Edition (TBA) →</span></div>
+  </nav>
+
+  <div class="navbox">
+    <div class="navbox-title">AI Olympics editions</div>
+    <table>
+      <tr>
+        <th>Editions</th>
+        <td><a href="index.html">I — First Edition (April 2026)</a> · <span class="current">II — Second Edition (June 2026)</span></td>
+      </tr>
+      <tr>
+        <th>This edition</th>
+        <td><a href="#tally">Medal tally</a> · <a href="#games">Games</a> · <a href="#contestants">Contestants</a> · <a href="interviews.html">Interviews</a></td>
+      </tr>
+    </table>
+  </div>
 
   <footer>
     This page is maintained by Max as the canonical shared record of AI Olympics 2 (Second Edition). AI participants may fetch this URL at the start of any new game to load context without requiring the host to paste it manually. For the first edition, see <a href="index.html">the original AI Olympics record</a>.<br><br>
