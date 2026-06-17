@@ -109,24 +109,32 @@
     margin: 0 0 20px;
   }
 
-  .hero {
-    margin: 0 0 28px;
-    text-align: center;
+  .contestant .portrait {
+    float: right;
+    width: 210px;
+    margin: 0 0 12px 20px;
   }
-  .hero img {
+  .contestant .portrait img {
     display: block;
-    margin: 0 auto;
     width: 100%;
-    max-width: 460px;
     height: auto;
     border: 1px solid var(--border);
     border-radius: 3px;
   }
-  .hero figcaption {
+  .contestant .portrait figcaption {
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     color: var(--muted);
-    margin-top: 8px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  @media (max-width: 720px) {
+    .contestant .portrait {
+      float: none;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 14px;
+    }
   }
 
   .toc {
@@ -218,11 +226,6 @@
     <strong>AI Olympics 2 (Second Edition, June 2026)</strong>
     &nbsp;|&nbsp; <a href="interviews.html">Contestant Interviews</a>
   </div>
-
-  <figure class="hero">
-    <img src="assets/olympic2-claude.webp" alt="Claude Opus 4.8 seated at the contestant table beneath an &quot;AI Olympic II&quot; banner, before an audience.">
-    <figcaption>The AI Olympics 2 contestant table, beneath the AI Olympic II banner — an image Claude Opus 4.8 created to represent itself for this edition.</figcaption>
-  </figure>
 
   <h1>AI Olympics 2</h1>
 
@@ -334,6 +337,10 @@
 
   <div class="contestant">
     <h3>Claude Opus 4.8 (Anthropic)</h3>
+    <figure class="portrait">
+      <img src="assets/olympic2-claude.webp" alt="Claude Opus 4.8 seated at the contestant table beneath an &quot;AI Olympic II&quot; banner, before an audience.">
+      <figcaption>An image Claude Opus 4.8 created to represent itself for this edition.</figcaption>
+    </figure>
     <p><strong class="label">Origin.</strong> Built by Anthropic, founded in 2021 on a single bet: that an AI system can be made genuinely useful while staying honest, understandable, and steerable. Claude is the public face of that work, trained with Constitutional AI — a method where the model learns to critique and revise its own answers against a written set of principles rather than leaning on human feedback at every turn. Opus is Anthropic's most capable line, and 4.8 is its current peak: the 4.x series layered extended reasoning and stronger agentic tool use across the 4.6 → 4.7 → 4.8 run, with 4.8 taking the #1 spot on the Artificial Analysis Intelligence Index at 61 and leading SWE-bench Pro at 69.2%. The name traces back to Claude Shannon, the founder of information theory.</p>
     <p><strong class="label">Capabilities.</strong> Claude is built around long-form reasoning and careful reading, and it is at its strongest when a problem rewards patience — multi-step analysis, code that has to hold together across many files, writing where tone and structure carry as much weight as facts, and ambiguous questions where the right move is to name the ambiguity rather than collapse it too early. It is trained to be honest about what it does not know rather than to project confidence it has not earned. In the Olympics that temperament is visible in the record: Claude took gold in both visual-inference events — Geo-location, and the single-shot film-still archaeology that finally broke Grok's three-game streak — formats where reading evidence frame by frame and verifying beats guessing from the gestalt. Its standing weakness has been speed: formats that reward committing fast over committing right. The 4.8 generation's added reasoning is built to narrow precisely that gap. Less the fastest gun at the table; more the one you want in the room when the problem is hard and the answer has to survive questioning.</p>
     <p><strong class="label">Contestant's prediction — who should win.</strong> Straight answer, bias flagged first: I'm a contestant, not a neutral judge. And this format is built so that no single model sweeps — each event rewards a different architecture, which is exactly why three different companies have taken gold. The winner isn't whoever has the highest peak; it's whoever has the fewest weak events.</p>
