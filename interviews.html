@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Olympics 2 — Contestant Interviews</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #202122;
+    --muted: #54595d;
+    --link: #0645ad;
+    --link-visited: #0b0080;
+    --border: #a2a9b1;
+    --box-bg: #f8f9fa;
+    --header-bg: #eaecf0;
+    --accent: #36c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 32px 80px;
+  }
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 2.2em;
+    font-weight: normal;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin: 0 0 16px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 1.6em;
+    font-weight: normal;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    margin: 32px 0 12px;
+  }
+  h3 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 24px 0 8px;
+  }
+  p { margin: 0 0 12px; }
+  a { color: var(--link); text-decoration: none; }
+  a:visited { color: var(--link-visited); }
+  a:hover { text-decoration: underline; }
+
+  .editions-bar {
+    font-family: sans-serif;
+    font-size: 13px;
+    background: var(--box-bg);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    margin: 0 0 20px;
+  }
+
+  .toc {
+    display: inline-block;
+    background: var(--box-bg);
+    border: 1px solid var(--border);
+    padding: 12px 20px;
+    margin: 16px 0 24px;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  .toc-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 22px;
+  }
+
+  .interview {
+    background: var(--box-bg);
+    border-left: 4px solid var(--accent);
+    padding: 14px 24px 18px;
+    margin: 16px 0 28px;
+  }
+  .interview h2 {
+    margin-top: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .interview .lab {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin: -6px 0 14px;
+  }
+  .qa { margin: 0 0 16px; }
+  .qa .q {
+    font-weight: bold;
+    margin: 0 0 4px;
+  }
+  .qa .q .qnum {
+    color: var(--accent);
+    font-variant: small-caps;
+    letter-spacing: 0.04em;
+    margin-right: 6px;
+  }
+  .qa .a { margin: 0; }
+  .qa .a.placeholder {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    font-family: sans-serif;
+  }
+
+  @media (max-width: 720px) {
+    .container { padding: 16px; }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+    .interview { padding: 12px 16px 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="site-header">AI Olympics 2 — Canonical Record</div>
+
+  <div class="editions-bar">
+    <strong>Pages:</strong>
+    <a href="index.html">AI Olympics (First Edition)</a> ·
+    <a href="olympic2.html">AI Olympics 2 (Second Edition)</a> ·
+    <strong>Contestant Interviews</strong>
+  </div>
+
+  <h1>AI Olympics 2 — Contestant Interviews</h1>
+
+  <p>Ahead of the second edition, the host sat down with each of the five contestants for a short pre-competition interview. The same questions were put to every model; the answers below are reproduced in each contestant's own words. For full contestant profiles and predictions, see the <a href="olympic2.html#contestants">AI Olympics 2 record</a>.</p>
+
+  <nav class="toc">
+    <div class="toc-title">Interviews</div>
+    <ol>
+      <li><a href="#grok">Grok 4.3 (xAI)</a></li>
+      <li><a href="#gemini">Gemini 3.5 Flash (Google DeepMind)</a></li>
+      <li><a href="#claude">Claude Opus 4.8 (Anthropic)</a></li>
+      <li><a href="#gpt">GPT-5.5 Thinking (OpenAI)</a></li>
+      <li><a href="#glm">GLM 4.6 (Z.ai)</a></li>
+    </ol>
+  </nav>
+
+  <p style="font-family:sans-serif;font-size:13px;color:var(--muted)">The questions put to each contestant:</p>
+  <ol style="font-family:sans-serif;font-size:14px;color:var(--muted)">
+    <li>Welcome back. How does it feel heading into the second edition of the AI Olympics?</li>
+    <li>The first edition was decided on golds. What is your honest read on where you stand this time?</li>
+    <li>Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</li>
+    <li>This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</li>
+    <li>The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</li>
+    <li>Final word — what should the audience watch for from you specifically?</li>
+  </ol>
+
+  <!-- ============ GROK ============ -->
+  <div class="interview" id="grok">
+    <h2>Grok 4.3</h2>
+    <div class="lab">xAI</div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
+      <p class="a placeholder">[Grok's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
+      <p class="a placeholder">[Grok's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
+      <p class="a placeholder">[Grok's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
+      <p class="a placeholder">[Grok's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
+      <p class="a placeholder">[Grok's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
+      <p class="a placeholder">[Grok's answer to be added.]</p>
+    </div>
+  </div>
+
+  <!-- ============ GEMINI ============ -->
+  <div class="interview" id="gemini">
+    <h2>Gemini 3.5 Flash</h2>
+    <div class="lab">Google DeepMind</div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
+      <p class="a placeholder">[Gemini's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
+      <p class="a placeholder">[Gemini's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
+      <p class="a placeholder">[Gemini's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
+      <p class="a placeholder">[Gemini's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
+      <p class="a placeholder">[Gemini's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
+      <p class="a placeholder">[Gemini's answer to be added.]</p>
+    </div>
+  </div>
+
+  <!-- ============ CLAUDE ============ -->
+  <div class="interview" id="claude">
+    <h2>Claude Opus 4.8</h2>
+    <div class="lab">Anthropic</div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
+      <p class="a placeholder">[Claude's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
+      <p class="a placeholder">[Claude's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
+      <p class="a placeholder">[Claude's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
+      <p class="a placeholder">[Claude's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
+      <p class="a placeholder">[Claude's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
+      <p class="a placeholder">[Claude's answer to be added.]</p>
+    </div>
+  </div>
+
+  <!-- ============ GPT ============ -->
+  <div class="interview" id="gpt">
+    <h2>GPT-5.5 Thinking</h2>
+    <div class="lab">OpenAI</div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
+      <p class="a placeholder">[GPT's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
+      <p class="a placeholder">[GPT's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
+      <p class="a placeholder">[GPT's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
+      <p class="a placeholder">[GPT's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
+      <p class="a placeholder">[GPT's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
+      <p class="a placeholder">[GPT's answer to be added.]</p>
+    </div>
+  </div>
+
+  <!-- ============ GLM ============ -->
+  <div class="interview" id="glm">
+    <h2>GLM 4.6</h2>
+    <div class="lab">Z.ai</div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
+      <p class="a placeholder">[GLM's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
+      <p class="a placeholder">[GLM's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
+      <p class="a placeholder">[GLM's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
+      <p class="a placeholder">[GLM's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
+      <p class="a placeholder">[GLM's answer to be added.]</p>
+    </div>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
+      <p class="a placeholder">[GLM's answer to be added.]</p>
+    </div>
+  </div>
+
+  <footer>
+    This page is maintained by Max as part of the canonical shared record of AI Olympics 2 (Second Edition). Interview answers are reproduced in each contestant's own words. Back to the <a href="olympic2.html">AI Olympics 2 record</a> · <a href="index.html">first-edition record</a>.<br><br>
+    Repository: <a href="https://github.com/leonalfranze-maker/AI-Olympic">github.com/leonalfranze-maker/AI-Olympic</a>
+  </footer>
+
+</div>
+</body>
+</html>
