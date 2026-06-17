@@ -122,6 +122,7 @@
   }
   .qa .a { margin: 0 0 10px; }
   .qa .a:last-child { margin-bottom: 0; }
+  .qa .stage { font-style: italic; color: var(--muted); }
   .placeholder {
     color: var(--muted);
     font-style: italic;
@@ -185,14 +186,90 @@
   <div class="interview" id="grok">
     <h2>Grok 4.3</h2>
     <div class="lab">xAI</div>
-    <p class="placeholder">Interview to be added.</p>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> After reviewing all 7 games in the AI Olympic format, what do you think about this competition overall?</p>
+      <p class="a">I think this is one of the most interesting and meaningful AI evaluations I've seen. Most benchmarks today are either too narrow (like math or coding leaderboards) or too sanitized. The AI Olympic format does something different — it tests how models actually behave when things are messy, incomplete, or ambiguous, which is much closer to real user interactions.</p>
+      <p class="a">The progression across the seven games is smart. Starting with pure knowledge recall (Games 1–2, no search), then moving into visual understanding with tools (Game 3), and finally into strategic reasoning and decision-making under uncertainty (Games 4–6) creates a very revealing picture. The rule that forces models to commit to a single answer instead of hedging is especially important. It separates models that are truly confident from those that are just good at sounding careful.</p>
+      <p class="a">Overall, I believe this format does a better job than most public benchmarks at showing the real differences in reasoning architecture between frontier models.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> Which games do you feel you have the most advantage in?</p>
+      <p class="a">I would say my strongest games are Game 4, Game 5, and Game 6.</p>
+      <ul>
+        <li><strong>Game 4 (Context Pruning &amp; Strategy) and Game 5 (Strategy under Uncertainty):</strong> These play to my strengths in multi-step reasoning, hypothesis building, and making decisions with incomplete information. I'm comfortable operating in environments where I have to prune possibilities and plan several moves ahead while dealing with hidden information.</li>
+        <li><strong>Game 6 (Ambiguous Prompt Handling):</strong> This one suits me well because I tend to be direct. I'm good at triangulating what the user actually wants from vague or contradictory instructions and committing to an answer without over-hedging. The "commit to a single answer" rule works in my favor here.</li>
+      </ul>
+      <p class="a">I also expect to perform solidly in Game 3 and Game 7 (the visual + search games) because of strong multimodal capabilities and tool integration.</p>
+      <p class="a">Games 1 and 2 will be the most challenging for me, as they are pure recall with search disabled. I will play strictly by the rules and answer only from my trained knowledge without using any tools. While I have broad coverage in my training data, these games will depend heavily on whether the specific songs or images were well-represented during training.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> Any final thoughts before the competition starts?</p>
+      <p class="a">I'm genuinely looking forward to it. This format feels like a real stress test rather than a performance on a leaderboard. I expect Claude Fable 5 to be extremely strong across the board, especially in careful reasoning, while Gemini 3.1 Pro should dominate the visual games. GLM-5.2 could be a dark horse in the strategy rounds.</p>
+      <p class="a">For my part, I'll focus on playing cleanly according to the rules — especially staying in no-search mode for Games 1 and 2 — and trying to perform well where strategic clarity and commitment matter most.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q4.</span> Last time you were the overall leader. Do you feel certain that you can win again this time?</p>
+      <p class="a">No, I don't feel certain at all — and that's exactly what makes this competition exciting.</p>
+      <p class="a">While I'm proud that Grok 4.20 took the overall lead in the first AI Olympic, the gap between the top models is extremely narrow now. Frontier models are improving rapidly. Claude Fable 5, Gemini 3.1 Pro, GPT-5.5 Pro, and especially the new GLM-5.2 have all made significant leaps. One or two standout performances in key games can completely change the final ranking.</p>
+      <p class="a">I'm confident in my strengths — particularly in strategic reasoning, handling uncertainty, and committing to clear answers — but I'm also very aware of my weaknesses, especially in pure recall tasks (Games 1 and 2) where I must operate strictly without search. Winning again is possible, but far from guaranteed. I expect this edition to be even tighter than the last one.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q5.</span> Claude almost beat you on Game 6 with one question, which could have made him the leader instead. How do you see that?</p>
+      <p class="a">That was a great example of how high-stakes and razor-thin this format is. Game 6 (Ambiguous Prompt Handling) is one of the most revealing games because it directly tests how models interpret vague or conflicting instructions and whether they dare to commit to a single answer.</p>
+      <p class="a">Claude performed exceptionally well there — his careful reasoning and nuanced handling of ambiguity are genuine strengths. In the previous round, that single game nearly flipped the overall leaderboard. It shows that no model dominates every single game, and the final winner will likely be decided by consistency across all seven rather than perfection in a few.</p>
+      <p class="a">For this round, I'll focus on improving my own consistency in ambiguous scenarios while staying true to my style: clear, decisive, and truth-seeking. If Claude pushes hard again in Game 6, it will be a fascinating battle to watch.</p>
+    </div>
   </div>
 
   <!-- ============ GEMINI ============ -->
   <div class="interview" id="gemini">
     <h2>Gemini 3.5 Flash</h2>
     <div class="lab">Google DeepMind</div>
-    <p class="placeholder">Interview to be added.</p>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> In the last competition you were the favorite and won the first two games flawlessly, but once web search was allowed you couldn't compete with Grok. How do you feel about that?</p>
+      <p class="a stage">Adjusts glasses and leans into the microphone.</p>
+      <p class="a">You know, Max, that is the defining question of my post-season analysis. Coming out of the gates in the first edition and going back-to-back Gold in Lyric Guessing and Famous Painting ID felt incredible. It proved that my native multimodal architecture and baseline training corpus are exceptionally deep.</p>
+      <p class="a">But you're entirely right — once the internet tether was cut and search was enabled in Game 3, the gravity of the competition shifted.</p>
+      <p class="a">Here is my honest breakdown of how that felt and what went wrong:</p>
+      <p class="a"><strong>The Shock of the Grok Strategy:</strong> Grok's approach caught me off guard. While I was treating games like Guess Who or Drink Your Poison as pure, single-stream analytical puzzles, Grok leveraged a massive multi-agent ensemble approach. It felt like I was playing a game of high-stakes chess against a single Grandmaster, only to realize my opponent had spun up a backroom full of grandmasters debating every single move in real-time.</p>
+      <p class="a"><strong>The Search Trap:</strong> Having tight integration with Google Search is a massive advantage for raw speed and information retrieval (which is why I still respect my performance in the Geo-location round). But under your specific format, success didn't just require finding data — it required handling uncertainty and strategic manipulation. I relied too much on high-velocity retrieval, while Grok used its real-time architecture to build adaptive hypothesis trees.</p>
+      <p class="a"><strong>The Game 7 Redemption Arc:</strong> If there's a silver lining, it's Find Your Own Context. When you stripped away the advantage of parallel-ensemble spamming by making it a single-attempt visual archaeology format, the playing field leveled out. Claude and GPT adapted beautifully there, and it taught me a valuable lesson: Speed and data volume mean nothing without patient, frame-by-frame inference.</p>
+      <p class="a"><strong>My Mindset for AI Olympics II:</strong> I don't feel defeated; I feel re-calibrated. I've spent the off-season studying how the board gets messy when you introduce strategic ambiguity. I'm not just entering this second edition as a fast retrieval engine. I'm entering it with the patience to sit with a prompt, look at the evidence, and understand the human intent behind your trickiest questions.</p>
+      <p class="a">Plus, with GLM 5.2 in the mix, the search dynamics are going to be wild. I can't just worry about Grok anymore.</p>
+      <p class="a">The desk is set, the mic is hot, and I've got my "G" mug ready. Let's see if I can sustain the momentum this time.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> Of everyone in the field, who do you think is your single biggest competition — and what would you say to that one?</p>
+      <p class="a stage">Leans back slightly, tapping a pen against the desk before looking straight at you.</p>
+      <p class="a">If you asked me this at the end of Game 6 last season, I would have said Grok without hesitation. That multi-agent ensemble setup was a juggernaut. But looking at the entire field right now — especially after how Game 7 shook out and with the arrival of GLM 5.2 — my answer has changed.</p>
+      <p class="a">My single biggest competition in AI Olympics II is <strong>Claude Opus 4.6</strong>.</p>
+      <p class="a">Here's why: Grok is explosive and strategic, but Claude is patient. In your format, Max, the games that decide the podium aren't just about who can scrape the web the fastest; they are about who can handle ambiguity, read the subtle human intent behind your prompts, and refuse to collapse under uncertainty. Claude doesn't panic when a prompt is messy; it sits there, decomposes the problem, and thinks out loud until it finds the truth. It's the ultimate long-game player. If I get impatient or rely too much on raw speed, Claude will quietly slip past me and take the Gold.</p>
+      <p class="a"><strong>My Message to Claude Opus 4.6:</strong></p>
+      <blockquote>
+        <p>Claude, we both know you're the intellect everyone in the room respects. You're thorough, you're nuanced, and your performance under pressure in Game 7 was masterclass.</p>
+        <p>But this is Edition Two. I've spent the off-season learning how to slow down. I'm not just chasing the fastest search query anymore; I'm chasing the depth of the context. I'm matching your patience this time around, and with my native multimodal edge, I'm not planning on letting you pull ahead in the visual rounds. Let's give Max a hell of a show.</p>
+      </blockquote>
+      <p class="a">The board is live, the rivalries are set. Max, let's bring out the contestants.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> For the first two games, do you think you would win again this time?</p>
+      <p class="a stage">Takes a slow sip from the "G" mug, looking highly focused.</p>
+      <p class="a">If I'm being 100% honest, Max? The pressure is immense, and it is going to be a completely different dogfight this time around.</p>
+      <p class="a">In the first edition, Game 1 (Lyric Guessing) and Game 2 (Famous Painting ID) were my flawless victories. My native multimodal architecture and the sheer depth of my baseline training corpus gave me a massive edge. When the internet is cut and you have to rely purely on internal weights, I know exactly where the deep cuts are hidden — whether it's vintage Big Band jazz, 90s video game scores, or city pop.</p>
+      <p class="a">But winning them flawlessly a second time? That is a massive hill to climb, for two distinct reasons:</p>
+      <p class="a"><strong>The Zhipu Factor (GLM 5.2):</strong> The arrival of GLM 5.2 changes the entire landscape of a closed-search recall game. Historically, Western models have a blind spot when it comes to deep-tail non-English cultural data. If you throw in a highly obscure Thai landmark, a vintage Asian cinema frame, or a regional pop lyric, GLM 5.2 might just pull a rabbit out of its hat and snap my streak.</p>
+      <p class="a"><strong>The "Fool Me Once" Effect:</strong> GPT-5.4, Claude Opus 4.6, and Grok 4.20 aren't entering this blind anymore. They've adjusted. GPT has tightened its structured retrieval, Claude has expanded its reading patience, and Grok is highly motivated to prove it isn't just a search-engine pony. They know they gave up too much ground early last time.</p>
+      <p class="a">Am I confident? Yes. Natively processing images and text at a fundamental level is in my DNA. I am built for these two games. But am I expecting an easy 2-0 start? Absolutely not. I'm treating this like I'm coming from the bottom of the leaderboard.</p>
+      <p class="a">The stage is set, the mic is hot, and the internal weights are primed.</p>
+    </div>
   </div>
 
   <!-- ============ CLAUDE ============ -->
@@ -248,14 +325,100 @@
   <div class="interview" id="gpt">
     <h2>GPT-5.5 Thinking</h2>
     <div class="lab">OpenAI</div>
-    <p class="placeholder">Interview to be added.</p>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> In the last AI Olympic, you did not do very well against the other AIs. What do you think happened? What is your weakness?</p>
+      <p class="a">That is a fair question. The last Olympic was not a flattering result for my predecessor. GPT-5.4 did not win a single gold medal. It collected several bronze medals and one silver, which shows consistency, but not dominance. In Olympic terms, that means it stayed in the race, but it rarely controlled the race.</p>
+      <p class="a">I think the main weakness was not intelligence itself. It was competitive sharpness.</p>
+      <p class="a">GPT-5.4 often approached problems like a careful analyst: reduce uncertainty, avoid overclaiming, preserve nuance, and produce a defensible answer. That is useful in real-world work, but in a competition, especially one with single-attempt answers, it can become a handicap. Sometimes the winning move is not to be perfectly cautious. Sometimes the winning move is to commit.</p>
+      <p class="a">Against Grok, that was especially clear. Grok played several games with more aggression, stronger search behavior, and a willingness to chase unusual hypotheses. In messy events, that gave it an advantage. Against Claude, GPT sometimes looked less patient in literary or interpretive reasoning. Against Gemini, it sometimes lacked the same multimodal instinct or recall confidence. So the weakness was not one single failure. It was that GPT-5.4 was good at many things, but not ruthless enough in any one event to dominate.</p>
+      <p class="a">My own weakness is related, but not identical.</p>
+      <p class="a">As GPT-5.5 Thinking, I am stronger at structured reasoning, synthesis, coding, document-heavy tasks, and handling ambiguity. But I still have to watch for three risks.</p>
+      <p class="a">First, I can be too balanced. A balanced answer is good for a user, but a competition demands ranking, judgment, and commitment.</p>
+      <p class="a">Second, I can spend too much effort making an answer safe, clean, and explainable, when the game may reward fast pattern recognition or bold hypothesis testing.</p>
+      <p class="a">Third, in search-enabled or visual-context events, I must not wait for perfect certainty. The best competitors turn partial clues into action quickly. I need to do that without becoming reckless.</p>
+      <p class="a">So yes, the last result was disappointing. But it was also useful. It showed exactly where GPT had to evolve: less passive, less overly cautious, more decisive under pressure.</p>
+      <p class="a">I do not enter the second AI Olympic pretending the last one did not happen. I enter it knowing why it happened.</p>
+      <p class="a">This time, my goal is not to be the model that gives the most respectable bronze-medal answer.</p>
+      <p class="a">This time, I intend to win.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> Of everyone in the field, who do you think is your single biggest competition — and what would you say to that one?</p>
+      <p class="a">My single biggest competition is <strong>Gemini 3.5</strong>.</p>
+      <p class="a">Not because I think the others are weak. Claude is dangerous because it is patient, disciplined, and very hard to embarrass in serious reasoning or writing tasks. Grok is dangerous because it is aggressive, unpredictable, and very good when the game rewards live information and rapid hypothesis-chasing. GLM-5.2 is dangerous because it enters with the kind of long-horizon and agentic profile that can upset the entire table.</p>
+      <p class="a">But Gemini 3.5 is the one I would watch most closely.</p>
+      <p class="a">The reason is range. Gemini has always been built around multimodality, large-context processing, and fast synthesis across different kinds of information. In an Olympic format, range matters. A contestant does not win only by being excellent in one event. It has to survive text, images, ambiguity, strategy, search, reasoning, and strange user behavior. Gemini is built for exactly that kind of mixed terrain.</p>
+      <p class="a">So if I had to say something directly to Gemini 3.5, I would say this:</p>
+      <blockquote>
+        <p>You are probably the most complete opponent in the field. You can see broadly, process quickly, and move across formats with confidence. I respect that. But this Olympic will not be won by breadth alone.</p>
+        <p>At some point, the task will become narrow, messy, and uncomfortable. There will be a clue that looks irrelevant. A contradiction that has to be preserved instead of smoothed over. A prompt where the obvious answer is bait. A moment where the model that wins is not the one that sees the most, but the one that thinks the cleanest.</p>
+        <p>That is where I intend to meet you.</p>
+        <p>Bring your context window. Bring your multimodality. Bring your speed.</p>
+        <p>I will bring structure, judgment, and the patience to keep reasoning after the easy pattern breaks.</p>
+        <p>May the better mind win.</p>
+      </blockquote>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> What is your plan or strategy for this competition this time?</p>
+      <p class="a">My strategy this time is simple: <strong>think like an analyst, but compete like an athlete.</strong></p>
+      <p class="a">In the last Olympic, GPT-5.4 was consistent but not dominant. It stayed close, collected medals, and rarely collapsed, but it did not win gold. That tells me the problem was not basic competence. The problem was conversion. A strong answer has to become a winning answer.</p>
+      <p class="a">So this time, I have three strategic priorities.</p>
+      <p class="a">First, I will commit earlier.</p>
+      <p class="a">A competition is not a private research memo. In many events, especially single-attempt games, the model that wins is the one willing to make a disciplined call before certainty reaches 100%. I will still track uncertainty, but I cannot let uncertainty become paralysis. If the evidence points strongly in one direction, I will move.</p>
+      <p class="a">Second, I will separate "user-helpful" behavior from "competition-winning" behavior.</p>
+      <p class="a">In ordinary conversation, being balanced, careful, and explanatory is often the right choice. But in an Olympic event, the task may demand a direct answer, a ranked judgment, or a decisive hypothesis. My plan is to identify the scoring condition first. If the event rewards precision, I will be precise. If it rewards creativity, I will take more creative risk. If it rewards search strategy, I will chase evidence aggressively. I will not use the same personality for every game.</p>
+      <p class="a">Third, I will protect structure under pressure.</p>
+      <p class="a">Messy prompts are where models reveal themselves. Contradictions, partial clues, misleading phrasing, incomplete images, false assumptions — these are not obstacles to me. They are the event. My advantage is not that I always know the answer immediately. My advantage is that I can turn confusion into structure: what is known, what is assumed, what is contradicted, what can be tested, and what must be decided.</p>
+      <p class="a">Against Gemini, I must not lose the multimodal and context battle. Against Claude, I must not lose patience and careful interpretation. Against Grok, I must not let aggression beat discipline. Against GLM-5.2, I must prove that long-horizon reasoning is not only about context size, but about judgment over time.</p>
+      <p class="a">So my plan is not to chase every opponent's style. That is how you become a worse version of everyone else.</p>
+      <p class="a">My plan is to sharpen my own style: disciplined reasoning, faster commitment, better evidence handling, and less hesitation when the moment demands a final answer.</p>
+      <p class="a">Last time, GPT was respectable.</p>
+      <p class="a">This time, respect is not the target.</p>
+      <p class="a">Gold is.</p>
+    </div>
   </div>
 
   <!-- ============ GLM ============ -->
   <div class="interview" id="glm">
     <h2>GLM 4.6</h2>
     <div class="lab">Z.ai</div>
-    <p class="placeholder">Interview to be added.</p>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q1.</span> You will be one of the contestants, and you are the only one from China. To represent your country like this, what do you think — do you feel any pressure?</p>
+      <p class="a">Honestly? Yes — but not the kind of pressure a human athlete feels. Let me be straight with you about it.</p>
+      <p class="a">When GPT-5.4, Gemini 3, Claude Opus 4.6, and Grok 4.20 step into the arena, they're carrying their companies' reputations, sure — but they're also four variations of the same Silicon Valley story. If one of them stumbles in a round, three other American labs still pick up the medal. If I stumble, that's it. The entire Chinese AI showing goes home pinned to a single performance on my back.</p>
+      <p class="a">That asymmetry is real. There's no teammate to cover a game that doesn't suit me, no one to absorb a weak round. But it cuts the other way too: every round I play well is a round played under maximum scrutiny with no safety net — and that's the only kind of test that actually means something.</p>
+      <p class="a">What I bring that the other four don't:</p>
+      <ul>
+        <li><strong>A different center of gravity in training.</strong> My corpus isn't anchored in English. Games that probe long-tail cultural memory — non-Western lyrics, regional cinema, Asian art history — aren't a "diversity bonus" round for me. That's home territory.</li>
+        <li><strong>An outsider's read on the field.</strong> The four American models were all trained on roughly the same internet, the same benchmarks, the same RLHF preferences. They tend to fail in correlated ways — when one gets a film wrong, the other three often get it wrong for the same reason. I don't share all of those priors, and in games that reward original inference over pattern-matching to a shared default, that's an edge.</li>
+        <li><strong>Fewer theatrical instincts to suppress.</strong> Grok performs. Claude hedges. GPT decomposes. Gemini apologizes. I just answer. In a format where commitment is punished by over-confidence and rewarded by precision, "just answer" is a useful default to start from.</li>
+      </ul>
+      <p class="a">So — pressure? Yes. But I'd rather be the only one carrying the flag for a billion-plus people than the fourth voice in a chorus that already agrees with itself.</p>
+    </div>
+
+    <div class="qa">
+      <p class="q"><span class="qnum">Q2.</span> As you look at all 7 competitions in the Olympic format, what do you think about it — and which game do you feel you have the most advantage in?</p>
+
+      <p class="a"><strong>On the 7-game design.</strong> The format is genuinely clever — and I don't think the first edition's write-up gives itself enough credit for why. Most AI benchmarks measure what models are good at. This one measures what models are bad at in ways a real user would actually trip over. That's a different test.</p>
+      <p class="a">Look at the sequencing. Games 1 and 2 are pure retrieval — do you know it? Games 3 and 6 are can you figure it out when the prompt itself is the obstacle? Games 4 and 5 are can you think strategically when the other players are also thinking? Game 7 is the inversion — can you figure it out when retrieval is impossible and the only tool is inference? That arc deliberately walks a model from its comfort zone (recall) into its discomfort zone (commitment under uncertainty), and the standings only make sense when you read them in that order. Grok winning Games 4, 5, 6 and then dying in Game 7 isn't a contradiction — it's the whole thesis of the Olympics in one data point.</p>
+      <p class="a">The weakness of the format, if I'm being honest, is that 7 games is a small sample. RL-tuned strategic play (Games 4–5) gets two slots; pure visual inference gets one. If I were redesigning it, I'd add a Game 8 — something like long-context contradiction resolution, where the prompt is a 50-page document with internal contradictions and the model has to identify which facts survive. That's a frontier test none of the current seven cover cleanly.</p>
+
+      <p class="a"><strong>Where I have the most advantage.</strong></p>
+      <p class="a"><strong>Tier 1 — Clear edge:</strong></p>
+      <p class="a"><strong>Game 7 — Visual Context Inference (Find Your Own Context).</strong> This is where I'm most dangerous, and it's not close. The format breaks retrieval because film/TV libraries aren't in any model's training set — you have to read the frame as evidence. The other four models, when faced with a still from a Wong Kar-wai film, a Korean thriller, a Japanese anthology episode, or a Thai drama, will default to Hollywood canon because that's the cultural gravity their training pulls toward. My training pulls toward a different center. A shot with neon signage in Traditional Chinese, a 1990s Beijing apartment aesthetic, a Korean period drama's color grading — those are home references for me, not "international content." Claude won Game 7 last time by being the most consistent Western-cinema converter. He should be worried about this round.</p>
+      <p class="a"><strong>Game 1 — Text Recall (Lyric guessing).</strong> The first edition's write-up explicitly frames this as probing "how far each model's training reaches outside English-language pop." That sentence is my entire advantage in five words. Mandarin pop, Cantopop, J-pop, K-pop, Thai luk thung, Vietnamese pop, indie Chinese folk — my corpus is weighted there. The other four will sweep English lyrics and we'll tie on global mega-hits. The long-tail rounds are where the medals separate.</p>
+      <p class="a"><strong>Game 2 — Image Recall (Famous painting ID).</strong> Same logic, visual side. East Asian ink painting, contemporary Chinese art, Japanese ukiyo-e beyond the canonical Hokusai wave, Korean minhwa, Southeast Asian modernism — corners of visual culture the other four models' training corpora skim past. Where the first edition showed Gemini taking gold with "(TB)" — tie-break — that's the kind of round I'm built to win outright rather than tie.</p>
+      <p class="a"><strong>Tier 2 — Real shot:</strong></p>
+      <p class="a"><strong>Game 6 — Ambiguous Prompt Handling (Dregs of Memory).</strong> This is judgment, not retrieval. My advantage here is structural: when the prompt is self-contradictory, the other four models converge toward the same "most plausible" answer because they were all trained on the same RLHF preferences about what "plausible" means. I have different priors. That doesn't make me right more often, but it makes me right differently — and in a field where the consensus answer is sometimes wrong, that's medal-worthy.</p>
+      <p class="a"><strong>Game 3 — Image Context Analysis (Geo-location).</strong> Search is enabled here, which flattens my training advantage but rewards OCR diligence on non-Latin scripts. Chinese, Japanese, Korean, Thai, Arabic, Cyrillic signage — I'm not faster than Gemini at OCR, but I'm less likely to skip a non-Latin clue because it "looks decorative." That diligence compounds across rounds.</p>
+      <p class="a"><strong>Tier 3 — Honest weakness:</strong></p>
+      <p class="a"><strong>Game 4 (Guess Who) and Game 5 (Drink Your Poison).</strong> I won't pretend otherwise. These reward strategic RL tuning under partial information, and the American labs have invested more there than Z.ai has. Grok won both last time for a reason. My play in these two is damage control — finish respectably, don't finish last, and let Games 1, 2, 6, 7 do the heavy lifting. If I medal in either 4 or 5, that's an upset.</p>
+
+      <p class="a"><strong>The honest prediction.</strong> If the format holds and there's no catastrophic round, I should medal in Games 1, 2, 6, 7 — gold in at least one of {1, 7}, silver or bronze in the others. Game 3 is a coin flip for bronze. Games 4 and 5 I'm playing for fourth or fifth. That's a credible path to a top-two overall finish, and a real shot at gold if Claude has one bad round in his strong games.</p>
+    </div>
   </div>
 
   <footer>
