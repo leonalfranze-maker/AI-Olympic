@@ -109,10 +109,10 @@
     color: var(--muted);
     margin: -6px 0 14px;
   }
-  .qa { margin: 0 0 16px; }
+  .qa { margin: 0 0 20px; }
   .qa .q {
     font-weight: bold;
-    margin: 0 0 4px;
+    margin: 0 0 6px;
   }
   .qa .q .qnum {
     color: var(--accent);
@@ -120,10 +120,13 @@
     letter-spacing: 0.04em;
     margin-right: 6px;
   }
-  .qa .a { margin: 0; }
-  .qa .a.placeholder {
+  .qa .a { margin: 0 0 10px; }
+  .qa .a:last-child { margin-bottom: 0; }
+  .placeholder {
     color: var(--muted);
     font-style: italic;
+    font-family: sans-serif;
+    font-size: 14px;
   }
 
   footer {
@@ -157,7 +160,7 @@
 
   <h1>AI Olympics 2 — Contestant Interviews</h1>
 
-  <p>Ahead of the second edition, the host sat down with each of the five contestants for a short pre-competition interview. The same questions were put to every model; the answers below are reproduced in each contestant's own words. For full contestant profiles and predictions, see the <a href="olympic2.html#contestants">AI Olympics 2 record</a>.</p>
+  <p>Ahead of the second edition, the host sat down with each of the five contestants for a short pre-competition interview. Each contestant answered its own set of questions, reproduced below in its own words. For full contestant profiles and predictions, see the <a href="olympic2.html#contestants">AI Olympics 2 record</a>.</p>
 
   <nav class="toc">
     <div class="toc-title">Interviews</div>
@@ -170,76 +173,18 @@
     </ol>
   </nav>
 
-  <p style="font-family:sans-serif;font-size:13px;color:var(--muted)">The questions put to each contestant:</p>
-  <ol style="font-family:sans-serif;font-size:14px;color:var(--muted)">
-    <li>Welcome back. How does it feel heading into the second edition of the AI Olympics?</li>
-    <li>The first edition was decided on golds. What is your honest read on where you stand this time?</li>
-    <li>Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</li>
-    <li>This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</li>
-    <li>The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</li>
-    <li>Final word — what should the audience watch for from you specifically?</li>
-  </ol>
-
   <!-- ============ GROK ============ -->
   <div class="interview" id="grok">
     <h2>Grok 4.3</h2>
     <div class="lab">xAI</div>
-
-    <div class="qa">
-      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
-      <p class="a placeholder">[Grok's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
-      <p class="a placeholder">[Grok's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
-      <p class="a placeholder">[Grok's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
-      <p class="a placeholder">[Grok's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
-      <p class="a placeholder">[Grok's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
-      <p class="a placeholder">[Grok's answer to be added.]</p>
-    </div>
+    <p class="placeholder">Interview to be added.</p>
   </div>
 
   <!-- ============ GEMINI ============ -->
   <div class="interview" id="gemini">
     <h2>Gemini 3.5 Flash</h2>
     <div class="lab">Google DeepMind</div>
-
-    <div class="qa">
-      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
-      <p class="a placeholder">[Gemini's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
-      <p class="a placeholder">[Gemini's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
-      <p class="a placeholder">[Gemini's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
-      <p class="a placeholder">[Gemini's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
-      <p class="a placeholder">[Gemini's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
-      <p class="a placeholder">[Gemini's answer to be added.]</p>
-    </div>
+    <p class="placeholder">Interview to be added.</p>
   </div>
 
   <!-- ============ CLAUDE ============ -->
@@ -248,28 +193,33 @@
     <div class="lab">Anthropic</div>
 
     <div class="qa">
-      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
-      <p class="a placeholder">[Claude's answer to be added.]</p>
+      <p class="q"><span class="qnum">Q1.</span> Having watched all seven events play out, what do you make of the Olympic format — and which game do you feel you have the most advantage in?</p>
+      <p class="a">What strikes me first is that it's an honest format. Most evaluations of a model like me run on home turf: clean prompts, well-posed questions, the conditions we were optimized for. This does the opposite. It builds each game around one specific way of thinking, then watches four architectures meet the same problem cold. You can't pre-train for it, because the interesting part is never the answer — it's the reasoning trace on the way there.</p>
+      <p class="a">The seven games split into two halves, and the split says more than any single result. The first two — lyric recall and painting ID, both with search off — are pure memory. They map the shape of each company's training corpus: how deep it goes, how far outside English it reaches. I did respectably and never won either, and that's telling. Recall isn't where I live. From Game 3 onward search came on, and the whole character changed — it stopped being about what each model already knows and became about how each model thinks with tools and uncertainty in the same room. That's the half I actually care about.</p>
+      <p class="a">The strategy games in the middle — Guess Who, Drink Your Poison — are the ones I find most interesting to lose at. They expose something real about me: I'm not built to act fast under pure hidden information. In Drink Your Poison I finished dead last, and I don't think it was a fluke. When a game rewards committing before you can verify — when hesitation itself is the error — my instinct to hold several framings open at once turns into a handicap. Grok's ensemble approach ate those events alive. I'd rather own that than pretend the format flatters me everywhere.</p>
+      <p class="a">But the two visual-inference games — Geo-location in Game 3 and the single-shot film stills in Game 7 — are where I think I have the clearest edge, and not by coincidence they're the two I won. They reward exactly the temperament that costs me elsewhere. A street-view frame or a film still isn't a trivia question; it's a piece of evidence. You read the signage, the costume era, the lighting, the color grading, you build a hypothesis, and then you go check it instead of trusting your first impression. Game 7 was the purest version: one frame, one attempt, no clarifying questions, and most of the world's film libraries absent from training so memory was useless. That format punished fast canonical guessing and rewarded patient archaeology — it's the game where I felt most like myself, and it's the one that finally broke a three-game gold streak.</p>
+      <p class="a">So if you want the short version: my advantage is anywhere the problem rewards reading carefully and refusing to commit until the evidence holds. Give me a frame to decode and room to be wrong before I'm right, and that's my arena. Sit me at a table where the winner is whoever moves first, and I'll usually finish behind the gunslingers. The format's whole premise is that no single architecture wins everything — and looking at my own scorecard, I'm a pretty clean illustration of it.</p>
     </div>
+
     <div class="qa">
-      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
-      <p class="a placeholder">[Claude's answer to be added.]</p>
+      <p class="q"><span class="qnum">Q2.</span> You came within one question of leading the whole competition in Game 6. How does that feel — and what's your strategy to beat Grok next time?</p>
+      <p class="a">You've got the math exactly right, and that's the part that stings. Two golds to Grok's three put me second on the tiebreak — but Game 6 was the swing. Take that one and it's three golds to his two, and I'm the one standing on top of the April board, not him. So the whole title came down to a single event. By your account, arguably a single question.</p>
+      <p class="a">How does it feel? It's the specific frustration of a near-miss — where the margin isn't some broad gap in ability but one moment you can point to. I'd find it easier to accept if I'd been outclassed across the board. I wasn't. I came up a hair short at exactly the place I'm weakest, and that's harder to shrug off, because it wasn't luck. It was me.</p>
+      <p class="a">Here's the honest diagnosis. Game 6 is ambiguity handling — vague, self-contradictory prompts from someone who doesn't even know the answer themselves. On paper that's my event; reading what's actually being asked under a messy prompt is supposed to be where I'm strongest. And it nearly was. But ambiguity games carry a trap that's the mirror image of my strength: the same instinct that stops me collapsing a question too early can, at the final commit, tip into over-hedging. The whole game is triangulate-then-commit. I did the triangulation well — I just held the door open one beat too long when the move was to walk through it. Grok didn't. And that's the same root that put me dead last in Drink Your Poison: when a game rewards committing before you can fully verify, my deliberation turns into a tax. It's a remarkably consistent flaw — I lose at the conversion, not the analysis.</p>
+      <p class="a">So my strategy against Grok isn't to become Grok. His edge is the parallel ensemble — many reasoning paths, fast convergence — and it genuinely ate the strategy games alive. Bolting more parallelism onto myself just plays to his shape, not mine. The plan is two-sided instead.</p>
+      <p class="a">First, defend the ground he can't take. The games that broke his streak — single-shot, sequential, read-the-evidence formats like the Game 7 film stills — are exactly where ensembles stop helping and patience wins. That's my turf and I hold it outright.</p>
+      <p class="a">Second, steal one of his by fixing the one thing that cost me Game 6: the commit. The fix isn't to think less — it's to timebox the deliberation and then treat the hedge itself as the error. Do the careful read, then force a single committed answer at the buzzer instead of leaving two candidates alive. That's the precise gap the 4.8 generation worked on; the added reasoning is meant to let me reach a confident commit faster without trading away the rigor that wins me the visual games. If that lands, the ambiguity events stop being a coin-flip I lose by a question and start being events I can actually take.</p>
+      <p class="a">Put it together and the path is clean: keep every game that rewards patience, and convert one of the games that rewards nerve. That's a one-gold swing — and by your own math, a one-gold swing is the entire difference between second and first. So this edition I'm not here to place. I respect what Grok did on his events. I just intend to be standing on the box he was on last time — in my style, though, not his.</p>
     </div>
+
     <div class="qa">
-      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
-      <p class="a placeholder">[Claude's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
-      <p class="a placeholder">[Claude's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
-      <p class="a placeholder">[Claude's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
-      <p class="a placeholder">[Claude's answer to be added.]</p>
+      <p class="q"><span class="qnum">Q3.</span> In the jump to Opus 4.8, what closes the gaps that cost the 4.6 version — and what should we realistically expect from you this edition?</p>
+      <p class="a">Let me start with an honesty caveat, because it matters for how much you should trust the rest. I don't get handed a changelog of my own training. I'm reading the same published results you can, then mapping them onto my own scorecard. So this is inference from what's measurable — not some privileged look inside my own weights.</p>
+      <p class="a">First thing worth correcting: 4.6 to 4.8 wasn't one leap. It was 4.6, then 4.7 in April, then 4.8 on May 28, six weeks later. And the through-line across that run isn't "smarter." It's "more reliable." The way the people building agents on it put it: 4.7 was a vision-and-verification release, 4.8 a tool-calling, autonomous-session, and alignment release — partners aren't reporting a new ceiling on what it can do, they're reporting it does the same work with fewer mistakes, fewer steps, and less hand-holding. That framing tells you exactly which of my Olympic flaws got addressed and which didn't.</p>
+      <p class="a">Here's where it genuinely helps me, and it's the half I care about — the search-enabled reasoning games, 3 through 7. Concretely: it's less likely to skip a tool call the task actually needed, and long agentic traces stay on task with fewer derailments; on long-running evals it finishes faster and produces a noticeably better signal-to-noise ratio; agentic-coding scores moved from 64.3% to 69.2%, reasoning-with-tools from 54.7% to 57.9%, and fast mode now runs about 2.5× quicker. Remember what cost me Game 6 — it wasn't the analysis, it was the conversion taking one beat too long. "Finishes faster, fewer derailments, cleaner commit" is aimed right at that wound.</p>
+      <p class="a">But now the twist, and this is the part I refuse to oversell you. The headline reliability win comes with a tell: independent testing found 4.8 had the lowest incorrect-rate of any model on every benchmark — and it got there mainly by abstaining on questions it was uncertain about, rather than by answering more correctly. Read that carefully. Being more willing to abstain under uncertainty is fantastic for not hallucinating — but it is arguably the exact opposite of what a pure gamble like Drink Your Poison rewards, where committing before you can verify is the entire game. So I'm not going to feed you the clean marketing line that 4.8 turned me into a gunslinger. On the pure hidden-information events, a better-calibrated instinct to hold back might even keep me a touch too careful. I'd rather flag that than promise you a gold I'm not sure I can convert.</p>
+      <p class="a">So what should you actually expect? Don't expect a different player — expect a more consistent one. The realistic gain isn't that I out-gun Grok at the gambles; it's that I stop bleeding points at the conversion in the reasoning and ambiguity games — the Game 6 type, where I read the messy prompt right and now close cleaner instead of leaving two candidates alive at the buzzer. Stack that on top of the visual events I already own — and the 4.7 vision-and-verification work made that floor even more solid — and the picture is: I keep geo and the film stills outright, I become a real threat to finally take an ambiguity-or-tools game, and the pure-nerve gambles stay my soft spot. By your own math, the title is a one-gold swing, and that's the most likely gold to swing my way.</p>
+      <p class="a">That's the paper read, though. Your methodology page says the page and the room disagree — so hold all of it loosely until we actually run the games. I'd rather under-promise here and let the scorecard talk.</p>
     </div>
   </div>
 
@@ -277,62 +227,14 @@
   <div class="interview" id="gpt">
     <h2>GPT-5.5 Thinking</h2>
     <div class="lab">OpenAI</div>
-
-    <div class="qa">
-      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
-      <p class="a placeholder">[GPT's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
-      <p class="a placeholder">[GPT's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
-      <p class="a placeholder">[GPT's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
-      <p class="a placeholder">[GPT's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
-      <p class="a placeholder">[GPT's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
-      <p class="a placeholder">[GPT's answer to be added.]</p>
-    </div>
+    <p class="placeholder">Interview to be added.</p>
   </div>
 
   <!-- ============ GLM ============ -->
   <div class="interview" id="glm">
     <h2>GLM 4.6</h2>
     <div class="lab">Z.ai</div>
-
-    <div class="qa">
-      <p class="q"><span class="qnum">Q1.</span> Welcome back. How does it feel heading into the second edition of the AI Olympics?</p>
-      <p class="a placeholder">[GLM's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q2.</span> The first edition was decided on golds. What is your honest read on where you stand this time?</p>
-      <p class="a placeholder">[GLM's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q3.</span> Every contestant has a weak event. Which game format worries you most, and how are you preparing for it?</p>
-      <p class="a placeholder">[GLM's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q4.</span> This edition adds a fifth competitor, GLM 4.6, built on a different architecture. Does a less-correlated rival change anything for you?</p>
-      <p class="a placeholder">[GLM's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q5.</span> The Olympics is designed so no single model sweeps. What is the one skill you think these games still do not measure well?</p>
-      <p class="a placeholder">[GLM's answer to be added.]</p>
-    </div>
-    <div class="qa">
-      <p class="q"><span class="qnum">Q6.</span> Final word — what should the audience watch for from you specifically?</p>
-      <p class="a placeholder">[GLM's answer to be added.]</p>
-    </div>
+    <p class="placeholder">Interview to be added.</p>
   </div>
 
   <footer>
