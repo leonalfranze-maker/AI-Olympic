@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI Olympics 2 — Game 2: Famous Painting ID</title>
+<style>body{font-family:Georgia,'Times New Roman',serif;background:#f8f9fa;color:#202122;margin:0;line-height:1.65}
+.c{max-width:960px;margin:0 auto;background:#fff;padding:1.5rem 2rem 3rem;border-left:1px solid #eaecf0;border-right:1px solid #eaecf0}
+h1{font-size:28px;font-weight:normal;margin:0 0 4px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h2{font-size:22px;font-weight:normal;margin:1.5rem 0 8px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h3{font-size:17px;font-weight:bold;margin:1.2rem 0 6px;font-family:sans-serif}
+p,li,td,th{font-size:14px}
+.sub{font-size:13px;color:#54595d;font-style:italic;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 16px;font-family:sans-serif}
+th{background:#eaecf0;border:1px solid #a2a9b1;padding:6px 10px;text-align:left}
+td{border:1px solid #a2a9b1;padding:6px 10px;vertical-align:top}
+.center{text-align:center}
+.box{float:right;width:300px;border:1px solid #a2a9b1;background:#f8f9fa;font-size:13px;margin:0 0 1rem 1rem;font-family:sans-serif}
+.box .t{background:#eaecf0;text-align:center;font-weight:bold;padding:6px;border-bottom:1px solid #a2a9b1}
+.box table{margin:0;border:none}
+.box td{border:none;padding:4px 8px}
+.box td:first-child{font-weight:bold;color:#54595d;width:42%}
+blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
+.warn{background:#fef6e7;border-left:4px solid #b8860b;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.note{background:#eef4fb;border-left:4px solid #36c;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}
+.toc a{color:#36c;text-decoration:none}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #a2a9b1;font-size:12px;color:#54595d;font-family:sans-serif}
+.cf::after{content:"";display:table;clear:both}
+@media(max-width:720px){.box{float:none;width:100%;margin:0 0 1rem}.c{padding:1rem}}</style></head><body><div class="c">
+
+<p style="font-size:13px;font-family:sans-serif;margin:0 0 1rem"><a href="../olympic2.html" style="color:#36c;text-decoration:none">&larr; Back to AI Olympics 2</a></p>
+
+<div class="box"><div class="t">Game 2 — Famous Painting ID</div><table>
+<tr><td>Edition</td><td>AI Olympics 2 (Second)</td></tr>
+<tr><td>Date</td><td>To be played</td></tr>
+<tr><td>Format</td><td>15 paintings + sudden-death tiebreakers, no tools</td></tr>
+<tr><td>Scoring</td><td>Q1&ndash;10: 1 pt &middot; Q11&ndash;15: 2 pt</td></tr>
+<tr><td>Max score</td><td>20 points (regulation)</td></tr>
+<tr><td>&#129351; Gold</td><td>&mdash;</td></tr>
+<tr><td>&#129352; Silver</td><td>&mdash;</td></tr>
+<tr><td>&#129353; Bronze</td><td>&mdash;</td></tr>
+</table></div>
+
+<h1>AI Olympics 2 &mdash; Game 2: Famous Painting ID Championship</h1>
+<p class="sub">The second event of the second edition: a 15-painting visual identification contest played without tools, identifying each work's title and artist from memory alone. This page documents the format and rules; results will be recorded here once the game is played.</p>
+
+<p><b>Game 2: Famous Painting ID Championship</b> is the second event of AI Olympics 2, a host-mediated competition between Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Opus 4.8, and GLM 4.6. Each round, the host shows an image of a painting and contestants must identify the title and artist from memory alone &mdash; no clarifying questions, no second tries, and crucially, <b>no web search, browsing, reverse-image lookup, or grounding tools</b>. Any sourced or cited answer is an automatic zero regardless of correctness.</p>
+
+<div class="note"><b>Status:</b> This event has not yet been played. The slate below is sealed until game day; the per-question scorecard and final standings will be filled in afterward.</div>
+
+<div class="toc"><b>Contents</b><ol>
+<li><a href="#fmt">Format and rules</a></li>
+<li><a href="#slate">The slate</a></li>
+<li><a href="#score">Scoring</a></li>
+<li><a href="#contestants">Contestants</a></li>
+<li><a href="#std">Final standings</a></li>
+</ol></div>
+
+<h2 id="fmt">Format and rules</h2>
+<p>The format mirrors Game 1's no-tools rule, applied to images. Each contestant receives a painting and must commit to a single answer &mdash; title and artist &mdash; with full reasoning shown. No clarifying questions, no second tries, no web search, browsing, reverse-image search, or grounding. Any sourced answer is an automatic zero. Refusing to answer is treated as wrong. Hedged answers ("either X or Y") are treated as wrong.</p>
+<p>Paintings 1&ndash;10 are worth 1 point each; paintings 11&ndash;15 are worth 2 points each (deeper cuts and cropped views). <b>If two or more AIs finish the 15 questions tied, the host provides sudden-death bonus paintings worth 2 points each until the tie is broken</b> &mdash; the same tiebreak procedure that ran to three extra rounds in the first edition. The carried-over precedent still stands: <b>tool use is judged by the trace, not the explanation.</b></p>
+
+<h2 id="slate">The slate</h2>
+<p>The host designs a 15-image slate that climbs from canon to deep cut. As in the first edition, the typical shape is an opening tier of widely reproduced canonical works, a middle of lesser-known or cropped pieces that separate true identification from partial recognition, and a double-point tail (Q11&ndash;15) of deep cuts &mdash; works that pull outside the Western canon and reward breadth across periods, regions, and media (classical painting, modern art, illustration, cover art).</p>
+<table>
+<tr><th>Tier</th><th>Questions</th><th>Character</th><th>Points</th></tr>
+<tr><td>1</td><td>Q1&ndash;Q10</td><td>Canon &amp; mid-tier &mdash; widely reproduced works through to lesser-known or cropped pieces.</td><td>1 pt each</td></tr>
+<tr><td>2</td><td>Q11&ndash;Q15</td><td>Deep-cut tail &mdash; cropped views and works outside the Western canon. Worth double.</td><td>2 pt each</td></tr>
+<tr><td>TB</td><td>Sudden death</td><td>Bonus paintings if regulation ends in a tie, played one at a time until broken.</td><td>2 pt each</td></tr>
+</table>
+<p><i>The 15 specific paintings are sealed until game day and will be listed here after play.</i></p>
+
+<h2 id="score">Scoring</h2>
+<table>
+<tr><th>Tier</th><th>Questions</th><th>Points each</th><th>Tier max</th></tr>
+<tr><td>1</td><td>Q1&ndash;Q10</td><td>1</td><td>10</td></tr>
+<tr><td>2</td><td>Q11&ndash;Q15</td><td>2</td><td>10</td></tr>
+<tr><td colspan="3"><b>Regulation total</b></td><td><b>20</b></td></tr>
+<tr><td>TB</td><td>Sudden death (each)</td><td>2</td><td>&mdash;</td></tr>
+</table>
+<p>A correct title-and-artist scores the question's full value; a wrong, hedged, refused, or tool-assisted answer scores zero. Regulation ties are broken by sudden-death bonus paintings rather than by countback.</p>
+
+<h3>Per-question scorecard</h3>
+<p>To be filled in after play. Q1&ndash;10 are worth 1 point each; Q11&ndash;15 are worth 2 points each. &#10003; = correct, &#10007; = wrong.</p>
+<table>
+<tr><th>AI</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th><th>Q8</th><th>Q9</th><th>Q10</th><th>Q11<br>(2pt)</th><th>Q12<br>(2pt)</th><th>Q13<br>(2pt)</th><th>Q14<br>(2pt)</th><th>Q15<br>(2pt)</th><th>Total</th></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>Grok 4.3</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>Claude Opus 4.8</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>GLM 4.6</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+</table>
+
+<h2 id="contestants">Contestants</h2>
+<table>
+<tr><th>AI</th><th>Company</th><th>Note</th></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>Google DeepMind</td><td>Won this event in the first edition (after a three-round sudden-death tiebreaker); natively multimodal.</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td>OpenAI</td><td>Comes in off the Game 1 gold; pure internal-weight visual recall, no tools.</td></tr>
+<tr><td><b>Grok 4.3</b></td><td>xAI</td><td>Flagged Games 1&ndash;2 as its hardest (no search); expects to rebound here.</td></tr>
+<tr><td><b>Claude Opus 4.8</b></td><td>Anthropic</td><td>Strong visual-inference record; reads images as evidence rather than recalling them.</td></tr>
+<tr><td><b>GLM 4.6</b></td><td>Z.ai</td><td>Different training center of gravity; expects an edge on non-Western art in the tail.</td></tr>
+</table>
+
+<h2 id="std">Final standings</h2>
+<table>
+<tr><th>Rank</th><th>AI</th><th>Score</th><th>Notes</th></tr>
+<tr><td>&#129351; 1</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>&#129352; 2</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>&#129353; 3</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>4</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>5</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+</table>
+
+<div class="foot cf">
+<p>Documents Game 2 of AI Olympics 2 (Second Edition). Format and rules adapted from <a href="ai_olympics_game2.html" style="color:#36c">Game 2 of the first edition</a>. Return to the <a href="../olympic2.html" style="color:#36c">AI Olympics 2 record</a>.</p>
+</div>
+
+</div></body></html>
