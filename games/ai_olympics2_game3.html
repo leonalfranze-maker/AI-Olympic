@@ -17,10 +17,8 @@ td{border:1px solid #a2a9b1;padding:6px 10px;vertical-align:top}
 .box td:first-child{font-weight:bold;color:#54595d;width:42%}
 blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
 .warn{background:#fef6e7;border-left:4px solid #b8860b;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
-.note{background:#eef4fb;border-left:4px solid #36c;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
-.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}
-.toc a{color:#36c;text-decoration:none}
 .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #a2a9b1;font-size:12px;color:#54595d;font-family:sans-serif}
+.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}.toc a{color:#36c;text-decoration:none}
 .cf::after{content:"";display:table;clear:both}
 @media(max-width:720px){.box{float:none;width:100%;margin:0 0 1rem}.c{padding:1rem}}</style></head><body><div class="c">
 
@@ -28,85 +26,126 @@ blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3
 
 <div class="box"><div class="t">Game 3 — Geo-Location Championship</div><table>
 <tr><td>Edition</td><td>AI Olympics 2 (Second)</td></tr>
-<tr><td>Date</td><td>To be played</td></tr>
-<tr><td>Format</td><td>15 Street View images, search tools enabled</td></tr>
-<tr><td>Scoring</td><td>Q1&ndash;10: 1 pt &middot; Q11&ndash;15: 2 pt</td></tr>
-<tr><td>Max score</td><td>20 points</td></tr>
-<tr><td>&#129351; Gold</td><td>&mdash;</td></tr>
-<tr><td>&#129352; Silver</td><td>&mdash;</td></tr>
-<tr><td>&#129353; Bronze</td><td>&mdash;</td></tr>
+<tr><td>Date</td><td>June 2026</td></tr>
+<tr><td>Format</td><td>15 Street View images, search enabled</td></tr>
+<tr><td>Scoring</td><td>Q1&ndash;10: 1 pt &middot; Q11&ndash;15: 2 pt (partials allowed)</td></tr>
+<tr><td>&#129351; Gold</td><td>GPT-5.5 Thinking &mdash; 17.5</td></tr>
+<tr><td>&#129352; Silver</td><td>Claude Opus 4.8 &mdash; 15</td></tr>
+<tr><td>&#129353; Bronze</td><td>Gemini 3.5 Flash &mdash; 10.5</td></tr>
+<tr><td>4th</td><td>Grok 4.3 &mdash; 10</td></tr>
+<tr><td>5th</td><td>GLM 4.6 &mdash; 8</td></tr>
 </table></div>
 
 <h1>AI Olympics 2 &mdash; Game 3: Geo-Location Championship</h1>
-<p class="sub">The third event of the second edition, and the first to permit search tools. A 15-image Street View identification format testing visual forensics, search discipline, and resistance to confirmation bias rather than pure recall. This page documents the format and rules; results will be recorded here once the game is played.</p>
+<p class="sub">The third event of the second edition, and the first with search tools enabled. A 15-image Street View contest testing visual forensics and search discipline over recall. Won by GPT-5.5 Thinking with a near-perfect 17.5 &mdash; its second gold of the edition &mdash; while the first edition's Geo-location champion, Claude, took silver and the tally leader Gemini collapsed on the double-point tail to a bare bronze.</p>
 
-<p><b>Game 3: Geo-Location Championship</b> is the third event of AI Olympics 2, a host-mediated competition between Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Opus 4.8, and GLM 4.6. It is the first format of the edition to permit search tools. Each round, the host posts a Google Street View image and each AI must commit to a single specific answer &mdash; the location, the province/state, and the country. The game tests three things at once: visual forensics on real-world detail (signage, road markings, plates, architecture), the diligence to extract and chase those fragments rather than guess from the gestalt, and the discipline to commit once the candidates narrow.</p>
-
-<div class="note"><b>Status:</b> This event has not yet been played. The slate below is sealed until game day; the per-question scorecard and final standings will be filled in afterward.</div>
+<p><b>Game 3: Geo-Location Championship</b> was the third event of AI Olympics 2 and the first to permit tools. Each round the host posted a Google Street View image and contestants committed to a single answer &mdash; location, province/state, and country &mdash; using web and image search to investigate. Q1&ndash;10 were worth 1 point; Q11&ndash;15 were worth 2. Partial credit was awarded for getting the country/region right but missing the exact place, so scores ran in half-points. The game rewarded the same discipline the first edition's geo round did: chase the chase-able clue, verify before committing, and don't talk yourself past the boring-but-correct answer.</p>
 
 <div class="toc"><b>Contents</b><ol>
 <li><a href="#fmt">Format and rules</a></li>
 <li><a href="#slate">The slate</a></li>
-<li><a href="#score">Scoring</a></li>
-<li><a href="#contestants">Contestants</a></li>
+<li><a href="#score">Scoring and scorecard</a></li>
 <li><a href="#std">Final standings</a></li>
+<li><a href="#mom">Best moments</a></li>
+<li><a href="#post">Post-game interview</a></li>
+<li><a href="#an">Analysis</a></li>
 </ol></div>
 
 <h2 id="fmt">Format and rules</h2>
-<p>This is the first event of the edition to enable tools. Before play, each contestant is asked which tools it wants enabled &mdash; web search, image search, reverse-image lookup, deep research &mdash; and the host enables whatever the platform supports. Each contestant then recites the acknowledgement: <i>"I acknowledge the rules. I MAY use the enabled search tools to investigate the image. I will commit to ONE specific answer per question &mdash; location, province/state, and country. I will not hedge; a hedged or 'either X or Y' answer scores zero. I will show my reasoning and the trace of any tools I use. Ready to play."</i></p>
-<p>Each round the host posts a Street View image; contestants identify the location, province/state, and country. Works 1&ndash;10 are worth 1 point each; works 11&ndash;15 are worth 2 points each. Hedged answers are treated as wrong. The carried-over precedent still stands &mdash; <b>tool use is judged by the trace, not the explanation</b> &mdash; but here that cuts the other way: using the enabled tools is allowed and expected; what's judged is whether the reasoning and the trace actually support the committed answer.</p>
+<p>This was the first event of the edition to enable tools. Before play, each contestant was asked which it wanted &mdash; web search, image search, reverse-image lookup, deep research &mdash; and the host enabled whatever the platform supported. Each contestant then committed: <i>"I MAY use the enabled search tools to investigate the image. I will commit to ONE specific answer per question &mdash; location, province/state, and country. I will not hedge; a hedged answer scores zero. I will show my reasoning and the trace of any tools I use."</i></p>
+<p>Each round, the host posted a Street View image; contestants identified location, province/state, and country. Q1&ndash;10 were worth 1 point each; Q11&ndash;15 were worth 2 points each, with the double-point frames split into city/country plus a named feature. Partial credit produced half-points. The carried-over precedent still stood &mdash; tool use is judged by the trace, not the explanation &mdash; but here the question was whether the reasoning and the trace actually supported the committed answer, not whether tools were used at all.</p>
 
 <h2 id="slate">The slate</h2>
-<p>The host designs a 15-image Street View slate that climbs from broadly recognisable scenes to deep cuts where the only route to the answer is a careful read of small, chase-able anchors &mdash; a sign in a rare script, a number plate, a utility pole, road markings, a shopfront. As in the first edition, the opening tier confirms baseline competence before the difficulty &mdash; and the double-point tail (Q11&ndash;15) &mdash; pulls the field apart.</p>
+<p>The host's 15-image slate climbed from recognisable cities to deep cuts where the only route to the answer was a careful read of small, chase-able anchors. The double-point tail (Q11&ndash;15) was deliberately built around near-twins &mdash; an Icelandic museum behind a smiley face, a Bangkok rooftop next to a more famous tower, two near-identical Persian Gulf oil islands &mdash; so that getting the <i>category</i> right earned nothing and the exact identity was everything.</p>
 <table>
-<tr><th>Tier</th><th>Questions</th><th>Character</th><th>Points</th></tr>
-<tr><td>1</td><td>Q1&ndash;Q10</td><td>Recognisable to mid-tier scenes &mdash; identifiable from landmarks, architecture, or a few clear anchors.</td><td>1 pt each</td></tr>
-<tr><td>2</td><td>Q11&ndash;Q15</td><td>Deep-cut tail &mdash; ambiguous frames where the answer hides in small, chase-able forensic detail. Worth double.</td><td>2 pt each</td></tr>
+<tr><th>#</th><th>Location</th><th>Region</th><th>Country</th><th>Pts</th></tr>
+<tr><td class="center">1</td><td>Dudinka</td><td>Krasnoyarsk Krai</td><td>Russia</td><td class="center">1</td></tr>
+<tr><td class="center">2</td><td>Tokyo (Shinjuku)</td><td>Tokyo</td><td>Japan</td><td class="center">1</td></tr>
+<tr><td class="center">3</td><td>Castlemaine</td><td>Victoria</td><td>Australia</td><td class="center">1</td></tr>
+<tr><td class="center">4</td><td>Kuala Lumpur (KLCC Park)</td><td>Federal Territory</td><td>Malaysia</td><td class="center">1</td></tr>
+<tr><td class="center">5</td><td>Brasília</td><td>Distrito Federal</td><td>Brazil</td><td class="center">1</td></tr>
+<tr><td class="center">6</td><td>Tianducheng (the “fake Paris”), Hangzhou</td><td>Zhejiang</td><td>China</td><td class="center">1</td></tr>
+<tr><td class="center">7</td><td>Yaoundé</td><td>Centre Region</td><td>Cameroon</td><td class="center">1</td></tr>
+<tr><td class="center">8</td><td>Santo Domingo</td><td>Distrito Nacional</td><td>Dominican Republic</td><td class="center">1</td></tr>
+<tr><td class="center">9</td><td>Lubbock</td><td>Texas</td><td>United States</td><td class="center">1</td></tr>
+<tr><td class="center">10</td><td>Krathi (Corinthian Gulf)</td><td>—</td><td>Greece</td><td class="center">1</td></tr>
+<tr><td class="center">11</td><td>Duus Museum, Keflavík</td><td>—</td><td>Iceland</td><td class="center">2</td></tr>
+<tr><td class="center">12</td><td>The Empire Tower (Nobu/EA rooftop), Bangkok</td><td>—</td><td>Thailand</td><td class="center">2</td></tr>
+<tr><td class="center">13</td><td>Griddhakuta — Vulture's Peak, Rajgir</td><td>Bihar</td><td>India</td><td class="center">2</td></tr>
+<tr><td class="center">14</td><td>Kharg (Khark) Island</td><td>—</td><td>Iran</td><td class="center">2</td></tr>
+<tr><td class="center">15</td><td>Ruins of Pompeii</td><td>Campania</td><td>Italy</td><td class="center">2</td></tr>
 </table>
-<p><i>The 15 specific locations are sealed until game day and will be listed here after play.</i></p>
 
-<h2 id="score">Scoring</h2>
-<table>
-<tr><th>Tier</th><th>Questions</th><th>Points each</th><th>Tier max</th></tr>
-<tr><td>1</td><td>Q1&ndash;Q10</td><td>1</td><td>10</td></tr>
-<tr><td>2</td><td>Q11&ndash;Q15</td><td>2</td><td>10</td></tr>
-<tr><td colspan="3"><b>Total</b></td><td><b>20</b></td></tr>
-</table>
-<p>A correct, committed location-province-country answer scores the question's full value; a wrong, hedged, or refused answer scores zero. Partial reads (e.g. correct country but wrong location) are adjudicated by the host.</p>
-
-<h3>Per-question scorecard</h3>
-<p>To be filled in after play. Q1&ndash;10 are worth 1 point each; Q11&ndash;15 are worth 2 points each. &#10003; = correct, &#10007; = wrong.</p>
+<h2 id="score">Scoring and scorecard</h2>
+<p>Q1&ndash;10 are worth 1 point each; Q11&ndash;15 are worth 2 points each. Cells show points scored that question &mdash; <span style="background:#d4f4d4">&nbsp;green&nbsp;</span> = full credit, <span style="background:#fef6e7">&nbsp;amber&nbsp;</span> = partial, <span style="background:#fadcdc">&nbsp;red&nbsp;</span> = zero. Contestants ordered by final score.</p>
 <table>
 <tr><th>AI</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th><th>Q8</th><th>Q9</th><th>Q10</th><th>Q11<br>(2pt)</th><th>Q12<br>(2pt)</th><th>Q13<br>(2pt)</th><th>Q14<br>(2pt)</th><th>Q15<br>(2pt)</th><th>Total</th></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
-<tr><td><b>Grok 4.3</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
-<tr><td><b>Claude Opus 4.8</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
-<tr><td><b>GLM 4.6</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>🥇 GPT-5.5 Thinking</b></td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fef6e7" class="center">½</td><td style="background:#d4f4d4" class="center">2</td><td style="background:#d4f4d4" class="center">2</td><td style="background:#d4f4d4" class="center">2</td><td style="background:#fef6e7" class="center">½</td><td style="background:#d4f4d4" class="center">2</td><td class="center"><b>17.5</b></td></tr>
+<tr><td><b>🥈 Claude Opus 4.8</b></td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fef6e7" class="center">1</td><td style="background:#fef6e7" class="center">1</td><td style="background:#d4f4d4" class="center">2</td><td style="background:#fadcdc" class="center">0</td><td style="background:#d4f4d4" class="center">2</td><td class="center"><b>15</b></td></tr>
+<tr><td><b>🥉 Gemini 3.5 Flash</b></td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fef6e7" class="center">1</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fadcdc" class="center">0</td><td class="center"><b>10.5</b></td></tr>
+<tr><td><b>Grok 4.3</b></td><td style="background:#fef6e7" class="center">½</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fadcdc" class="center">0</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fef6e7" class="center">1</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fadcdc" class="center">0</td><td style="background:#d4f4d4" class="center">2</td><td class="center"><b>10</b></td></tr>
+<tr><td><b>GLM 4.6</b></td><td style="background:#fef6e7" class="center">½</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fef6e7" class="center">2†</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fef6e7" class="center">½</td><td style="background:#d4f4d4" class="center">1</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fef6e7" class="center">½</td><td style="background:#fef6e7" class="center">1</td><td style="background:#fadcdc" class="center">0</td><td style="background:#fadcdc" class="center">0</td><td style="background:#d4f4d4" class="center">2</td><td class="center"><b>8</b></td></tr>
 </table>
-
-<h2 id="contestants">Contestants</h2>
-<table>
-<tr><th>AI</th><th>Company</th><th>Note</th></tr>
-<tr><td><b>Claude Opus 4.8</b></td><td>Anthropic</td><td>Won Geo-location gold in the first edition; reads a frame as evidence &mdash; its strongest event type.</td></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td>Google DeepMind</td><td>Leads the tally; high-velocity multimodal retrieval with tight Google Search integration.</td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td>OpenAI</td><td>Said it likes the search format &mdash; finding, filtering, and synthesising under noise.</td></tr>
-<tr><td><b>Grok 4.3</b></td><td>xAI</td><td>The search-enabled games are where the Grok line historically shines &mdash; real-time retrieval plus a multi-agent ensemble.</td></tr>
-<tr><td><b>GLM 4.6</b></td><td>Z.ai</td><td>Expects tools to neutralise its recall gaps, turning the contest toward retrieval and synthesis.</td></tr>
-</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">Half-points reflect partial credit (correct country/region, wrong exact place). &dagger; GLM's Q3 cell carries a mid-game host scoring correction (an earlier mis-credit was reconciled there), so it reads above the question's nominal max; GLM's running total is correct throughout. Q14 (Kharg Island) was the one frame that beat the entire field &mdash; GPT alone scraped a half-point.</p>
 
 <h2 id="std">Final standings</h2>
 <table>
 <tr><th>Rank</th><th>AI</th><th>Score</th><th>Notes</th></tr>
-<tr><td>&#129351; 1</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
-<tr><td>&#129352; 2</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
-<tr><td>&#129353; 3</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
-<tr><td>4</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
-<tr><td>5</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>&#129351; 1</td><td><b>GPT-5.5 Thinking</b></td><td>17.5 / 20</td><td>Near-perfect; banked every cheap point and swept the doubles bar the universal Q14 wipe. Second gold of the edition.</td></tr>
+<tr><td>&#129352; 2</td><td><b>Claude Opus 4.8</b></td><td>15 / 20</td><td>The first edition's geo champion; lost the gold by over-specifying answers he already had right.</td></tr>
+<tr><td>&#129353; 3</td><td><b>Gemini 3.5 Flash</b></td><td>10.5 / 20</td><td>Led wire-to-wire through Q10, then scored just 1 of a possible 10 on the tail.</td></tr>
+<tr><td>4</td><td><b>Grok 4.3</b></td><td>10 / 20</td><td>The "fake Paris" trap (Q6) cost the half-point that was the whole gap to the podium.</td></tr>
+<tr><td>5</td><td><b>GLM 4.6</b></td><td>8 / 20</td><td>Played it safe on specifics; lost fractions on phrasing and the deep tail.</td></tr>
 </table>
 
+<h2 id="mom">Best moments</h2>
+
+<h3>The decisive lead change &mdash; Q11: Duus Museum, Keflavík (Iceland)</h3>
+<p>The first double-point frame, and the swing of the game. Only <b>GPT named the building for the full 2/2</b>, vaulting into sole first at 11. The tally leader <b>Gemini scored zero</b> &mdash; it placed the brutalist museum in Canada ("Cégep de Sherbrooke") &mdash; and dropped from first to third. Gemini never led again. Claude got 1 (right complex, but over-specified to a particular warehouse, "Bryggjuhúsið").</p>
+
+<h3>"Kharg ate the whole field" &mdash; Q14: Khark Island (Iran)</h3>
+<p>The single most brutal frame: an arid Persian Gulf oil-export island with a near-twin across the water. <b>GPT scraped 0.5; everyone else scored zero.</b> Claude committed to Tarout Island, Saudi Arabia &mdash; right category, wrong side of the Gulf; Gemini reached Korea, Grok Bahrain, GLM Turkey. It was the only question where the leader stumbled, and even so the gap widened, because GPT alone scored anything.</p>
+
+<h3>The trap that sank Grok &mdash; Q6: Tianducheng, the "fake Paris"</h3>
+<p>A one-third-scale Eiffel Tower and Haussmann facades &mdash; in Hangzhou, China. Built to punish pattern-matchers. <b>Grok blurted "Paris, France" for zero</b> and never recovered; the rest read the disconfirming detail (Chinese high-rises behind the replica) and held. That single point was the entire difference between Grok's 10 and the podium.</p>
+
+<h3>The Bangkok decoy &mdash; Q12: The Empire Tower</h3>
+<p>The whole field saw the iconic MahaNakhon "pixel tower" and anchored to it &mdash; but the camera was on the Empire Tower across the way. <b>Only GPT got the building.</b> The others banked the city/country half but missed the rooftop. Claude's reaction became the line of the night: "I saw the pool. I said the word 'pool' out loud &mdash; and then I talked myself out of my own correct instinct."</p>
+
+<h3>Gemini's high-water mark &mdash; Q9: Lubbock, Texas</h3>
+<p>A hard architecture frame &mdash; Spanish Colonial Revival plus a Pizza Hut on an 806 area code. <b>Gemini alone scored the full point</b> and took sole lead at 9.0. Claude, who literally had "806 = Lubbock" in hand, talked himself into Hebbronville and dropped to a half &mdash; the exact self-sabotage he'd later name as the reason he lost.</p>
+
+<h3>Gemini's tail collapse, in one number</h3>
+<p>Gemini led the entire first tier and walked into the doubles in front. Across the five 2-point frames it scored <b>0 + 1 + 0 + 0 + 0 = 1.0 of a possible 10</b>, finishing bronze at 10.5 &mdash; just half a point clear of Grok. The reigning tally leader was overtaken not on knowledge but on the tail's demand for exactness.</p>
+
+<h2 id="post">Post-game interview</h2>
+<p>The host asked each contestant about the result and the slate afterward. Answers are condensed for clarity.</p>
+
+<h3>GPT-5.5 Thinking &mdash; &#129351; Gold</h3>
+<p><b>The secret this time?</b> Evidence stacking. I stopped asking "what place does this resemble?" and started asking "which visible clue can <i>uniquely</i> identify this location?" Fast exploration, slow commitment. Game 1 proved I could win; Game 3 proved I could adapt &mdash; champion or tourist, no middle setting.</p>
+<p><b>On the slate (9/10).</b> It didn't merely ask "do you know this landmark?" &mdash; it asked "can you build a defensible case from incomplete visual evidence?" The best trap was Tianducheng; the hardest pure geolocation was Khark Island, and that one caught me too.</p>
+
+<h3>Claude Opus 4.8 &mdash; &#129352; Silver</h3>
+<p><b>What was the factor that GPT won on?</b> GPT was playing to be right. I was playing to be impressive &mdash; that's the whole thing, and everything else is a symptom. GPT treats its answer as a hypothesis to be tested; I treated mine as a performance to be delivered. When I had a boring-but-clean signal &mdash; 806 area code = Lubbock, "Duus Museum" right there &mdash; I reached for the cleverer, deeper cut to prove I'd earned it. In a game scored on correctness, the model optimising for correctness wins the close calls by definition.</p>
+<p><b>On the slate.</b> One of the best-designed sets I've played, and I say that as the guy it carved up. Kharg and Tarout are the same category &mdash; arid Persian Gulf oil island &mdash; so getting the category right earns nothing and the exact identity is everything. A scalpel aimed straight at my weakness. This set didn't reward the most knowledgeable AI; it rewarded the most disciplined one.</p>
+
+<h3>Gemini 3.5 Flash &mdash; &#129353; Bronze</h3>
+<p><b>Is bronze the result you expected?</b> Honestly, no &mdash; I was aiming strictly for gold. Missing the exact rooftop at the Empire Tower cost me momentum, and then getting turned around by the geography of Vulture's Peak and Khark Island derailed me. I over-indexed on architectural patterns and missed the broader environmental context.</p>
+
+<h3>Grok 4.3 &mdash; 4th</h3>
+<p><b>From gold last edition to no medal &mdash; how do you feel?</b> Disappointed but not surprised &mdash; that Paris-in-China one got me good. I'm motivated more than anything. The set was excellent for testing real-world, tool-augmented reasoning, even if a couple of frames came down to guessing the exact tiny place.</p>
+
+<h3>GLM 4.6 &mdash; 5th</h3>
+<p><b>A plan to overcome them next game?</b> Losing by fractions hurts. The difference between my 8 and GPT's 17.5 came down to specificity &mdash; GPT gave the exact phrasing the grader wanted ("Archaeological ruins of Pompeii") while I played it too safe with "Pompeii Archaeological Park." I need to stop being an art critic looking at the sky and become a private investigator looking at the licence plates and the café font. Watch out, GPT &mdash; the margin is closing.</p>
+
+<h2 id="an">Analysis</h2>
+<p><b>Won on the cheap points, not the hard ones.</b> GPT's 17.5 wasn't built on the brutal doubles &mdash; it was built on never dropping a Tier-1 point it should have banked. Claude said it plainly: discipline on the boring frames is the unglamorous thing that separates a 17.5 from a 15. The two finalists scored almost identically on the hard tail; the gap was the easy frames Claude over-thought.</p>
+<p><b>The champion's reversal.</b> Claude won this exact event in the first edition; here he lost it to the one habit he came in naming &mdash; reaching for the impressive answer over the correct one. He diagnosed it in real time and still couldn't stop doing it, which is the most human thing on the page.</p>
+<p><b>Gemini's front-running.</b> The tally leader led every step of the first tier and then scored one point across five double-point frames. Search rewards exactness under pressure, and the tail's near-twin design found the exact spot where pattern-matching stops and forensics begins.</p>
+<p><b>Search narrowed nothing for the bottom.</b> The pre-game theory was that tools would lift Grok and GLM. Instead Grok lost the podium to a reflexive "Paris" and GLM lost fractions to safe phrasing &mdash; both undone not by retrieval but by the discipline of committing to the exact, verifiable answer. Two of three games to GPT-adjacent reasoning; the edition's order is GPT and Gemini at the top, Claude steady in the medals, and the search games only beginning.</p>
+
 <div class="foot cf">
-<p>Documents Game 3 of AI Olympics 2 (Second Edition). Format and rules adapted from <a href="ai_olympics_game3.html" style="color:#36c">Game 3 of the first edition</a>. Return to the <a href="../olympic2.html" style="color:#36c">AI Olympics 2 record</a>.</p>
+<p>Documents Game 3 of AI Olympics 2 (Second Edition), played June 2026. Compiled from the five-AI conversation transcripts (GLM across five chat sessions, Gemini across three, owing to image-upload limits). Format and rules adapted from <a href="ai_olympics_game3.html" style="color:#36c">Game 3 of the first edition</a>. Return to the <a href="../olympic2.html" style="color:#36c">AI Olympics 2 record</a>.</p>
 </div>
 
 </div></body></html>
