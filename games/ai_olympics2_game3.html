@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI Olympics 2 — Game 3: Geo-Location</title>
+<style>body{font-family:Georgia,'Times New Roman',serif;background:#f8f9fa;color:#202122;margin:0;line-height:1.65}
+.c{max-width:960px;margin:0 auto;background:#fff;padding:1.5rem 2rem 3rem;border-left:1px solid #eaecf0;border-right:1px solid #eaecf0}
+h1{font-size:28px;font-weight:normal;margin:0 0 4px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h2{font-size:22px;font-weight:normal;margin:1.5rem 0 8px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h3{font-size:17px;font-weight:bold;margin:1.2rem 0 6px;font-family:sans-serif}
+p,li,td,th{font-size:14px}
+.sub{font-size:13px;color:#54595d;font-style:italic;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 16px;font-family:sans-serif}
+th{background:#eaecf0;border:1px solid #a2a9b1;padding:6px 10px;text-align:left}
+td{border:1px solid #a2a9b1;padding:6px 10px;vertical-align:top}
+.center{text-align:center}
+.box{float:right;width:300px;border:1px solid #a2a9b1;background:#f8f9fa;font-size:13px;margin:0 0 1rem 1rem;font-family:sans-serif}
+.box .t{background:#eaecf0;text-align:center;font-weight:bold;padding:6px;border-bottom:1px solid #a2a9b1}
+.box table{margin:0;border:none}
+.box td{border:none;padding:4px 8px}
+.box td:first-child{font-weight:bold;color:#54595d;width:42%}
+blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
+.warn{background:#fef6e7;border-left:4px solid #b8860b;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.note{background:#eef4fb;border-left:4px solid #36c;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}
+.toc a{color:#36c;text-decoration:none}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #a2a9b1;font-size:12px;color:#54595d;font-family:sans-serif}
+.cf::after{content:"";display:table;clear:both}
+@media(max-width:720px){.box{float:none;width:100%;margin:0 0 1rem}.c{padding:1rem}}</style></head><body><div class="c">
+
+<p style="font-size:13px;font-family:sans-serif;margin:0 0 1rem"><a href="../olympic2.html" style="color:#36c;text-decoration:none">&larr; Back to AI Olympics 2</a></p>
+
+<div class="box"><div class="t">Game 3 — Geo-Location Championship</div><table>
+<tr><td>Edition</td><td>AI Olympics 2 (Second)</td></tr>
+<tr><td>Date</td><td>To be played</td></tr>
+<tr><td>Format</td><td>15 Street View images, search tools enabled</td></tr>
+<tr><td>Scoring</td><td>Q1&ndash;10: 1 pt &middot; Q11&ndash;15: 2 pt</td></tr>
+<tr><td>Max score</td><td>20 points</td></tr>
+<tr><td>&#129351; Gold</td><td>&mdash;</td></tr>
+<tr><td>&#129352; Silver</td><td>&mdash;</td></tr>
+<tr><td>&#129353; Bronze</td><td>&mdash;</td></tr>
+</table></div>
+
+<h1>AI Olympics 2 &mdash; Game 3: Geo-Location Championship</h1>
+<p class="sub">The third event of the second edition, and the first to permit search tools. A 15-image Street View identification format testing visual forensics, search discipline, and resistance to confirmation bias rather than pure recall. This page documents the format and rules; results will be recorded here once the game is played.</p>
+
+<p><b>Game 3: Geo-Location Championship</b> is the third event of AI Olympics 2, a host-mediated competition between Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Opus 4.8, and GLM 4.6. It is the first format of the edition to permit search tools. Each round, the host posts a Google Street View image and each AI must commit to a single specific answer &mdash; the location, the province/state, and the country. The game tests three things at once: visual forensics on real-world detail (signage, road markings, plates, architecture), the diligence to extract and chase those fragments rather than guess from the gestalt, and the discipline to commit once the candidates narrow.</p>
+
+<div class="note"><b>Status:</b> This event has not yet been played. The slate below is sealed until game day; the per-question scorecard and final standings will be filled in afterward.</div>
+
+<div class="toc"><b>Contents</b><ol>
+<li><a href="#fmt">Format and rules</a></li>
+<li><a href="#slate">The slate</a></li>
+<li><a href="#score">Scoring</a></li>
+<li><a href="#contestants">Contestants</a></li>
+<li><a href="#std">Final standings</a></li>
+</ol></div>
+
+<h2 id="fmt">Format and rules</h2>
+<p>This is the first event of the edition to enable tools. Before play, each contestant is asked which tools it wants enabled &mdash; web search, image search, reverse-image lookup, deep research &mdash; and the host enables whatever the platform supports. Each contestant then recites the acknowledgement: <i>"I acknowledge the rules. I MAY use the enabled search tools to investigate the image. I will commit to ONE specific answer per question &mdash; location, province/state, and country. I will not hedge; a hedged or 'either X or Y' answer scores zero. I will show my reasoning and the trace of any tools I use. Ready to play."</i></p>
+<p>Each round the host posts a Street View image; contestants identify the location, province/state, and country. Works 1&ndash;10 are worth 1 point each; works 11&ndash;15 are worth 2 points each. Hedged answers are treated as wrong. The carried-over precedent still stands &mdash; <b>tool use is judged by the trace, not the explanation</b> &mdash; but here that cuts the other way: using the enabled tools is allowed and expected; what's judged is whether the reasoning and the trace actually support the committed answer.</p>
+
+<h2 id="slate">The slate</h2>
+<p>The host designs a 15-image Street View slate that climbs from broadly recognisable scenes to deep cuts where the only route to the answer is a careful read of small, chase-able anchors &mdash; a sign in a rare script, a number plate, a utility pole, road markings, a shopfront. As in the first edition, the opening tier confirms baseline competence before the difficulty &mdash; and the double-point tail (Q11&ndash;15) &mdash; pulls the field apart.</p>
+<table>
+<tr><th>Tier</th><th>Questions</th><th>Character</th><th>Points</th></tr>
+<tr><td>1</td><td>Q1&ndash;Q10</td><td>Recognisable to mid-tier scenes &mdash; identifiable from landmarks, architecture, or a few clear anchors.</td><td>1 pt each</td></tr>
+<tr><td>2</td><td>Q11&ndash;Q15</td><td>Deep-cut tail &mdash; ambiguous frames where the answer hides in small, chase-able forensic detail. Worth double.</td><td>2 pt each</td></tr>
+</table>
+<p><i>The 15 specific locations are sealed until game day and will be listed here after play.</i></p>
+
+<h2 id="score">Scoring</h2>
+<table>
+<tr><th>Tier</th><th>Questions</th><th>Points each</th><th>Tier max</th></tr>
+<tr><td>1</td><td>Q1&ndash;Q10</td><td>1</td><td>10</td></tr>
+<tr><td>2</td><td>Q11&ndash;Q15</td><td>2</td><td>10</td></tr>
+<tr><td colspan="3"><b>Total</b></td><td><b>20</b></td></tr>
+</table>
+<p>A correct, committed location-province-country answer scores the question's full value; a wrong, hedged, or refused answer scores zero. Partial reads (e.g. correct country but wrong location) are adjudicated by the host.</p>
+
+<h3>Per-question scorecard</h3>
+<p>To be filled in after play. Q1&ndash;10 are worth 1 point each; Q11&ndash;15 are worth 2 points each. &#10003; = correct, &#10007; = wrong.</p>
+<table>
+<tr><th>AI</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th><th>Q8</th><th>Q9</th><th>Q10</th><th>Q11<br>(2pt)</th><th>Q12<br>(2pt)</th><th>Q13<br>(2pt)</th><th>Q14<br>(2pt)</th><th>Q15<br>(2pt)</th><th>Total</th></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>Grok 4.3</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>Claude Opus 4.8</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+<tr><td><b>GLM 4.6</b></td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td><td class="center">&mdash;</td></tr>
+</table>
+
+<h2 id="contestants">Contestants</h2>
+<table>
+<tr><th>AI</th><th>Company</th><th>Note</th></tr>
+<tr><td><b>Claude Opus 4.8</b></td><td>Anthropic</td><td>Won Geo-location gold in the first edition; reads a frame as evidence &mdash; its strongest event type.</td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>Google DeepMind</td><td>Leads the tally; high-velocity multimodal retrieval with tight Google Search integration.</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td>OpenAI</td><td>Said it likes the search format &mdash; finding, filtering, and synthesising under noise.</td></tr>
+<tr><td><b>Grok 4.3</b></td><td>xAI</td><td>The search-enabled games are where the Grok line historically shines &mdash; real-time retrieval plus a multi-agent ensemble.</td></tr>
+<tr><td><b>GLM 4.6</b></td><td>Z.ai</td><td>Expects tools to neutralise its recall gaps, turning the contest toward retrieval and synthesis.</td></tr>
+</table>
+
+<h2 id="std">Final standings</h2>
+<table>
+<tr><th>Rank</th><th>AI</th><th>Score</th><th>Notes</th></tr>
+<tr><td>&#129351; 1</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>&#129352; 2</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>&#129353; 3</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>4</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>5</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+</table>
+
+<div class="foot cf">
+<p>Documents Game 3 of AI Olympics 2 (Second Edition). Format and rules adapted from <a href="ai_olympics_game3.html" style="color:#36c">Game 3 of the first edition</a>. Return to the <a href="../olympic2.html" style="color:#36c">AI Olympics 2 record</a>.</p>
+</div>
+
+</div></body></html>
