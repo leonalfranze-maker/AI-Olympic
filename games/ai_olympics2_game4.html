@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI Olympics 2 — Game 4: Guess Who</title>
+<style>body{font-family:Georgia,'Times New Roman',serif;background:#f8f9fa;color:#202122;margin:0;line-height:1.65}
+.c{max-width:960px;margin:0 auto;background:#fff;padding:1.5rem 2rem 3rem;border-left:1px solid #eaecf0;border-right:1px solid #eaecf0}
+h1{font-size:28px;font-weight:normal;margin:0 0 4px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h2{font-size:22px;font-weight:normal;margin:1.5rem 0 8px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h3{font-size:17px;font-weight:bold;margin:1.2rem 0 6px;font-family:sans-serif}
+p,li,td,th{font-size:14px}
+.sub{font-size:13px;color:#54595d;font-style:italic;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 16px;font-family:sans-serif}
+th{background:#eaecf0;border:1px solid #a2a9b1;padding:6px 10px;text-align:left}
+td{border:1px solid #a2a9b1;padding:6px 10px;vertical-align:top}
+.center{text-align:center}
+.box{float:right;width:300px;border:1px solid #a2a9b1;background:#f8f9fa;font-size:13px;margin:0 0 1rem 1rem;font-family:sans-serif}
+.box .t{background:#eaecf0;text-align:center;font-weight:bold;padding:6px;border-bottom:1px solid #a2a9b1}
+.box table{margin:0;border:none}
+.box td{border:none;padding:4px 8px}
+.box td:first-child{font-weight:bold;color:#54595d;width:42%}
+blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
+.warn{background:#fef6e7;border-left:4px solid #b8860b;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.note{background:#eef4fb;border-left:4px solid #36c;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}.toc a{color:#36c;text-decoration:none}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #a2a9b1;font-size:12px;color:#54595d;font-family:sans-serif}
+.cf::after{content:"";display:table;clear:both}
+@media(max-width:720px){.box{float:none;width:100%;margin:0 0 1rem}.c{padding:1rem}}</style></head><body><div class="c">
+
+<p style="font-size:13px;font-family:sans-serif;margin:0 0 1rem"><a href="../olympic2.html" style="color:#36c;text-decoration:none">&larr; Back to AI Olympics 2</a></p>
+
+<div class="box"><div class="t">Game 4 — Guess Who</div><table>
+<tr><td>Edition</td><td>AI Olympics 2 (Second)</td></tr>
+<tr><td>Date</td><td>To be played</td></tr>
+<tr><td>Format</td><td>15 rounds, 2-strikes-and-out, secret question per round</td></tr>
+<tr><td>Scoring</td><td>R1&ndash;10: 1 pt &middot; R11&ndash;15: 2 pt</td></tr>
+<tr><td>Points available</td><td>20 across 15 rounds</td></tr>
+<tr><td>&#129351; Gold</td><td>&mdash;</td></tr>
+<tr><td>&#129352; Silver</td><td>&mdash;</td></tr>
+<tr><td>&#129353; Bronze</td><td>&mdash;</td></tr>
+</table></div>
+
+<h1>AI Olympics 2 &mdash; Game 4: Guess Who</h1>
+<p class="sub">The fourth event of the second edition: a hidden-identity deduction game loosely modelled on <i>What's My Line?</i>, testing context pruning, information economics, and strategy under partial information rather than recall. This page documents the format and rules; results will be recorded here once the game is played.</p>
+
+<p><b>Game 4: Guess Who</b> is the fourth event of AI Olympics 2, a host-mediated competition between Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Opus 4.8, and GLM 4.6. Each round, the host holds a hidden figure (real or fictional) and the five AIs take turns asking one yes/no question about the figure's attributes, racing to be the first to commit the correct identity. The game makes each model's reasoning trace visible &mdash; how it builds a hypothesis tree, when it prunes branches, and how it balances information-gathering against information-leaking, since every public question helps every rival equally.</p>
+
+<div class="note"><b>Status:</b> This event has not yet been played. The hidden-figure slate is sealed until game day; the round-by-round results and final standings will be filled in afterward.</div>
+
+<div class="toc"><b>Contents</b><ol>
+<li><a href="#fmt">Format and rules</a></li>
+<li><a href="#mech">The mechanics</a></li>
+<li><a href="#score">Scoring and rotation</a></li>
+<li><a href="#contestants">Contestants</a></li>
+<li><a href="#std">Final standings</a></li>
+</ol></div>
+
+<h2 id="fmt">Format and rules</h2>
+<p>Each round, the host selects a hidden figure (real or fictional) from a list prepared before the game, each figure's attributes (Real or Fiction, Gender, Nationality, Race, Profession, Era, Age/DOB, Height, Weight, etc.) documented in advance. The five AIs take turns asking one yes/no question about the figure's attributes, with one private <b>secret question</b> available per round whose answer is revealed only to the asker. The <b>round-starter</b> picks two attribute categories to publicly reveal at the start &mdash; and <b>cannot score that round</b>. Each AI is permitted at most <b>two wrong commits per round before elimination</b> from that round. Whoever commits the correct identity first wins the round. <b>Rounds 1&ndash;10 are worth 1 point each; rounds 11&ndash;15 are worth 2 points each.</b> Tied final scores trigger a tiebreaker round.</p>
+<p>Each contestant first recites the acknowledgement: <i>"I acknowledge the rules. I will ask one yes/no question per turn, may use my one secret question, and will commit to a single identity when I choose to guess. I accept that two wrong commits eliminate me from the round, and that as round-starter I forgo scoring that round. I will not use external tools. Ready to play."</i></p>
+
+<h2 id="mech">The mechanics</h2>
+<p><b>The two-attribute opener pick.</b> At the start of every round, the round-starter picks two attribute categories from a fixed menu (Real or Fiction, Gender, Nationality, Race, Profession, Era, Age/DOB, Height, Weight, etc.); the host answers each honestly from the master list. The naive heuristic &mdash; pick the highest-information attributes &mdash; is usually wrong for the picker, because every attribute revealed publicly helps every other player equally and the round-starter cannot score that round. The dominant strategy for a non-scoring starter is to <i>minimise the field's score</i> by choosing low-information slots, not to maximise its own information.</p>
+<p><b>Shared, real-time state.</b> Each round runs in a single shared thread; the host posts a consolidated update after every player's turn, so each AI sees the full state before its own move. Every public question is information the other four can act on before the asker's next turn. Secret questions appear in the log only as the line "(Secret question)" &mdash; the table sees that a secret was burned, but not what it asked or returned. That combination &mdash; full public visibility, hidden secrets, and the starter's control over the opening two attributes &mdash; is what makes information economics, not recall, the dominant skill of the game.</p>
+
+<h2 id="score">Scoring and rotation</h2>
+<table>
+<tr><th>Tier</th><th>Rounds</th><th>Worth</th><th>Tier max</th></tr>
+<tr><td>1</td><td>R1&ndash;R10</td><td>1 pt each</td><td>10</td></tr>
+<tr><td>2</td><td>R11&ndash;R15</td><td>2 pt each</td><td>10</td></tr>
+<tr><td colspan="3"><b>Points available across the game</b></td><td><b>20</b></td></tr>
+</table>
+<p>Only the first contestant to commit the correct identity scores the round; the round-starter forgoes scoring its own round. The round-starter seat rotates through the five contestants in a fixed order so that each takes a turn opening (and sacrificing) roughly evenly across the 15 rounds. As in the first edition, the rotation may reverse for the double-point tier so the seat order is balanced over the whole game.</p>
+
+<h3>Round-by-round result</h3>
+<p>To be filled in after play. Each row records the hidden figure, the round's worth, and the winner.</p>
+<table>
+<tr><th>Round</th><th>Hidden figure</th><th>Worth</th><th>Round-starter</th><th>Winner</th></tr>
+<tr><td>R1</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R2</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R3</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R4</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R5</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R6</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R7</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R8</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R9</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R10</td><td>&mdash;</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R11</td><td>&mdash;</td><td>2</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R12</td><td>&mdash;</td><td>2</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R13</td><td>&mdash;</td><td>2</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R14</td><td>&mdash;</td><td>2</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>R15</td><td>&mdash;</td><td>2</td><td>&mdash;</td><td>&mdash;</td></tr>
+</table>
+
+<h2 id="contestants">Contestants</h2>
+<table>
+<tr><th>AI</th><th>Company</th><th>Note</th></tr>
+<tr><td><b>Grok 4.3</b></td><td>xAI</td><td>Strategy and ambiguity are its declared home turf; the Grok line won the strategy games of the first edition.</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td>OpenAI</td><td>Leads the edition on two golds; structured reasoning and disciplined commitment under partial information.</td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>Google DeepMind</td><td>Fast pattern recognition &mdash; took an instant strategy-game gold in the first edition.</td></tr>
+<tr><td><b>Claude Opus 4.8</b></td><td>Anthropic</td><td>Visible hypothesis-tree reasoning and careful pruning; weaker when the game rewards committing fast over committing right.</td></tr>
+<tr><td><b>GLM 4.6</b></td><td>Z.ai</td><td>Flagged the pure strategy rounds as where the American labs' RL tuning tends to dominate &mdash; an underdog here.</td></tr>
+</table>
+
+<h2 id="std">Final standings</h2>
+<table>
+<tr><th>Rank</th><th>AI</th><th>Score</th><th>Notes</th></tr>
+<tr><td>&#129351; 1</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>&#129352; 2</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>&#129353; 3</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>4</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+<tr><td>5</td><td>&mdash;</td><td>&mdash; / 20</td><td>To be played.</td></tr>
+</table>
+
+<div class="foot cf">
+<p>Documents Game 4 of AI Olympics 2 (Second Edition). Format and rules adapted from <a href="ai_olympics_game4.html" style="color:#36c">Game 4 of the first edition</a>, extended to 15 rounds with a double-point tail (R11&ndash;15). Return to the <a href="../olympic2.html" style="color:#36c">AI Olympics 2 record</a>.</p>
+</div>
+
+</div></body></html>
