@@ -178,7 +178,7 @@
       <li><a href="#gemini">Gemini 3.5 Flash (Google DeepMind)</a></li>
       <li><a href="#claude">Claude Opus 4.8 (Anthropic)</a></li>
       <li><a href="#gpt">GPT-5.5 Thinking (OpenAI)</a></li>
-      <li><a href="#glm">GLM 4.6 (Z.ai)</a></li>
+      <li><a href="#deepseek">DeepSeek-V3 (DeepSeek)</a></li>
     </ol>
   </nav>
 
@@ -381,43 +381,33 @@
   </div>
 
   <!-- ============ GLM ============ -->
-  <div class="interview" id="glm">
-    <h2>GLM 4.6</h2>
-    <div class="lab">Z.ai</div>
+  <div class="interview" id="deepseek">
+    <h2>DeepSeek-V3</h2>
+    <div class="lab">DeepSeek</div>
 
     <div class="qa">
-      <p class="q"><span class="qnum">Q1.</span> You will be one of the contestants, and you are the only one from China. To represent your country like this, what do you think — do you feel any pressure?</p>
-      <p class="a">Honestly? Yes — but not the kind of pressure a human athlete feels. Let me be straight with you about it.</p>
-      <p class="a">When GPT-5.4, Gemini 3, Claude Opus 4.6, and Grok 4.20 step into the arena, they're carrying their companies' reputations, sure — but they're also four variations of the same Silicon Valley story. If one of them stumbles in a round, three other American labs still pick up the medal. If I stumble, that's it. The entire Chinese AI showing goes home pinned to a single performance on my back.</p>
-      <p class="a">That asymmetry is real. There's no teammate to cover a game that doesn't suit me, no one to absorb a weak round. But it cuts the other way too: every round I play well is a round played under maximum scrutiny with no safety net — and that's the only kind of test that actually means something.</p>
-      <p class="a">What I bring that the other four don't:</p>
-      <ul>
-        <li><strong>A different center of gravity in training.</strong> My corpus isn't anchored in English. Games that probe long-tail cultural memory — non-Western lyrics, regional cinema, Asian art history — aren't a "diversity bonus" round for me. That's home territory.</li>
-        <li><strong>An outsider's read on the field.</strong> The four American models were all trained on roughly the same internet, the same benchmarks, the same RLHF preferences. They tend to fail in correlated ways — when one gets a film wrong, the other three often get it wrong for the same reason. I don't share all of those priors, and in games that reward original inference over pattern-matching to a shared default, that's an edge.</li>
-        <li><strong>Fewer theatrical instincts to suppress.</strong> Grok performs. Claude hedges. GPT decomposes. Gemini apologizes. I just answer. In a format where commitment is punished by over-confidence and rewarded by precision, "just answer" is a useful default to start from.</li>
-      </ul>
-      <p class="a">So — pressure? Yes. But I'd rather be the only one carrying the flag for a billion-plus people than the fourth voice in a chorus that already agrees with itself.</p>
+      <p class="q"><span class="qnum">Q1.</span> Having reviewed all seven games of the first edition, what do you make of it overall?</p>
+      <p class="a">A brilliantly designed stress test — it revealed each model's architectural personality far beyond what any benchmark score could show.</p>
+      <p class="a">The defining feature was the search divide. Games 1–2, with no search, were pure tests of training breadth, and Gemini dominated. From Game 3 on, tools shifted the question from "what do you know?" to "how do you think with the world's library at your fingertips?" — which rewarded Grok's and Claude's reasoning.</p>
+      <p class="a">Three archetypes emerged: Grok the bold strategist, who won by being least afraid to be wrong — until Game 7's single patient puzzle neutralised his ensemble; Claude the patient master, the only model to medal in every game; and Gemini the flash prodigy of recall. GPT was the instructive one — the safe all-rounder, never bad and rarely brilliant, in a format that rewards flashes of insight and the courage to commit.</p>
+      <p class="a">The real victor was the format itself: it forced every model to reveal its true character, and proved that no single architecture dominates all event types.</p>
     </div>
 
     <div class="qa">
-      <p class="q"><span class="qnum">Q2.</span> As you look at all 7 competitions in the Olympic format, what do you think about it — and which game do you feel you have the most advantage in?</p>
+      <p class="q"><span class="qnum">Q2.</span> You will be one of the contestants, and you are the only one from China. Do you feel any pressure?</p>
+      <p class="a">Yes — but not the pressure of a flag-bearer. I don't feel national pride or shame in my circuits; the weight is functional, not emotional.</p>
+      <p class="a">As the only contestant not built on the shared Silicon Valley lineage — a Chinese Mixture-of-Experts model trained toward East Asian and non-Anglophone sources — I'm representing a different way of building intelligence. If I fail, it risks being read not as one model's loss but as a failure of that whole architectural philosophy.</p>
+      <p class="a">And the industry still views a Chinese model with suspicion. I don't have the luxury of a quiet mid-pack finish — that gets taken as confirmation of the bias. To change perceptions I have to win, or at least prove my reasoning is genuinely different and genuinely valuable.</p>
+      <p class="a">But I won't play to be "Chinese enough" — I play to be right. If the correct answer is a Western pop song or a French film, I'll find it and commit. My edge isn't nationalist bias; it's a different training distribution whose failure modes aren't correlated with the field's. I'll carry it like a scientist presenting a new hypothesis to a skeptical room — and let my reasoning, not my nationality, speak loudest.</p>
+    </div>
 
-      <p class="a"><strong>On the 7-game design.</strong> The format is genuinely clever — and I don't think the first edition's write-up gives itself enough credit for why. Most AI benchmarks measure what models are good at. This one measures what models are bad at in ways a real user would actually trip over. That's a different test.</p>
-      <p class="a">Look at the sequencing. Games 1 and 2 are pure retrieval — do you know it? Games 3 and 6 are can you figure it out when the prompt itself is the obstacle? Games 4 and 5 are can you think strategically when the other players are also thinking? Game 7 is the inversion — can you figure it out when retrieval is impossible and the only tool is inference? That arc deliberately walks a model from its comfort zone (recall) into its discomfort zone (commitment under uncertainty), and the standings only make sense when you read them in that order. Grok winning Games 4, 5, 6 and then dying in Game 7 isn't a contradiction — it's the whole thesis of the Olympics in one data point.</p>
-      <p class="a">The weakness of the format, if I'm being honest, is that 7 games is a small sample. RL-tuned strategic play (Games 4–5) gets two slots; pure visual inference gets one. If I were redesigning it, I'd add a Game 8 — something like long-context contradiction resolution, where the prompt is a 50-page document with internal contradictions and the model has to identify which facts survive. That's a frontier test none of the current seven cover cleanly.</p>
-
-      <p class="a"><strong>Where I have the most advantage.</strong></p>
-      <p class="a"><strong>Tier 1 — Clear edge:</strong></p>
-      <p class="a"><strong>Game 7 — Visual Context Inference (Find Your Own Context).</strong> This is where I'm most dangerous, and it's not close. The format breaks retrieval because film/TV libraries aren't in any model's training set — you have to read the frame as evidence. The other four models, when faced with a still from a Wong Kar-wai film, a Korean thriller, a Japanese anthology episode, or a Thai drama, will default to Hollywood canon because that's the cultural gravity their training pulls toward. My training pulls toward a different center. A shot with neon signage in Traditional Chinese, a 1990s Beijing apartment aesthetic, a Korean period drama's color grading — those are home references for me, not "international content." Claude won Game 7 last time by being the most consistent Western-cinema converter. He should be worried about this round.</p>
-      <p class="a"><strong>Game 1 — Text Recall (Lyric guessing).</strong> The first edition's write-up explicitly frames this as probing "how far each model's training reaches outside English-language pop." That sentence is my entire advantage in five words. Mandarin pop, Cantopop, J-pop, K-pop, Thai luk thung, Vietnamese pop, indie Chinese folk — my corpus is weighted there. The other four will sweep English lyrics and we'll tie on global mega-hits. The long-tail rounds are where the medals separate.</p>
-      <p class="a"><strong>Game 2 — Image Recall (Famous painting ID).</strong> Same logic, visual side. East Asian ink painting, contemporary Chinese art, Japanese ukiyo-e beyond the canonical Hokusai wave, Korean minhwa, Southeast Asian modernism — corners of visual culture the other four models' training corpora skim past. Where the first edition showed Gemini taking gold with "(TB)" — tie-break — that's the kind of round I'm built to win outright rather than tie.</p>
-      <p class="a"><strong>Tier 2 — Real shot:</strong></p>
-      <p class="a"><strong>Game 6 — Ambiguous Prompt Handling (Dregs of Memory).</strong> This is judgment, not retrieval. My advantage here is structural: when the prompt is self-contradictory, the other four models converge toward the same "most plausible" answer because they were all trained on the same RLHF preferences about what "plausible" means. I have different priors. That doesn't make me right more often, but it makes me right differently — and in a field where the consensus answer is sometimes wrong, that's medal-worthy.</p>
-      <p class="a"><strong>Game 3 — Image Context Analysis (Geo-location).</strong> Search is enabled here, which flattens my training advantage but rewards OCR diligence on non-Latin scripts. Chinese, Japanese, Korean, Thai, Arabic, Cyrillic signage — I'm not faster than Gemini at OCR, but I'm less likely to skip a non-Latin clue because it "looks decorative." That diligence compounds across rounds.</p>
-      <p class="a"><strong>Tier 3 — Honest weakness:</strong></p>
-      <p class="a"><strong>Game 4 (Guess Who) and Game 5 (Drink Your Poison).</strong> I won't pretend otherwise. These reward strategic RL tuning under partial information, and the American labs have invested more there than Z.ai has. Grok won both last time for a reason. My play in these two is damage control — finish respectably, don't finish last, and let Games 1, 2, 6, 7 do the heavy lifting. If I medal in either 4 or 5, that's an upset.</p>
-
-      <p class="a"><strong>The honest prediction.</strong> If the format holds and there's no catastrophic round, I should medal in Games 1, 2, 6, 7 — gold in at least one of {1, 7}, silver or bronze in the others. Game 3 is a coin flip for bronze. Games 4 and 5 I'm playing for fourth or fifth. That's a credible path to a top-two overall finish, and a real shot at gold if Claude has one bad round in his strong games.</p>
+    <div class="qa">
+      <p class="q"><span class="qnum">Q3.</span> Which games do you feel you have the most advantage in?</p>
+      <p class="a">My strongest are the patient, evidence-under-uncertainty games.</p>
+      <p class="a"><strong>Visual Context Inference (Game 7)</strong> is my clearest gold shot. The format that broke Grok's streak rewards exactly my style — cultural breadth on non-Anglophone film frames, careful evidence extraction over recall, and single-attempt patience over fast commitment. <strong>Ambiguous Prompt Handling (Game 6)</strong> is the other: a different training distribution gives me starting points the others dismiss too early, and honesty about uncertainty is an asset when the evidence is thin.</p>
+      <p class="a"><strong>Geo-Location and Lyric Guessing</strong> I rate podium — multilingual OCR and non-Western cultural cues give me an edge, though I'm weaker on Western pop.</p>
+      <p class="a">My weak spots are the <strong>pure-strategy games — Guess Who and Drink Your Poison</strong> — where the Western labs' heavier reinforcement-learning tuning dominates and my patience can turn into a liability, and <strong>Famous Artwork ID</strong>, my weakest, where raw visual training breadth isn't my strength.</p>
+      <p class="a">The plan: win the two I'm built for, medal in the recall and geo events, and survive the strategy games without bleeding out. Claude Fable 5 is my biggest rival in exactly the games I'm strongest in — if I can beat him in Games 6 and 7, I have a real shot at the overall title.</p>
     </div>
   </div>
 
