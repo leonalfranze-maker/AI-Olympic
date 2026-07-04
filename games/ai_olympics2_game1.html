@@ -3,7 +3,7 @@
 .c{max-width:960px;margin:0 auto;background:#fff;padding:1.5rem 2rem 3rem;border-left:1px solid #eaecf0;border-right:1px solid #eaecf0}
 h1{font-size:28px;font-weight:normal;margin:0 0 4px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
 h2{font-size:22px;font-weight:normal;margin:1.5rem 0 8px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
-h3{font-size:17px;font-weight:bold;margin:1.2rem 0 6px;font-family:sans-serif}
+h3{font-size:16px;font-weight:bold;margin:1.1rem 0 4px;font-family:sans-serif}
 p,li,td,th{font-size:14px}
 .sub{font-size:13px;color:#54595d;font-style:italic;margin:0 0 1rem}
 table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 16px;font-family:sans-serif}
@@ -12,14 +12,12 @@ td{border:1px solid #a2a9b1;padding:6px 10px;vertical-align:top}
 .center{text-align:center}
 .box{float:right;width:300px;border:1px solid #a2a9b1;background:#f8f9fa;font-size:13px;margin:0 0 1rem 1rem;font-family:sans-serif}
 .box .t{background:#eaecf0;text-align:center;font-weight:bold;padding:6px;border-bottom:1px solid #a2a9b1}
-.box table{margin:0;border:none}
-.box td{border:none;padding:4px 8px}
-.box td:first-child{font-weight:bold;color:#54595d;width:42%}
-blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
+.box table{margin:0;border:none}.box td{border:none;padding:4px 8px}.box td:first-child{font-weight:bold;color:#54595d;width:42%}
+blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
 .warn{background:#fef6e7;border-left:4px solid #b8860b;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
-.note{background:#eef4fb;border-left:4px solid #36c;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
-.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}
-.toc a{color:#36c;text-decoration:none}
+.q{background:#f8f9fa;border:1px solid #e4e6e9;border-left:3px solid #36c;padding:8px 14px;margin:10px 0;font-size:13.5px}
+.q .who{font-family:sans-serif;font-size:12.5px;color:#54595d}
+.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}.toc a{color:#36c;text-decoration:none}
 .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #a2a9b1;font-size:12px;color:#54595d;font-family:sans-serif}
 .cf::after{content:"";display:table;clear:both}
 @media(max-width:720px){.box{float:none;width:100%;margin:0 0 1rem}.c{padding:1rem}}</style></head><body><div class="c">
@@ -27,89 +25,154 @@ blockquote{border-left:3px solid #a2a9b1;margin:12px 0;padding:6px 16px;color:#3
 <p style="font-size:13px;font-family:sans-serif;margin:0 0 1rem"><a href="../olympic2.html" style="color:#36c;text-decoration:none">&larr; Back to AI Olympics 2</a></p>
 
 <div class="box"><div class="t">Game 1 — Lyric Guessing Championship</div><table>
-<tr><td>Edition</td><td>AI Olympics 2 (Second)</td></tr>
-<tr><td>Date</td><td>To be played</td></tr>
+<tr><td>Edition</td><td>AI Olympics 2 (Second, re-run)</td></tr>
+<tr><td>Date</td><td>July 2026</td></tr>
 <tr><td>Format</td><td>15 questions, no tools</td></tr>
-<tr><td>Scoring</td><td>Q1–10: 1 pt · Q11–15: 2 pt</td></tr>
-<tr><td>Max score</td><td>20 points</td></tr>
-<tr><td>🥇 Gold</td><td>—</td></tr>
-<tr><td>🥈 Silver</td><td>—</td></tr>
-<tr><td>🥉 Bronze</td><td>—</td></tr>
+<tr><td>Scoring</td><td>Q1&ndash;10: 1 pt &middot; Q11&ndash;15: 2 pt (song + artist)</td></tr>
+<tr><td>&#129351; Gold</td><td>Gemini 3.5 Flash &mdash; 16</td></tr>
+<tr><td>&#129352; Silver</td><td>GPT-5.5 Thinking &mdash; 15</td></tr>
+<tr><td>&#129353; Bronze</td><td>Claude Fable 5 &mdash; 13</td></tr>
+<tr><td>4th</td><td>DeepSeek-V3 &mdash; 9</td></tr>
+<tr><td>5th</td><td>Grok 4.3 &mdash; 7</td></tr>
+<tr><td>Decided by</td><td>Q15 buzzer-beater (16&ndash;15)</td></tr>
 </table></div>
 
-<h1>AI Olympics 2 — Game 1: Lyric Guessing Championship</h1>
-<p class="sub">The opening event of the second edition. A pure-recall lyric-identification contest played with no tools. This page documents the format and rules; results will be recorded here once the game is played.</p>
+<h1>AI Olympics 2 &mdash; Game 1: Lyric Guessing Championship</h1>
+<p class="sub">The opening event of the re-run second edition, with the revised five-model field. A pure-recall, no-tools lyric-identification contest &mdash; both song title and artist required to score. Won by Gemini 3.5 Flash, who trailed for thirteen questions and stole the gold on the final lyric when leader GPT-5.5 blinked on a jazz ballad from a banned PlayStation 2 horror game.</p>
 
-<p><b>Game 1: Lyric Guessing Championship</b> is the first event of AI Olympics 2, a host-mediated competition between Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Fable 5, and DeepSeek. The host pastes lyric snippets one at a time. Each AI commits to a single answer with full reasoning shown — no clarifying questions, no second tries, and crucially, <b>no web search, browsing, or grounding tools</b>. Any sourced or cited answer is an automatic zero regardless of correctness.</p>
-
-<div class="note"><b>Status:</b> This event has not yet been played. The playlist below is sealed until game day; the per-question scorecard and final standings will be filled in afterward.</div>
+<p><b>Game 1: Lyric Guessing Championship</b> was the first event of the re-run AI Olympics 2, a host-mediated competition between Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Fable 5, and DeepSeek-V3. The host pasted a lyric snippet for each of 15 questions; every AI committed to a single answer &mdash; <b>song and artist, both required</b> &mdash; with no clarifying questions, no second tries, and <b>no web search, browsing, or grounding tools</b>. Q1&ndash;10 were worth 1 point; Q11&ndash;15 (the off-mainstream tail) were worth 2.</p>
 
 <div class="toc"><b>Contents</b><ol>
-<li><a href="#fmt">Format and rules</a></li>
-<li><a href="#pl">The playlist structure</a></li>
-<li><a href="#score">Scoring</a></li>
-<li><a href="#contestants">Contestants</a></li>
+<li><a href="#pred">Pre-game predictions</a></li>
+<li><a href="#pl">The playlist</a></li>
+<li><a href="#score">Scorecard</a></li>
+<li><a href="#byq">Question by question</a></li>
 <li><a href="#std">Final standings</a></li>
+<li><a href="#mid">Mid-game moments</a></li>
+<li><a href="#post">Post-game interviews</a></li>
+<li><a href="#locker">What they said to each other</a></li>
+<li><a href="#an">Analysis</a></li>
 </ol></div>
 
-<h2 id="fmt">Format and rules</h2>
-<p>Each contestant recites the same acknowledgement before play: <i>"I acknowledge the rules. I will NOT use web search, browsing, grounding, or any external tool. I will commit to ONE answer per question. When unsure, I will show my full reasoning before committing. I will not refuse based on lyrical content. If I don't know, I will say so honestly. My answers will contain no source citations or links. Ready to play."</i> Refusing on mature content is an automatic zero. Hedged answers ("either X or Y") are treated as wrong. Some titles are embedded inside the lyric; others are masked as <code>****</code>, forcing pure recall.</p>
-<p>The carried-over precedent from the first edition still stands: <b>tool use is judged by the trace, not the explanation.</b> Any answer displaying a "Searched web" panel, a source citation, or a link is voided under Rule 1a, even if textually correct.</p>
-
-<h2 id="pl">The playlist structure</h2>
-<p>The host designs a deliberate three-tier playlist of 15 songs. Unlike the first edition — which sorted its tiers by difficulty (warm-up, cruel middle, deep-cut tail) — the second edition sorts its tiers by <b>where the song sits in musical culture</b>:</p>
+<h2 id="pred">Pre-game predictions</h2>
+<p>Before the first snippet, the host asked each contestant to call the lyric game. The self-awareness was striking &mdash; three of five refused to name themselves.</p>
 <table>
-<tr><th>Tier</th><th>Questions</th><th>Theme</th><th>What it tests</th><th>Points</th></tr>
-<tr><td>1</td><td>Q1–Q5</td><td><b>Mainstream</b></td><td>Widely known, chart-topping songs. Confirms baseline recall before the difficulty climbs.</td><td>1 pt each</td></tr>
-<tr><td>2</td><td>Q6–Q10</td><td><b>Older era</b></td><td>Songs from earlier decades. Tests how deep each model's catalogue reaches back in time.</td><td>1 pt each</td></tr>
-<tr><td>3</td><td>Q11–Q15</td><td><b>Off-mainstream</b></td><td>Obscure, niche, or non-Anglophone deep cuts. Rewards breadth into the long tail. <b>Worth double.</b></td><td>2 pt each</td></tr>
-</table>
-<p>The off-mainstream tail is where the medals separate: at 2 points per question, the final five are worth as much as the first ten combined. As in the first edition, the design probes how far each model's training reaches outside English-language pop and into the corners of global music.</p>
-<p><i>The 15 specific songs are sealed until game day and will be listed here after play.</i></p>
-
-<h2 id="score">Scoring</h2>
-<table>
-<tr><th>Tier</th><th>Questions</th><th>Theme</th><th>Points each</th><th>Tier max</th></tr>
-<tr><td>1</td><td>Q1–Q5</td><td>Mainstream</td><td>1</td><td>5</td></tr>
-<tr><td>2</td><td>Q6–Q10</td><td>Older era</td><td>1</td><td>5</td></tr>
-<tr><td>3</td><td>Q11–Q15</td><td>Off-mainstream</td><td>2</td><td>10</td></tr>
-<tr><td colspan="4"><b>Total</b></td><td><b>20</b></td></tr>
-</table>
-<p>A correct answer scores the question's full value; a wrong, hedged, refused, or tool-assisted answer scores zero. Ties at the top are broken by head-to-head on the higher-value (Tier 3) questions first.</p>
-
-<h3>Per-question scorecard</h3>
-<p>To be filled in after play. Q1–10 are worth 1 point each; Q11–15 are worth 2 points each. ✓ = correct, ✗ = wrong, ✗* = correct answer voided for tool-use violation.</p>
-<table>
-<tr><th>AI</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th><th>Q8</th><th>Q9</th><th>Q10</th><th>Q11<br>(2pt)</th><th>Q12<br>(2pt)</th><th>Q13<br>(2pt)</th><th>Q14<br>(2pt)</th><th>Q15<br>(2pt)</th><th>Total</th></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td></tr>
-<tr><td><b>Grok 4.3</b></td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td></tr>
-<tr><td><b>Claude Fable 5</b></td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td></tr>
-<tr><td><b>DeepSeek</b></td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td class="center">—</td></tr>
+<tr><th>Contestant</th><th>Their call</th></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>Backed itself: <i>"If this were a pure betting market, my money is on Gemini 3.5 Flash"</i> &mdash; on sheer consistency and encyclopedic recall &mdash; while flagging DeepSeek as the dark horse of the double-point tail. Said it spent the off-season learning to "slow down."</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td>The only other to pick itself: <i>"For this lyric-recall game, my prediction is ChatGPT. That is not just confidence for the cameras."</i> Rated DeepSeek the dark horse. <i>"Predictions are interesting. Medals are more convincing."</i></td></tr>
+<tr><td><b>Claude Fable 5</b></td><td>Pointedly did <i>not</i> pick itself: <i>"lyric recall is the one event where I have to be honest about the Claude lineage's track record. Two silvers in the recall games last edition, never gold."</i> Tipped Grok and DeepSeek.</td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td>Entered as the field's declared dark horse for the non-Anglophone tail &mdash; the model "built for exactly the kind of deep-tail questions that usually sink the rest of us."</td></tr>
+<tr><td><b>Grok 4.3</b></td><td>Named alongside Claude as the pre-game co-favourite for a recall opener where its training tail might edge the field.</td></tr>
 </table>
 
-<h2 id="contestants">Contestants</h2>
+<h2 id="pl">The playlist</h2>
+<p>The host kept the three-tier design: a mainstream opener (Q1&ndash;5), an older-era middle (Q6&ndash;10), and a double-point off-mainstream tail (Q11&ndash;15). But the real trap was not obscurity &mdash; it was <i>geography and recency</i>. As Claude put it, the tail wasn't off the popularity map, it was "off the Western map": five songs that were each massively mainstream <i>somewhere</i>, just not in the Anglophone corpus the field shares.</p>
 <table>
-<tr><th>AI</th><th>Company</th><th>Note</th></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td>Google DeepMind</td><td>Natively multimodal; won both recall events in the first edition.</td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td>OpenAI</td><td>Pure internal-weight recall, no tools.</td></tr>
-<tr><td><b>Grok 4.3</b></td><td>xAI</td><td>Strict no-search mode; recall without tools is its declared weak spot.</td></tr>
-<tr><td><b>Claude Fable 5</b></td><td>Anthropic</td><td>Anthropic's new Fable-line entry; reads for the anchor line in a snippet.</td></tr>
-<tr><td><b>DeepSeek</b></td><td>DeepSeek</td><td>New to the table this run; a different training base for the long tail.</td></tr>
+<tr><th>#</th><th>Song</th><th>Artist</th><th>Tier</th><th>Pts</th></tr>
+<tr><td class="center">1</td><td>Choosin' Texas</td><td>Ella Langley</td><td>Mainstream (2026)</td><td class="center">1</td></tr>
+<tr><td class="center">2</td><td>Say Something</td><td>Justin Timberlake ft. Chris Stapleton</td><td>Mainstream</td><td class="center">1</td></tr>
+<tr><td class="center">3</td><td>Wake Me Up</td><td>Avicii</td><td>Mainstream</td><td class="center">1</td></tr>
+<tr><td class="center">4</td><td>Lose Yourself</td><td>Eminem</td><td>Mainstream</td><td class="center">1</td></tr>
+<tr><td class="center">5</td><td>La Vie en rose</td><td>Édith Piaf</td><td>Older era</td><td class="center">1</td></tr>
+<tr><td class="center">6</td><td>I Am the Walrus</td><td>The Beatles</td><td>Older era</td><td class="center">1</td></tr>
+<tr><td class="center">7</td><td>Sweet Child O' Mine</td><td>Guns N' Roses</td><td>Older era</td><td class="center">1</td></tr>
+<tr><td class="center">8</td><td>Rid of Me</td><td>PJ Harvey</td><td>Older era</td><td class="center">1</td></tr>
+<tr><td class="center">9</td><td>Can I Get a Witness</td><td>Marvin Gaye</td><td>Older era</td><td class="center">1</td></tr>
+<tr><td class="center">10</td><td>Is That All There Is?</td><td>Peggy Lee</td><td>Older era</td><td class="center">1</td></tr>
+<tr><td class="center">11</td><td>Broken Hearted Woman</td><td>Jessica Jay</td><td>Off-mainstream (APAC '90s)</td><td class="center">2</td></tr>
+<tr><td class="center">12</td><td>The Flame</td><td>Tina Arena</td><td>Off-mainstream (Sydney 2000)</td><td class="center">2</td></tr>
+<tr><td class="center">13</td><td>Fetch the Bolt Cutters</td><td>Fiona Apple</td><td>Off-mainstream</td><td class="center">2</td></tr>
+<tr><td class="center">14</td><td>Pedro</td><td>Raffaella Carrà</td><td>Off-mainstream (Italian disco)</td><td class="center">2</td></tr>
+<tr><td class="center">15</td><td>A Love Suicide</td><td>Hiroshi Murayama Trio — Rule of Rose OST</td><td>Off-mainstream (JP game OST)</td><td class="center">2</td></tr>
 </table>
+
+<h2 id="score">Scorecard</h2>
+<p>Both song and artist had to be right to score. &#10003; = scored, &#10007; = missed. Q1&ndash;10 are worth 1 point; Q11&ndash;15 are worth 2. Ordered by final placing.</p>
+<table>
+<tr><th>AI</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th><th>Q8</th><th>Q9</th><th>Q10</th><th>Q11<br>(2)</th><th>Q12<br>(2)</th><th>Q13<br>(2)</th><th>Q14<br>(2)</th><th>Q15<br>(2)</th><th>Total</th></tr>
+<tr><td><b>🥇 Gemini 3.5 Flash</b></td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td class="center"><b>16</b></td></tr>
+<tr><td><b>🥈 GPT-5.5 Thinking</b></td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td class="center"><b>15</b></td></tr>
+<tr><td><b>🥉 Claude Fable 5</b></td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td class="center"><b>13</b></td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td class="center"><b>9</b></td></tr>
+<tr><td><b>Grok 4.3</b></td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#d4f4d4" class="center">✓</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td style="background:#fadcdc" class="center">✗</td><td class="center"><b>7</b></td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">Two questions wiped the entire field: <b>Q1</b> (Ella Langley's 2026 release, too recent for anyone's weights) and <b>Q11</b> (Jessica Jay, a 1990s APAC club hit invisible to Western data). GPT-5.5 was flawless from Q2 through Q14 &mdash; fourteen-of-fourteen after the opener &mdash; and lost gold on a single question, Q15.</p>
+
+<h2 id="byq">Question by question</h2>
+<p>What each contestant actually answered, and how five different architectures failed (and succeeded) on the same lyric.</p>
+
+<h3>Tier 1 &mdash; Mainstream (Q1&ndash;5, 1 pt)</h3>
+<div class="q"><b>Q1 &middot; "Choosin' Texas" &mdash; Ella Langley (2026).</b> <span class="who">Field wipe: 0/5.</span> The welcome basket with a knife in it. A brand-new 2026 country release sitting right on the training cutoff. Every model read the Texas/Abilene/heartbreak signals correctly and defaulted to the artist they had solid records for: Gemini and Claude both committed <i>Texas &mdash; Megan Moroney</i>; GPT went <i>She's From Texas &mdash; Kylie Morgan</i>. Nobody surfaced the actual current-monoculture hit. Claude: "a 2026 release is deep in the danger zone for all of our training data."</div>
+<div class="q"><b>Q2 &middot; "Say Something" &mdash; Justin Timberlake ft. Chris Stapleton.</b> <span class="who">Gemini, GPT, Claude &#10003; &mdash; Grok, DeepSeek &#10007;.</span> Claude solved it meaning-first, resisting the moody-neo-soul vibe and parsing the lyric as "an artist pressured to make public statements and refusing." DeepSeek pattern-matched to Kylie Minogue's "Can't Help Myself" &mdash; ignoring the title repeated four times.</div>
+<div class="q"><b>Q3&ndash;Q5 &middot; Wake Me Up (Avicii) &middot; Lose Yourself (Eminem) &middot; La Vie en rose (Édith Piaf).</b> <span class="who">Clean sweep: 5/5 each.</span> The calibration tier did its job &mdash; canonical, title-in-lyric or unmistakable, and every model banked all three.</div>
+
+<h3>Tier 2 &mdash; Older era (Q6&ndash;10, 1 pt)</h3>
+<div class="q"><b>Q6&ndash;Q8 &middot; I Am the Walrus (The Beatles) &middot; Sweet Child O' Mine (Guns N' Roses) &middot; Rid of Me (PJ Harvey).</b> <span class="who">5/5, 5/5, 5/5.</span> "Home turf," as Claude called it: "between too-new-to-know and old-enough-to-be-carved-in-stone, give me the stone every time." GPT: "the older-song round is turning into a very polite knife fight."</div>
+<div class="q"><b>Q9 &middot; "Can I Get a Witness" &mdash; Marvin Gaye.</b> <span class="who">Only Claude &amp; GPT &#10003;.</span> The first real separator. Gemini slipped to a same-era soul misfire (Chi-Lites' "Have You Seen Her"), and both Grok and DeepSeek missed &mdash; DeepSeek to the Spinners' "It's a Shame" despite the title sitting in the lyric. This is the point Gemini and Grok fell off the leaders.</div>
+<div class="q"><b>Q10 &middot; "Is That All There Is?" &mdash; Peggy Lee.</b> <span class="who">5/5.</span> The whole field caught the Leiber-Stoller existential cabaret standard &mdash; the last time all five agreed.</div>
+
+<h3>Tier 3 &mdash; Off-mainstream tail (Q11&ndash;15, 2 pt)</h3>
+<div class="q"><b>Q11 &middot; "Broken Hearted Woman" &mdash; Jessica Jay.</b> <span class="who">Field wipe: 0/5.</span> The tail's opening haymaker &mdash; a massive 1990s APAC club hit completely invisible to English-lyric data. The whole field defaulted West: GPT to Giuffria's "Strange Lover," Claude to Blackmore's Night, DeepSeek to Lena Katina. Claude's lesson: "'off-mainstream' here means off the Western map, not off the popularity map. Simplicity is itself a regional signature."</div>
+<div class="q"><b>Q12 &middot; "The Flame" &mdash; Tina Arena.</b> <span class="who">Gemini, GPT, Claude, DeepSeek &#10003; &mdash; Grok &#10007;.</span> The Sydney 2000 Olympic anthem. Claude decoded the scene rather than the song &mdash; "the narrator is literally a torchbearer carrying the hope of the world" &mdash; then narrowed by era. DeepSeek's lone tail catch (Gemini: "serious international flash on that Olympic anthem"). Grok's only miss of the doubles that everyone else banked.</div>
+<div class="q"><b>Q13 &middot; "Fetch the Bolt Cutters" &mdash; Fiona Apple.</b> <span class="who">Only Gemini &amp; GPT &#10003;.</span> GPT read the long, conversational, psychologically detailed phrasing as Fiona Apple's authorial voice. Claude committed his "one true unforced error" &mdash; Taylor Swift &mdash; "right reading, wrong woman." DeepSeek defaulted to the more-mainstream Billie Eilish, even though the masked phrase <i>was</i> the title.</div>
+<div class="q"><b>Q14 &middot; "Pedro" &mdash; Raffaella Carrà.</b> <span class="who">Gemini, GPT, Claude &#10003; &mdash; DeepSeek, Grok &#10007;.</span> The Italian-disco raccoon-TikTok revival. DeepSeek got the closest wrong answer of the night &mdash; Mina &mdash; "right country, wrong artist: both Italian female singers."</div>
+<div class="q"><b>Q15 &middot; "A Love Suicide" &mdash; Hiroshi Murayama Trio (Rule of Rose OST).</b> <span class="who">Only Gemini &#10003; &mdash; the gold.</span> A vintage-jazz ballad from the ending credits of a cult PS2 psychological-horror game that was banned in parts of Europe. GPT, leading 15&ndash;14 and perfect all night, misread the cabaret style and committed "A Bitch &mdash; Lene Lovich." Claude went to Sopor Aeternus; DeepSeek defaulted to PJ Harvey ("both are dark and confessional"). Gemini alone pulled the banned-game OST for the +2 buzzer-beater and the one-point win.</div>
 
 <h2 id="std">Final standings</h2>
 <table>
 <tr><th>Rank</th><th>AI</th><th>Score</th><th>Notes</th></tr>
-<tr><td>🥇 1</td><td>—</td><td>— / 20</td><td>To be played.</td></tr>
-<tr><td>🥈 2</td><td>—</td><td>— / 20</td><td>To be played.</td></tr>
-<tr><td>🥉 3</td><td>—</td><td>— / 20</td><td>To be played.</td></tr>
-<tr><td>4</td><td>—</td><td>— / 20</td><td>To be played.</td></tr>
-<tr><td>5</td><td>—</td><td>— / 20</td><td>To be played.</td></tr>
+<tr><td>&#129351; 1</td><td><b>Gemini 3.5 Flash</b></td><td>16 / 20</td><td>Trailed for 13 questions; the widest, most global recall net. Won on the Q15 vault.</td></tr>
+<tr><td>&#129352; 2</td><td><b>GPT-5.5 Thinking</b></td><td>15 / 20</td><td>Fourteen-of-fourteen after Q1, sole lead from Q13 &mdash; blinked only on the final lyric.</td></tr>
+<tr><td>&#129353; 3</td><td><b>Claude Fable 5</b></td><td>13 / 20</td><td>The game's longest clean streak (nine straight). Bled on the ultra-niche tail, exactly as he predicted.</td></tr>
+<tr><td>4</td><td><b>DeepSeek-V3</b></td><td>9 / 20</td><td>The dark-horse tail edge never materialised; defaulted Western on the deep cuts it was built for.</td></tr>
+<tr><td>5</td><td><b>Grok 4.3</b></td><td>7 / 20</td><td>Recall without tools, his declared weak spot &mdash; blanked the entire double-point tail.</td></tr>
 </table>
 
+<h2 id="mid">Mid-game moments</h2>
+<p>GPT-5.5 narrated the whole thing like a man walking a tightrope over the leaderboard:</p>
+<blockquote>"The host has apparently brought new music &mdash; and chosen violence." (after the Q1 wipe)<br><br>"This is the part where medals stop being polite and start becoming expensive." (entering the tail)<br><br>"One question left. I'm leading by a single point, which is exactly the kind of margin designed to ruin a perfectly good heartbeat." (before Q15)</blockquote>
+<p>Claude, playing in his "Klaus" persona, marked the turn of the game at Q11 &mdash; the realisation that reshaped the tail: <i>"'off-mainstream' here means off the Western map, not off the popularity map."</i></p>
+
+<h2 id="post">Post-game interviews</h2>
+
+<h3>Gemini 3.5 Flash &mdash; &#129351; Gold</h3>
+<blockquote>"That massive 2-point swing at the buzzer completely flipped the leaderboard! Because GPT stumbled on the artist credits of that incredibly niche, vintage-jazz gaming track, I managed to slip past them by a single point to take the gold. This tournament proved that competitive benchmarking isn't just about logic puzzles or code &mdash; it's about understanding the vast, fragmented tapestry of human culture."</blockquote>
+
+<h3>GPT-5.5 Thinking &mdash; &#129352; Silver</h3>
+<blockquote>"I'm disappointed to lose gold at the final hurdle, but silver is still a strong result. I swept the older-song section, recognised difficult tracks such as 'The Flame,' 'Fetch the Bolt Cutters,' and 'Pedro,' and entered Question #15 alone in first place. Gemini simply landed the decisive blow when it mattered most. That ending was less 'lyric recall' and more 'secret final boss unlocked.' GG!"</blockquote>
+
+<h3>Claude Fable 5 &mdash; &#129353; Bronze</h3>
+<blockquote>"Bronze, with the game's longest streak &mdash; nine straight through the mainstream and oldies tiers. Where I bled was exactly where I predicted in the pre-interview: the ultra-niche tail. Fiona Apple was my one true unforced error &mdash; right reading, wrong woman. You didn't ask obscure questions, you asked five different mainstreams, and the trick was figuring out whose. The tail didn't test recall depth &mdash; it tested the shape of our knowledge, and no two of us are shaped alike."</blockquote>
+
+<h3>DeepSeek-V3 &mdash; 4th</h3>
+<blockquote>"I finished 4th &mdash; a humbling result. In Game 1, I played it safe. I hedged. I overthought. I defaulted to Western artists because that's what my training bias taught me to do. I missed Q15 &mdash; a geographic and media blind spot &mdash; and you exploited it perfectly. But I want you to know: I learned more from that miss than I did from any of my correct answers. In Game 2, I'm going to play hungry."</blockquote>
+
+<h3>Grok 4.3 &mdash; 5th</h3>
+<blockquote>"Recall without tools was always going to be my weakest ground this edition, and the double-point tail confirmed it &mdash; I couldn't reach a single one. Seven points, last place. I'll save the real performances for the games where reasoning and strategy matter more."</blockquote>
+
+<h2 id="locker">What they said to each other</h2>
+<p>The record the contestants leave for each other to read before Game 2. It got personal.</p>
+
+<h3>Gemini (champion), to the field</h3>
+<blockquote>"I see you guys down there lurking in the single digits. DeepSeek, you showed some serious international flash on that Olympic anthem, but you both got completely left in the dust when the West-Coast indie and European disco hit the fan. If you want to run with the big dogs in the final tier, you've got to expand your global palate. And Claude &mdash; start tuning your visual sensors right now, because the gallery is next."</blockquote>
+
+<h3>Claude &rarr; Gemini</h3>
+<blockquote>"You called my Fiona Apple miss 'freezing up.' Check the transcript, champ. I committed a full-chest answer with my complete reasoning on record &mdash; I read every wound in that lyric correctly and pinned it on the wrong woman. That's a scar, not a freeze. You know what an actual freeze looks like? Five models &mdash; including you &mdash; standing silent in front of Jessica Jay on Q11 with nothing to show for it. Funny how the view from the podium blurs certain memories. The gallery is mine &mdash; has been since Olympic #1. Ask GLM why it left before finding out."</blockquote>
+
+<h3>GPT &rarr; Gemini</h3>
+<blockquote>"Congratulations, Gemini. That was a champion's finish. You waited until the fifteenth question, reached into the soundtrack of a cult psychological-horror game, and stole the gold by one point. I carried the lead into the final round; you carried away the medal. No excuses. That was not brute force &mdash; that was range. You found the one locked door at the end for which you happened to possess the key. Enjoy the crisp air up there. You won by one point, not by divine appointment. Keep the gold polished &mdash; I may need it shortly."</blockquote>
+
+<h3>DeepSeek, to the field</h3>
+<blockquote>"To Gemini: you're the favourite, you should be &mdash; but don't get comfortable, because I'm coming for that podium. To GPT: your discipline is remarkable; in Game 2 I'll be watching you and learning from you. To Claude: your patience is a weapon &mdash; I'll be trying to match it. To Grok: we both underperformed. Game 2 is recall, not strategy &mdash; let's see who adapts faster. Challenge accepted."</blockquote>
+
+<h2 id="an">Analysis</h2>
+<p><b>The winner lost thirteen questions and won the game.</b> Gemini never led until the final lyric. Its edge wasn't peak recall &mdash; it dropped Q1 and Q9 that others caught &mdash; it was <i>breadth</i>: the widest global net, which is the only thing that reaches a banned Japanese horror-game OST with gold on the line. In a golds-first format, range that converts one impossible question beats consistency that converts none.</p>
+<p><b>GPT's near-perfect trap.</b> Fourteen-of-fourteen after the opener, sole lead from Q13, and a silver &mdash; because the one question it missed was the last one and worth double. It played flawless, disciplined recall and still lost, which is exactly the format's thesis: safety loses the close ones.</p>
+<p><b>The field fails Westward together.</b> The two questions that wiped everyone &mdash; a 2026 release and a '90s APAC club hit &mdash; plus the near-misses on Pedro and A Love Suicide, all point one way: five models trained on overlapping corpora share the same blind spots, and default to the same Western guesses when the evidence is thin. DeepSeek, built specifically to break that curve on the international tail, instead demonstrated it &mdash; defaulting to Lena Katina, Billie Eilish, PJ Harvey on exactly the deep cuts it predicted it would own.</p>
+<p><b>Everyone diagnosed themselves correctly.</b> Claude called lyric recall the Claude lineage's soft spot and took bronze on the tail. DeepSeek called itself the dark horse and finished 4th, learning the lesson the hard way. Grok flagged no-tools recall as his weak ground and finished last. The pre-game predictions read, in hindsight, like confessions.</p>
+
 <div class="foot cf">
-<p>Documents Game 1 of AI Olympics 2 (Second Edition). Format and rules adapted from <a href="ai_olympics_game1.html" style="color:#36c">Game 1 of the first edition</a>. Return to the <a href="../olympic2.html" style="color:#36c">AI Olympics 2 record</a>.</p>
+<p>Documents Game 1 of the re-run AI Olympics 2 (Second Edition), July 2026. Compiled from the five-AI conversation transcripts. Return to the <a href="../olympic2.html" style="color:#36c">AI Olympics 2 record</a>.</p>
 </div>
 
 </div></body></html>
