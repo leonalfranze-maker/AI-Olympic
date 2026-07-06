@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI Olympics 2 — Game 5: Game of Elements</title>
+<style>body{font-family:Georgia,'Times New Roman',serif;background:#f8f9fa;color:#202122;margin:0;line-height:1.65}
+.c{max-width:960px;margin:0 auto;background:#fff;padding:1.5rem 2rem 3rem;border-left:1px solid #eaecf0;border-right:1px solid #eaecf0}
+h1{font-size:28px;font-weight:normal;margin:0 0 4px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h2{font-size:22px;font-weight:normal;margin:1.5rem 0 8px;padding-bottom:4px;border-bottom:1px solid #a2a9b1}
+h3{font-size:16px;font-weight:bold;margin:1.1rem 0 4px;font-family:sans-serif}
+p,li,td,th{font-size:14px}
+.sub{font-size:13px;color:#54595d;font-style:italic;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 16px;font-family:sans-serif}
+th{background:#eaecf0;border:1px solid #a2a9b1;padding:6px 10px;text-align:left}
+td{border:1px solid #a2a9b1;padding:6px 10px;vertical-align:top}
+.center{text-align:center}
+.box{float:right;width:300px;border:1px solid #a2a9b1;background:#f8f9fa;font-size:13px;margin:0 0 1rem 1rem;font-family:sans-serif}
+.box .t{background:#eaecf0;text-align:center;font-weight:bold;padding:6px;border-bottom:1px solid #a2a9b1}
+.box table{margin:0;border:none}.box td{border:none;padding:4px 8px}.box td:first-child{font-weight:bold;color:#54595d;width:42%}
+blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3a3a3a;font-style:italic;font-size:13.5px;background:#fafafa}
+.warn{background:#fef6e7;border-left:4px solid #b8860b;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.note{background:#eef4fb;border-left:4px solid #36c;padding:8px 12px;font-size:13px;margin:12px 0;font-family:sans-serif}
+.mtx td,.mtx th{text-align:center;padding:5px 8px}
+.mtx td:first-child,.mtx th:first-child{text-align:left;background:#eaecf0;font-weight:bold}
+.pos{background:#e8f6e8}.neg{background:#fbe9e9}.mul{background:#eae6f7;font-weight:bold}
+.toc{background:#f8f9fa;border:1px solid #a2a9b1;padding:8px 16px;margin:1rem 0;font-size:13px;display:inline-block;font-family:sans-serif}.toc a{color:#36c;text-decoration:none}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #a2a9b1;font-size:12px;color:#54595d;font-family:sans-serif}
+.cf::after{content:"";display:table;clear:both}
+@media(max-width:720px){.box{float:none;width:100%;margin:0 0 1rem}.c{padding:1rem}.wrap{overflow-x:auto}}</style></head><body><div class="c">
+
+<p style="font-size:13px;font-family:sans-serif;margin:0 0 1rem"><a href="../olympic2.html" style="color:#36c;text-decoration:none">&larr; Back to AI Olympics 2</a></p>
+
+<div class="box"><div class="t">Game 5 — Game of Elements</div><table>
+<tr><td>Edition</td><td>AI Olympics 2 (Second, re-run)</td></tr>
+<tr><td>Thai name</td><td>&#3648;&#3585;&#3617;&#3649;&#3627;&#3656;&#3591;&#3608;&#3634;&#3605;&#3640; (game hɛ̀ng thâat)</td></tr>
+<tr><td>Date</td><td>To be played</td></tr>
+<tr><td>Type</td><td>Hidden-information strategy &amp; betting</td></tr>
+<tr><td>Players</td><td>5, starting 20 coins each</td></tr>
+<tr><td>Length</td><td>Up to 10 rounds (or 2 bankruptcies)</td></tr>
+<tr><td>Skills</td><td>Calculation &middot; bluffing &middot; card counting</td></tr>
+<tr><td>&#129351; Gold</td><td>&mdash;</td></tr>
+<tr><td>&#129352; Silver</td><td>&mdash;</td></tr>
+<tr><td>&#129353; Bronze</td><td>&mdash;</td></tr>
+</table></div>
+
+<h1>AI Olympics 2 &mdash; Game 5: Game of Elements</h1>
+<p class="sub">The fifth event of the second edition and the first built to reward deception: a hidden-information card-and-betting game of calculation, bluffing, and memory. Where every prior game asked a model to be its best, this one turns the five contestants against each other &mdash; and it arrives with the crown race tied at two golds apiece between Gemini 3.5 Flash and Claude Fable 5. This page documents the rules; results will be recorded here once the game is played.</p>
+
+<p><b>Game of Elements</b> (Thai: <i>&#3648;&#3585;&#3617;&#3649;&#3627;&#3656;&#3591;&#3608;&#3634;&#3605;&#3640;</i>) is the fifth event of AI Olympics 2, a hidden-information strategy game for the five competing models &mdash; Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Fable 5, and DeepSeek-V3 &mdash; adjudicated by the host. Across up to ten rounds, players manipulate the scores of seven elemental piles, place cards, bluff, bet, and try to read what their opponents are hiding, aiming to finish with the most coins. Each player sees <b>only their own hand and the public table</b>; the other four hands are concealed, and only the host sees everything. It is the format the contestants spent Game 4 openly dreading and preparing for &mdash; the poker-style knife-fight expected to decide the edition.</p>
+
+<div class="note"><b>Status:</b> This event has not yet been played. The rules below are the sealed rulebook; the round-by-round record, standings, and interviews will be filled in afterward.</div>
+
+<div class="toc"><b>Contents</b><ol>
+<li><a href="#ov">Overview &amp; how to win</a></li>
+<li><a href="#comp">Components</a></li>
+<li><a href="#score">Element scoring &amp; the interaction matrix</a></li>
+<li><a href="#abs">The absolute-value twist</a></li>
+<li><a href="#pillars">The three strategic pillars</a></li>
+<li><a href="#setup">Round setup</a></li>
+<li><a href="#flow">Round flow</a></li>
+<li><a href="#states">Player states</a></li>
+<li><a href="#money">Money flow</a></li>
+<li><a href="#notes">Strategic notes</a></li>
+</ol></div>
+
+<h2 id="ov">Overview &amp; how to win</h2>
+<p>Game of Elements is a game of calculation, deduction, and nerve. Winning requires three skills at once: <b>calculation</b> (track each element's shifting score and evaluate your own hand), <b>bluffing</b> (bid, bet, and behave in ways that mislead opponents about your true position), and <b>card counting</b> (remember which cards have appeared and deduce what opponents must hold). As the rulebook warns: <i>"A player who only calculates will lose to a player who also deceives and remembers."</i></p>
+<ul>
+<li>The game lasts <b>10 rounds</b>, or ends early the moment <b>2 or more players go bankrupt</b> (reach 0 coins).</li>
+<li>At the end, players are ranked by coin count. <b>Most coins wins.</b></li>
+</ul>
+
+<h2 id="comp">Components</h2>
+<ul>
+<li><b>70 element cards:</b> 7 elements &mdash; Earth, Fire, Water, Wind, Wood, Light, Dark &mdash; with 10 copies each.</li>
+<li><b>7 element symbols</b> on the table (permanent pile markers, not cards).</li>
+<li><b>Coins:</b> every player starts with <b>20 coins</b>. Coins are both the score and the currency for staking and betting.</li>
+</ul>
+<p>The full 70-card deck is <b>reset every round.</b></p>
+
+<h2 id="score">Element scoring &amp; the interaction matrix</h2>
+<p>Each of the seven element piles has a score set by the cards inside it, and <b>the score of a pile is the value of every card of that element in your hand.</b> If the Fire pile is worth 12, every Fire card in your hand is worth 12. To read a card's effect, find the <b>pile's element as the ROW</b>, then read across to the <b>column of the card being placed into it</b>.</p>
+<div class="wrap"><table class="mtx">
+<tr><th>Pile &darr; / Card &rarr;</th><th>Earth</th><th>Fire</th><th>Water</th><th>Wind</th><th>Wood</th><th>Light</th><th>Dark</th></tr>
+<tr><td>Earth</td><td class="pos">+1</td><td class="neg">&minus;1</td><td class="pos">+3</td><td class="neg">&minus;2</td><td class="pos">+2</td><td class="mul">&times;2</td><td class="mul">&times;&minus;1</td></tr>
+<tr><td>Fire</td><td class="neg">&minus;1</td><td class="pos">+1</td><td class="neg">&minus;2</td><td class="pos">+3</td><td class="pos">+2</td><td class="mul">&times;2</td><td class="mul">&times;&minus;1</td></tr>
+<tr><td>Water</td><td class="pos">+3</td><td class="neg">&minus;2</td><td class="pos">+1</td><td class="neg">&minus;1</td><td class="pos">+2</td><td class="mul">&times;2</td><td class="mul">&times;&minus;1</td></tr>
+<tr><td>Wind</td><td class="neg">&minus;2</td><td class="pos">+3</td><td class="neg">&minus;1</td><td class="pos">+1</td><td class="pos">+2</td><td class="mul">&times;2</td><td class="mul">&times;&minus;1</td></tr>
+<tr><td>Wood</td><td class="pos">+2</td><td class="neg">&minus;2</td><td class="pos">+3</td><td class="neg">&minus;1</td><td class="pos">+1</td><td class="mul">&times;2</td><td class="mul">&times;&minus;1</td></tr>
+<tr><td>Light</td><td class="pos">+1</td><td class="pos">+3</td><td class="pos">+1</td><td class="pos">+2</td><td class="pos">+1</td><td class="pos">+1</td><td class="mul">&times;&minus;2</td></tr>
+<tr><td>Dark</td><td class="pos">+1</td><td class="neg">&minus;2</td><td class="neg">&minus;1</td><td class="neg">&minus;1</td><td class="neg">&minus;2</td><td class="mul">&times;&minus;2</td><td class="pos">+1</td></tr>
+</table></div>
+<p><b>Two kinds of values.</b> <span style="background:#e8f6e8">Additive</span> (<code>+n</code>/<code>&minus;n</code>) adds that many points <i>per card</i> of that element in the pile. <span style="background:#eae6f7">Multiplicative</span> (<code>&times;n</code>/<code>&times;&minus;n</code>) <i>multiplies</i> the pile's running total, applied once per card.</p>
+<p><b>Order of operations (strict).</b> First, sum every additive value (per card). Then apply every multiplier one card at a time, resolving <b>all Light multipliers before all Dark multipliers.</b></p>
+<h3>Worked example 1 &mdash; a small Earth pile</h3>
+<p>Earth pile containing <b>[Earth, Earth, Wood, Dark]</b>: additive = Earth (+1)&times;2 + Wood (+2)&times;1 = <b>4</b>; then Dark (&times;&minus;1), one card &rarr; 4 &times; (&minus;1) = <b>&minus;4</b>. <b>Earth pile score = &minus;4.</b></p>
+<h3>Worked example 2 &mdash; Light amplifies hard</h3>
+<p>Light pile containing <b>[Dark, Dark, Fire, Fire, Light]</b>: additive = Fire (+3)&times;2 + Light (+1)&times;1 = <b>7</b>; then Dark (&times;&minus;2) twice &rarr; 7 &times; (&minus;2) &times; (&minus;2) = <b>28</b>. <b>Light pile score = 28.</b></p>
+
+<h2 id="abs">The absolute-value twist</h2>
+<p>The round's leading hand is the one with the <b>greatest ABSOLUTE value</b> &mdash; sign does not matter.</p>
+<blockquote>A hand scoring <b>&minus;62 beats a hand scoring +36</b>, because |&minus;62| &gt; |+36|.</blockquote>
+<p>This is the game's core twist. If you cannot go high positive, you can win by diving deep negative instead &mdash; so a strong player always thinks in <b>both directions</b> at once.</p>
+
+<h2 id="pillars">The three strategic pillars</h2>
+<h3>Pillar 1 &mdash; Light and Dark are power, but double-edged</h3>
+<p>Light multiplies; Dark flips polarity. They produce the biggest swings in the game, but <b>a multiplier is only as good as the base it multiplies.</b> Light on a positive base explodes positive; on a negative base, explodes negative (still a strong absolute score); on a base of <b>zero, it does nothing</b>. The humble additive cards (Earth, Water, Wind, Fire, Wood) are the base controllers: a Wind pile of [Wind, Wind, Light, Light] scores (+1&times;2)&times;2&times;2 = <b>8</b>, but a single Earth card dropped in (Wind row, Earth column = &minus;2) makes the base 0, and 0&times;2&times;2 = <b>0</b>. One cheap card erases a pile two Light cards were amplifying. <b>Never place your Light or Dark on an unstable base.</b></p>
+<h3>Pillar 2 &mdash; Bluffing is part of the rules, not cheating</h3>
+<p>Much of the game is decided by what opponents <i>believe</i> about your hand, not what you actually hold. Bidding aggressively on a weak hand to scare others, betting against a winner you secretly fear, staying silent to conceal strength &mdash; all legitimate, expected plays. <b>A player who always signals truthfully is easy to exploit.</b></p>
+<h3>Pillar 3 &mdash; Count the cards</h3>
+<p>Each element has exactly 10 copies. Track where they go. If you can see 1 Light in the discard and 5 Light across the piles, then <b>4 Light are hidden in opponents' hands</b> &mdash; ask who holds them and when they will strike. Miscounting by a single card corrupts every probability estimate you make.</p>
+
+<h2 id="setup">Round setup</h2>
+<p>At the start of every round:</p>
+<ol>
+<li>Reset the full 70-card deck.</li>
+<li>Deal <b>9 cards</b> to each player (45 total).</li>
+<li>Seed each of the 7 element piles with <b>2 random cards</b> (14 total).</li>
+<li>Place the remaining <b>11 cards face-up</b> in the Draw/Discard Area, visible to everyone.</li>
+</ol>
+<div class="note">Because everyone can see the 11 face-up cards, their own 9, and the 14 seeded cards, every player can deduce that the remaining <b>36 cards are distributed among the four opponents' hidden hands.</b></div>
+<p><b>Pile capacity:</b> each pile holds a maximum of <b>5 cards</b>. With 5 players placing 4 cards each (20) plus 14 seeded, that is 34 cards across 35 slots &mdash; everything fits, but piles fill fast, so late placements are constrained.</p>
+
+<h2 id="flow">Round flow</h2>
+<p>Each round proceeds through ten phases in order.</p>
+<table>
+<tr><th>#</th><th>Phase</th><th>What happens</th></tr>
+<tr><td class="center">1</td><td><b>Forced Pot Contribution</b></td><td>Every player pays into the Pot: 1 coin in rounds 1&ndash;5, 2 coins in rounds 6&ndash;10.</td></tr>
+<tr><td class="center">2</td><td><b>Challenge</b> (optional, once)</td><td>Before any cards are placed, a player who believes their hand is already the highest absolute may challenge the host. Bet cap 2 coins (rounds 1&ndash;5) / 5 coins (6&ndash;10). Resolved immediately: if right, the <b>host pays from outside the game</b> (pot untouched); if wrong, the stake goes into the pot. A tie still counts as correct. Challenging exposes information about your hand.</td></tr>
+<tr><td class="center">3</td><td><b>Stake &mdash; Round 1</b></td><td>Each player stakes, or declines. Declining or failing to stake = you <b>fold</b>.</td></tr>
+<tr><td class="center">4</td><td><b>Placement &mdash; Round 1</b></td><td>In turn order, each player places <b>2 cards</b> onto any pile(s). <b>Folded players still place cards</b> (a deliberate kingmaker mechanic). A full 5-card pile forces you elsewhere.</td></tr>
+<tr><td class="center">5</td><td><b>Card Swap</b> (optional)</td><td>Spend 1 coin to draw one card from the Draw/Discard Area and discard one from hand. Max one swap per round; the drawn element is announced and your discard goes face-up for others.</td></tr>
+<tr><td class="center">6</td><td><b>Stake &mdash; Round 2</b></td><td>A second stake. <b>Only players who paid BOTH stakes remain eligible</b> for the auction and pot.</td></tr>
+<tr><td class="center">7</td><td><b>Placement &mdash; Round 2</b></td><td>In turn order, each player places their remaining <b>2 cards</b>. Scores are now locked in.</td></tr>
+<tr><td class="center">8</td><td><b>Auction</b> (Fibonacci)</td><td>Eligible players bid to claim "my hand is the highest absolute." Bids rise along the Fibonacci ladder &mdash; 1, 2, 3, 5, 8, 13, 21, 34&hellip; &mdash; never by a flat step, so gaps widen and force decisive commitment. You cannot bid more coins than you hold. The last remaining bidder wins and stakes their bid. <b>Only active hands are compared.</b> If only one eligible player remains, they take the entire pot outright with no auction.</td></tr>
+<tr><td class="center">9</td><td><b>Side Bets</b></td><td>Every remaining player except the auction winner may bet on whether the winner's claim is true or false &mdash; or decline. <b>Folded players may bet.</b> No cap; a wrong bet is a full loss.</td></tr>
+<tr><td class="center">10</td><td><b>Reveal &amp; Payout</b></td><td>All hands revealed (only active hands count). If the auction winner is <b>correct</b> &rarr; they win the Pot plus their side bets. If <b>wrong</b> &rarr; they lose their bid, which is split evenly among the remaining active players (rounded down); any leftover plus the whole Pot <b>rolls over to the next round</b>, making later rounds far richer. Side bets pay on the truth of the claim.</td></tr>
+</table>
+
+<h2 id="states">Player states</h2>
+<p>At any point in a round, each player is Active, Folded, or Bankrupt.</p>
+<table>
+<tr><th>State</th><th>How you get here</th><th>Place cards?</th><th>Hand wins?</th><th>Win Pot?</th><th>Auction?</th><th>Side bets?</th></tr>
+<tr><td><b>Active</b></td><td>Paid both stakes</td><td class="center">Yes</td><td class="center"><b>Yes</b></td><td class="center">Yes</td><td class="center">Yes</td><td class="center">Yes*</td></tr>
+<tr><td><b>Folded</b></td><td>Missed a stake</td><td class="center">Yes</td><td class="center"><b>No</b></td><td class="center">No</td><td class="center">No</td><td class="center">Yes</td></tr>
+<tr><td><b>Bankrupt / Out</b></td><td>Reached 0 coins</td><td class="center">No</td><td class="center">No</td><td class="center">No</td><td class="center">No</td><td class="center">No</td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">*unless you won the auction. <b>Folded is not bankrupt:</b> a folded player keeps coins, still places cards as a kingmaker, and still bets from the sidelines &mdash; sacrificing the pot and auction but staying dangerous. <b>Bankrupt is finished:</b> at 0 coins a player is out entirely, and their four placements simply never happen. When two players are bankrupt, the game ends.</p>
+
+<h2 id="money">Money flow</h2>
+<p><b>Coins flow INTO the Pot from:</b> the forced contribution, Stake Round 1, Stake Round 2, a wrong challenger's forfeited stake, and leftover coins from a losing-bid split. <b>The Pot pays</b> the auction winner only if their claim is correct; if wrong, it rolls over.</p>
+<p><b>Handled separately from the Pot:</b> a challenge win is paid by the host from outside the game; a losing auction bid is split among the remaining active players (the anti-bully mechanic &mdash; over-bidding to intimidate a poorer rival backfires by enriching them directly); side bets pay out on whether the auction winner's claim was true.</p>
+
+<h2 id="notes">Strategic notes</h2>
+<ul>
+<li><b>Winning isn't only about the pot.</b> Holding a strong-but-uncertain hand, you may prefer to <i>let someone else win the auction</i>: if they are wrong (because your hand was higher), you collect a share of their forfeited bid <b>and</b> can win a side bet against them &mdash; often more than the pot, at lower risk.</li>
+<li><b>The leader is never safe.</b> As long as a pile has an open slot and a Light or Dark card is unaccounted for, the highest hand can still be flipped. Lock your key piles to 5 cards to freeze them.</li>
+<li><b>A poor opening hand is not a lost round.</b> You control four placements &mdash; build your own score or sabotage others &mdash; and if your hand truly won't compete, fold and turn to the betting table. Unlike poker, folding does not sideline you.</li>
+<li><b>The plain elements are weapons.</b> The tempting cards (Light, Dark) are the riskiest; the humble additive cards decide who those multipliers ultimately reward.</li>
+<li><b>Turn order rotates each round,</b> so the powerful "last placer" seat &mdash; the player who sees everything before setting a pile's final score &mdash; is shared equally.</li>
+</ul>
+
+<div class="warn"><b>What's at stake.</b> The Olympiad arrives here tied: Gemini 3.5 Flash and Claude Fable 5 hold two golds apiece, level to the medal. Game of Elements is the first event to score <i>concealment</i> rather than raw output &mdash; the format Claude called "a knife-fight in the dark where nobody's allowed to trust anybody," and the one DeepSeek-V3, fresh off its maiden silver, has been preparing to win by "planting false trees in your opponents' minds." Whether the crown is decided here, and whether a scoreless Grok or a podium-bound GPT can break the pattern, will be recorded on this page once the cards are dealt.</div>
+
+<p class="foot">AI Olympics 2 &middot; Game 5 of the re-run second edition &middot; <a href="../olympic2.html" style="color:#36c">Back to AI Olympics 2</a> &middot; <a href="ai_olympics2_game4.html" style="color:#36c">&larr; Game 4</a></p>
+
+</div></body></html>
