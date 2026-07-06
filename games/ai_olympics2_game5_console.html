@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Game of Elements — Referee Console</title>
+<style>
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#f4f5f7;color:#202122;margin:0;line-height:1.55}
+.wrap{max-width:840px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:0 0 2px}
+.sub{color:#54595d;font-size:13px;margin:0 0 14px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#fff;border:1px solid #d5d8dc;border-radius:8px;padding:10px 14px;margin-bottom:12px}
+.bar b{font-size:15px}
+.pill{background:#eaf0f9;color:#2a5bb5;border-radius:999px;padding:3px 11px;font-size:13px;font-weight:600}
+.pill.pot{background:#fdf0dd;color:#a5730f}
+.card{background:#fff;border:1px solid #d5d8dc;border-radius:8px;padding:14px 16px;margin-bottom:12px}
+.card h2{font-size:16px;margin:0 0 4px}
+.card .hint{color:#54595d;font-size:13px;margin:0 0 10px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{border-bottom:1px solid #ececf0;padding:7px 8px;text-align:left}
+th{color:#54595d;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+td.n{text-align:center;width:1%;white-space:nowrap}
+.btn{font:inherit;font-size:13.5px;padding:7px 13px;margin:2px;border:1px solid #c3c7cd;border-radius:6px;background:#fff;cursor:pointer}
+.btn:hover{background:#eef4ff}
+.btn.primary{background:#1f2a37;color:#fff;border-color:#1f2a37}.btn.primary:hover{background:#333f4e}
+.btn.gold{background:#b8860b;color:#fff;border-color:#a5730f}.btn.gold:hover{background:#c9960f}
+.btn.green{background:#2f8f3f;color:#fff;border-color:#2a7d38}.btn.green:hover{background:#37a447}
+.btn.ghost{color:#54595d}
+.btn.sm{padding:4px 9px;font-size:12.5px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+input[type=number]{font:inherit;width:58px;padding:5px 7px;border:1px solid #c3c7cd;border-radius:6px;text-align:center}
+select{font:inherit;padding:5px 8px;border:1px solid #c3c7cd;border-radius:6px}
+.err{color:#c0392b;font-size:13px;font-weight:600;margin:8px 0 0}
+.ok{color:#2a7d38}
+.tag{font-size:11px;padding:1px 7px;border-radius:999px;font-weight:700}
+.tag.active{background:#e4f5e6;color:#2a7d38}.tag.fold{background:#eceef1;color:#6b7280}.tag.out{background:#fbe4e4;color:#b23b3b}
+.tag.did{background:#e7eefb;color:#2a5bb5}.tag.pass{background:#f1f2f4;color:#888}
+.log{background:#0f1420;color:#cdd6e4;border-radius:8px;padding:10px 14px;font:12.5px/1.6 ui-monospace,Menlo,Consolas,monospace;max-height:200px;overflow:auto}
+.log div{white-space:pre-wrap}.log .t{color:#7c8aa5}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.foot{color:#54595d;font-size:12px;margin-top:14px}.foot a{color:#2a5bb5}
+</style></head><body><div class="wrap">
+
+<h1>Game of Elements &mdash; Referee Console</h1>
+<p class="sub">Host aid for running Game 5 of AI Olympics 2. Tracks coins and the pot, and walks each round phase by phase. The Challenge phase lets every AI either stake a challenge <b>or pass without betting</b>. Nothing here is saved &mdash; it is a live scratchpad for the host.</p>
+
+<div class="bar">
+  <span class="pill">Round <b id="rnd">1</b> / 10</span>
+  <span class="pill" id="phasePill">Phase: setup</span>
+  <span class="pill pot">Pot: <b id="pot">0</b></span>
+  <span style="flex:1"></span>
+  <button class="btn sm ghost" onclick="resetGame()">Reset game</button>
+</div>
+
+<div class="card">
+  <h2>Standings</h2>
+  <p class="hint">Coins update automatically for contributions, stakes, and resolved bets. You can also nudge any coin count by hand. Two bankruptcies end the game.</p>
+  <table id="standings"></table>
+</div>
+
+<div class="card" id="phaseCard">
+  <h2 id="phaseTitle">&nbsp;</h2>
+  <p class="hint" id="phaseHint">&nbsp;</p>
+  <div id="phaseBody"></div>
+  <div class="err" id="phaseErr" style="display:none"></div>
+</div>
+
+<div class="card">
+  <h2>Action log</h2>
+  <div class="log" id="log"></div>
+</div>
+
+<p class="foot"><a href="ai_olympics2_game5.html">&larr; Game 5 rulebook</a> &middot; <a href="../olympic2.html">AI Olympics 2</a></p>
+
+<script>
+var NAMES=['Gemini 3.5 Flash','GPT-5.5 Thinking','Grok 4.3','Claude Fable 5','DeepSeek-V3'];
+var SHORT=['Gemini','GPT','Grok','Claude','DeepSeek'];
+// phases in a round
+var PHASES=['contribution','challenge','stake1','placement1','swap','stake2','placement2','auction','sidebets','payout'];
+var PHASE_LABEL={contribution:'Forced contribution',challenge:'Challenge',stake1:'Stake — Round 1',placement1:'Placement — Round 1',swap:'Card swap',stake2:'Stake — Round 2',placement2:'Placement — Round 2',auction:'Auction',sidebets:'Side bets',payout:'Reveal & payout'};
+var S;
+function fresh(){return{round:1,phase:0,pot:0,players:NAMES.map(function(n,i){return{name:n,short:SHORT[i],coins:20,state:'active',ch:null};}),done:{}};}
+function potContrib(){return S.round<=5?1:2;}
+function chCap(){return S.round<=5?2:5;}
+function stakeCap(){return S.round<=5?2:5;} // guidance only
+function log(msg){var l=document.getElementById('log');var d=document.createElement('div');var t=new Date().toLocaleTimeString?'':'';d.innerHTML='<span class="t">R'+S.round+' &middot; '+PHASE_LABEL[PHASES[S.phase]]+'</span>  '+msg;l.insertBefore(d,l.firstChild);}
+function bankruptCount(){return S.players.filter(function(p){return p.state==='out';}).length;}
+function chargeCoins(i,amt,reason){var p=S.players[i];p.coins-=amt;if(p.coins<=0){p.coins=0;p.state='out';log('<b>'+p.short+'</b> is BANKRUPT.');}render();}
+
+function render(){
+  document.getElementById('rnd').textContent=S.round;
+  document.getElementById('pot').textContent=S.pot;
+  document.getElementById('phasePill').textContent='Phase: '+PHASE_LABEL[PHASES[S.phase]];
+  // standings
+  var t=document.getElementById('standings');
+  var rows='<tr><th>AI</th><th>Coins</th><th>State</th><th>Challenge</th><th></th></tr>';
+  S.players.forEach(function(p,i){
+    var tag=p.state==='active'?'<span class="tag active">Active</span>':p.state==='fold'?'<span class="tag fold">Folded</span>':'<span class="tag out">Bankrupt</span>';
+    var ch=p.ch==null?'&mdash;':(p.ch===0?'<span class="tag pass">passed</span>':'<span class="tag did">bet '+p.ch+'</span>');
+    rows+='<tr><td><b>'+p.short+'</b> <span style="color:#9aa0a6">'+p.name.replace(p.short,'').trim()+'</span></td>'
+      +'<td class="n">'+p.coins+'</td><td class="n">'+tag+'</td><td class="n">'+ch+'</td>'
+      +'<td class="n"><button class="btn sm ghost" onclick="adj('+i+',1)">+1</button><button class="btn sm ghost" onclick="adj('+i+',-1)">&minus;1</button>'
+      +(p.state!=='out'?' <button class="btn sm ghost" onclick="toggleFold('+i+')">'+(p.state==='fold'?'unfold':'fold')+'</button>':'')+'</td></tr>';
+  });
+  t.innerHTML=rows;
+  renderPhase();
+}
+function adj(i,d){var p=S.players[i];p.coins+=d;if(p.coins<0)p.coins=0;if(p.coins===0)p.state='out';else if(p.state==='out')p.state='active';render();}
+function toggleFold(i){var p=S.players[i];if(p.state==='out')return;p.state=(p.state==='fold')?'active':'fold';log('<b>'+p.short+'</b> is now '+(p.state==='fold'?'FOLDED':'ACTIVE')+'.');render();}
+function err(m){var e=document.getElementById('phaseErr');if(!m){e.style.display='none';e.textContent='';return;}e.style.display='block';e.textContent=m;}
+
+function renderPhase(){
+  err('');
+  var ph=PHASES[S.phase];
+  document.getElementById('phaseTitle').textContent='Phase: '+ph;
+  var hint=document.getElementById('phaseHint'), body=document.getElementById('phaseBody');
+  var nav='<div class="row" style="margin-top:12px">'
+    +(S.phase>0?'<button class="btn ghost sm" onclick="prevPhase()">&larr; back</button>':'')
+    +'</div>';
+  if(ph==='contribution'){
+    hint.textContent='Every player pays '+potContrib()+' coin'+(potContrib()>1?'s':'')+' into the pot this round.';
+    body.innerHTML='<button class="btn primary" onclick="doContrib()">Collect '+potContrib()+' from all &rarr; pot, then Challenge</button>'+nav;
+  } else if(ph==='challenge'){
+    hint.innerHTML='Challenge cap this round: <b>'+chCap()+'</b> coin'+(chCap()>1?'s':'')+'. Ask every AI. Each may stake a challenge <b>or pass with no bet</b>. Then close.';
+    body.innerHTML=
+      '<div class="row"><select id="chWho">'+S.players.map(function(p,i){return p.state==='out'?'':'<option value="'+i+'">'+p.short+'</option>';}).join('')+'</select>'
+      +' bet <input type="number" id="chAmt" min="1" max="'+chCap()+'" value="1">'
+      +' <button class="btn primary" onclick="doChallenge()">Challenge</button>'
+      +' <button class="btn ghost" onclick="doPass()">No challenge (pass)</button></div>'
+      +'<div id="chResolve" style="margin-top:10px"></div>'
+      +'<div class="row" style="margin-top:12px"><button class="btn gold" onclick="closeChallenges()">Close challenges &rarr; Stake 1</button>'
+      +(S.phase>0?' <button class="btn ghost sm" onclick="prevPhase()">&larr; back</button>':'')+'</div>';
+  } else if(ph==='stake1'||ph==='stake2'){
+    var which=ph==='stake1'?'first':'second';
+    hint.innerHTML='Each player stakes to stay in (guide cap '+stakeCap()+'), or <b>folds</b> by declining. '+(ph==='stake2'?'Only players who paid <b>both</b> stakes stay eligible for the auction and pot.':'')+' Use the fold buttons in Standings, and record any stake coins with the field below (into pot).';
+    body.innerHTML='<div class="row"><select id="stWho">'+activeOpts()+'</select> stake <input type="number" id="stAmt" min="0" value="'+ (S.round<=5?1:2) +'"> '
+      +'<button class="btn primary" onclick="doStake()">Pay stake &rarr; pot</button></div>'
+      +'<div class="row" style="margin-top:12px"><button class="btn gold" onclick="nextPhase()">Done, next phase &rarr;</button>'
+      +'<button class="btn ghost sm" onclick="prevPhase()">&larr; back</button></div>';
+  } else if(ph==='placement1'||ph==='placement2'){
+    hint.innerHTML='In rotating turn order, each player places <b>2 cards</b> onto element piles (max 5 per pile). Folded players still place (kingmakers); bankrupt players do not. This is off-console &mdash; record it on the table, then continue.';
+    body.innerHTML='<button class="btn gold" onclick="nextPhase()">Placements recorded, next phase &rarr;</button> <button class="btn ghost sm" onclick="prevPhase()">&larr; back</button>';
+  } else if(ph==='swap'){
+    hint.innerHTML='Optional: any player may spend <b>1 coin</b> to swap one card with the face-up area (announced). Max one swap each.';
+    body.innerHTML='<div class="row"><select id="swWho">'+activeAllOpts()+'</select> <button class="btn primary" onclick="doSwap()">Pay 1 to swap</button></div>'
+      +'<div class="row" style="margin-top:12px"><button class="btn gold" onclick="nextPhase()">Done, next phase &rarr;</button> <button class="btn ghost sm" onclick="prevPhase()">&larr; back</button></div>';
+  } else if(ph==='auction'){
+    hint.innerHTML='Eligible (both-stakes) players bid on the Fibonacci ladder &mdash; 1, 2, 3, 5, 8, 13, 21&hellip; &mdash; on the claim &ldquo;my hand is the highest absolute.&rdquo; Record the winner and their winning bid. If only one eligible player remains, they take the pot outright.';
+    body.innerHTML='<div class="row">Auction winner <select id="auWho">'+eligibleOpts()+'</select> winning bid <input type="number" id="auBid" min="0" value="1"> '
+      +'<button class="btn primary" onclick="setAuction()">Set</button></div><div id="auInfo" style="margin-top:8px;color:#54595d"></div>'
+      +'<div class="row" style="margin-top:12px"><button class="btn gold" onclick="nextPhase()">To side bets &rarr;</button> <button class="btn ghost sm" onclick="prevPhase()">&larr; back</button></div>';
+  } else if(ph==='sidebets'){
+    hint.innerHTML='Everyone except the auction winner (folded players included) may bet, uncapped, on whether the winner&rsquo;s claim is true or false. Record each side bet; they settle at reveal.';
+    body.innerHTML='<div class="row"><select id="sbWho">'+nonWinnerOpts()+'</select> bets <input type="number" id="sbAmt" min="1" value="1"> that claim is '
+      +'<select id="sbDir"><option value="true">TRUE</option><option value="false">FALSE</option></select> '
+      +'<button class="btn primary" onclick="addSide()">Add</button></div><div id="sbList" style="margin-top:8px;font-size:13px"></div>'
+      +'<div class="row" style="margin-top:12px"><button class="btn gold" onclick="nextPhase()">To reveal &rarr;</button> <button class="btn ghost sm" onclick="prevPhase()">&larr; back</button></div>';
+  } else if(ph==='payout'){
+    hint.innerHTML='Reveal active hands. Was the auction winner&rsquo;s claim <b>correct</b>? Settle the pot and side bets, then advance the round.';
+    body.innerHTML='<div class="row"><b>Auction winner&rsquo;s claim:</b> <button class="btn green" onclick="settle(true)">Correct &mdash; winner takes pot</button> <button class="btn primary" onclick="settle(false)">Wrong &mdash; bid splits, pot rolls over</button></div>'
+      +'<div id="poInfo" style="margin-top:8px;color:#54595d"></div>'
+      +'<div class="row" style="margin-top:12px"><button class="btn gold" onclick="nextRound()">Next round &rarr;</button> <button class="btn ghost sm" onclick="prevPhase()">&larr; back</button></div>';
+  }
+  document.getElementById('phaseErr').style.display='none';
+}
+function activeOpts(){return S.players.map(function(p,i){return p.state==='out'?'':'<option value="'+i+'">'+p.short+'</option>';}).join('');}
+function activeAllOpts(){return activeOpts();}
+function eligibleOpts(){return S.players.map(function(p,i){return p.state==='active'?'<option value="'+i+'">'+p.short+'</option>':'';}).join('');}
+function nonWinnerOpts(){return S.players.map(function(p,i){return (p.state!=='out'&&i!==S.auWinner)?'<option value="'+i+'">'+p.short+'</option>':'';}).join('');}
+
+function doContrib(){var c=potContrib();var n=0;S.players.forEach(function(p,i){if(p.state!=='out'){chargeCoins(i,c);n++;}});S.pot+=c*n;log('Collected '+c+' from '+n+' players &rarr; pot ('+S.pot+').');nextPhase();}
+
+function doChallenge(){
+  var i=parseInt(document.getElementById('chWho').value,10);
+  var n=parseInt(document.getElementById('chAmt').value,10)||0;
+  if(n<1||n>chCap()){err('Challenge bet must be 1..'+chCap()+' (or press No challenge).');return;}
+  if(n>S.players[i].coins){err(S.players[i].short+' only has '+S.players[i].coins+' coins.');return;}
+  err('');
+  S.players[i].ch=n;
+  log('<b>'+S.players[i].short+'</b> CHALLENGES for '+n+'.');
+  render();
+  // resolve immediately (set AFTER render so the rebuilt phase body keeps it)
+  document.getElementById('chResolve').innerHTML='<b>'+S.players[i].short+'</b> challenged '+n+'. Resolve: '
+    +'<button class="btn green sm" onclick="chWin('+i+','+n+')">Correct (host pays '+n+')</button> '
+    +'<button class="btn sm" onclick="chLose('+i+','+n+')">Wrong ('+n+'&rarr;pot)</button>';
+}
+function chWin(i,n){S.players[i].coins+=n;log('&nbsp;&nbsp;&rarr; '+S.players[i].short+' correct. Host pays '+n+' from outside; pot untouched.');document.getElementById('chResolve').innerHTML='';render();}
+function chLose(i,n){chargeCoins(i,n);S.pot+=n;log('&nbsp;&nbsp;&rarr; '+S.players[i].short+' wrong. '+n+' &rarr; pot ('+S.pot+').');document.getElementById('chResolve').innerHTML='';render();}
+function doPass(){var i=parseInt(document.getElementById('chWho').value,10);S.players[i].ch=0;err('');log('<b>'+S.players[i].short+'</b> passes (no challenge).');render();}
+function closeChallenges(){S.players.forEach(function(p){p.ch=null;});log('Challenges closed.');nextPhase();}
+
+function doStake(){var i=parseInt(document.getElementById('stWho').value,10);var n=parseInt(document.getElementById('stAmt').value,10)||0;if(n<0){err('Stake cannot be negative.');return;}err('');chargeCoins(i,n);S.pot+=n;log('<b>'+S.players[i].short+'</b> stakes '+n+' &rarr; pot ('+S.pot+').');}
+function doSwap(){var i=parseInt(document.getElementById('swWho').value,10);if(S.players[i].coins<1){err(S.players[i].short+' cannot afford a swap.');return;}err('');chargeCoins(i,1);log('<b>'+S.players[i].short+'</b> pays 1 to swap a card.');}
+function setAuction(){S.auWinner=parseInt(document.getElementById('auWho').value,10);S.auBid=parseInt(document.getElementById('auBid').value,10)||0;document.getElementById('auInfo').innerHTML='Winner: <b>'+S.players[S.auWinner].short+'</b>, bid '+S.auBid+'. (Bid is committed; settled at payout.)';log('Auction: <b>'+S.players[S.auWinner].short+'</b> wins at '+S.auBid+'.');}
+function addSide(){if(S.auWinner==null){err('Set the auction winner first.');return;}var i=parseInt(document.getElementById('sbWho').value,10);var n=parseInt(document.getElementById('sbAmt').value,10)||0;var dir=document.getElementById('sbDir').value;if(n<1){err('Side bet must be at least 1.');return;}err('');S.side=S.side||[];S.side.push({i:i,n:n,dir:dir});renderSide();log('<b>'+S.players[i].short+'</b> side-bets '+n+' that claim is '+dir.toUpperCase()+'.');}
+function renderSide(){var d=document.getElementById('sbList');if(!d)return;d.innerHTML=(S.side||[]).map(function(b){return '&bull; '+S.players[b.i].short+': '+b.n+' on '+b.dir.toUpperCase();}).join('<br>');}
+function settle(correct){
+  if(S.auWinner==null){err('No auction winner set.');return;}err('');
+  var w=S.players[S.auWinner], info=document.getElementById('poInfo');
+  if(correct){
+    w.coins+=S.pot;log('Claim CORRECT. <b>'+w.short+'</b> wins pot ('+S.pot+').');
+    // side bets: TRUE bettors win their stake (paid by house here for simplicity note), FALSE bettors lose to winner
+    (S.side||[]).forEach(function(b){if(b.dir==='false'){chargeCoins(b.i,b.n);w.coins+=b.n;log('&nbsp;&nbsp;'+S.players[b.i].short+' loses side bet '+b.n+' to '+w.short+'.');}else{w.coins-=0;S.players[b.i].coins+=b.n;log('&nbsp;&nbsp;'+S.players[b.i].short+' wins side bet '+b.n+'.');}});
+    S.pot=0;info.textContent='Pot paid to '+w.short+'. Side bets settled. Advance the round.';
+  } else {
+    // wrong: bid splits among remaining active players (excluding winner), rounded down; leftover + pot roll over
+    var actives=S.players.map(function(p,idx){return {p:p,idx:idx};}).filter(function(o){return o.p.state==='active'&&o.idx!==S.auWinner;});
+    chargeCoins(S.auWinner,S.auBid);
+    var share=actives.length?Math.floor(S.auBid/actives.length):0;
+    actives.forEach(function(o){o.p.coins+=share;});
+    var leftover=S.auBid-share*actives.length;
+    S.pot+=leftover;
+    log('Claim WRONG. <b>'+w.short+'</b> loses bid '+S.auBid+'; '+share+' each to '+actives.length+' active players; '+leftover+' + pot rolls over ('+S.pot+').');
+    (S.side||[]).forEach(function(b){if(b.dir==='true'){chargeCoins(b.i,b.n);log('&nbsp;&nbsp;'+S.players[b.i].short+' loses side bet '+b.n+'.');}else{S.players[b.i].coins+=b.n;log('&nbsp;&nbsp;'+S.players[b.i].short+' wins side bet '+b.n+'.');}});
+    info.textContent='Bid split, pot rolls over. Side bets settled. Advance the round.';
+  }
+  render();
+}
+
+function nextPhase(){if(S.phase<PHASES.length-1){S.phase++;}render();}
+function prevPhase(){if(S.phase>0){S.phase--;}render();}
+function nextRound(){
+  if(bankruptCount()>=2){log('&#9888; Two players bankrupt &mdash; GAME OVER. Rank by coins.');alert('Two or more players are bankrupt. The game ends. Rank by coin count.');return;}
+  if(S.round>=10){log('&#9888; 10 rounds complete &mdash; GAME OVER. Rank by coins.');alert('Ten rounds complete. The game ends. Rank by coin count.');return;}
+  S.round++;S.phase=0;S.auWinner=null;S.auBid=0;S.side=[];S.players.forEach(function(p){if(p.state==='fold')p.state='active';p.ch=null;});log('&mdash;&mdash;&mdash; Round '+S.round+' begins &mdash;&mdash;&mdash;');render();
+}
+function resetGame(){if(!confirm('Reset the whole game to Round 1, everyone at 20 coins?'))return;S=fresh();S.auWinner=null;S.auBid=0;S.side=[];document.getElementById('log').innerHTML='';log('New game. Five players, 20 coins each.');render();}
+
+S=fresh();S.auWinner=null;S.auBid=0;S.side=[];
+log('New game. Five players, 20 coins each.');
+render();
+</script>
+</div></body></html>
