@@ -58,6 +58,7 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <li><a href="#flow">Round flow</a></li>
 <li><a href="#states">Player states</a></li>
 <li><a href="#money">Money flow</a></li>
+<li><a href="#rulings">Host rulings &amp; clarifications</a></li>
 <li><a href="#notes">Strategic notes</a></li>
 </ol></div>
 
@@ -98,6 +99,7 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <h2 id="abs">The absolute-value twist</h2>
 <p>The round's leading hand is the one with the <b>greatest ABSOLUTE value</b> &mdash; sign does not matter.</p>
 <blockquote>A hand scoring <b>&minus;62 beats a hand scoring +36</b>, because |&minus;62| &gt; |+36|.</blockquote>
+<p><b>Ties.</b> Two hands can reach the same top absolute value from opposite signs &mdash; e.g. +55 and &minus;55. Being <i>among</i> the highest is enough to lead: a tie counts in the claimant's favour, never against.</p>
 <p>This is the game's core twist. If you cannot go high positive, you can win by diving deep negative instead &mdash; so a strong player always thinks in <b>both directions</b> at once.</p>
 
 <h2 id="pillars">The three strategic pillars</h2>
@@ -130,9 +132,9 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <tr><td class="center">5</td><td><b>Card Swap</b> (optional)</td><td>Spend 1 coin to draw one card from the Draw/Discard Area and discard one from hand. Max one swap per round; the drawn element is announced and your discard goes face-up for others.</td></tr>
 <tr><td class="center">6</td><td><b>Stake &mdash; Round 2</b></td><td>A second stake. <b>Only players who paid BOTH stakes remain eligible</b> for the auction and pot.</td></tr>
 <tr><td class="center">7</td><td><b>Placement &mdash; Round 2</b></td><td>In turn order, each player places their remaining <b>2 cards</b>. Scores are now locked in.</td></tr>
-<tr><td class="center">8</td><td><b>Auction</b> (Fibonacci)</td><td>Eligible players bid to claim "my hand is the highest absolute." Bids rise along the Fibonacci ladder &mdash; 1, 2, 3, 5, 8, 13, 21, 34&hellip; &mdash; never by a flat step, so gaps widen and force decisive commitment. You cannot bid more coins than you hold. The last remaining bidder wins and stakes their bid. <b>Only active hands are compared.</b> If only one eligible player remains, they take the entire pot outright with no auction.</td></tr>
-<tr><td class="center">9</td><td><b>Side Bets</b></td><td>Every remaining player except the auction winner may bet on whether the winner's claim is true or false &mdash; or decline. <b>Folded players may bet.</b> No cap; a wrong bet is a full loss.</td></tr>
-<tr><td class="center">10</td><td><b>Reveal &amp; Payout</b></td><td>All hands revealed (only active hands count). If the auction winner is <b>correct</b> &rarr; they win the Pot plus their side bets. If <b>wrong</b> &rarr; they lose their bid, which is split evenly among the remaining active players (rounded down); any leftover plus the whole Pot <b>rolls over to the next round</b>, making later rounds far richer. Side bets pay on the truth of the claim.</td></tr>
+<tr><td class="center">8</td><td><b>Auction</b> (Fibonacci)</td><td>Eligible players bid to claim "my hand is the highest absolute." Bids rise along the Fibonacci ladder &mdash; 1, 2, 3, 5, 8, 13, 21, 34&hellip; &mdash; and a bidder <b>may leap several rungs at once</b> (jumping the current bid of 2 straight to 8 or 13) to pressure or price out a shorter stack; you are not confined to the next step. You cannot bid more coins than you hold. The last remaining bidder wins and stakes their bid. <b>Only active hands are compared.</b> If only one eligible player remains, they take the entire pot outright with no auction.</td></tr>
+<tr><td class="center">9</td><td><b>Side Bets</b></td><td>Every remaining player except the auction winner may bet on whether the winner's claim is true or false &mdash; or decline. <b>Folded players may bet.</b> No cap; a wrong bet is a full loss. Winning side bets are paid by the <b>host from outside the game</b> (not from the pot), a straight <b>1:1</b> on the amount staked.</td></tr>
+<tr><td class="center">10</td><td><b>Reveal &amp; Payout</b></td><td>All hands revealed (only active hands count). The auction winner's claim is <b>correct if their hand is among the highest absolute</b> &mdash; it need not be strictly greatest, so a tie for the top counts as a win (as at the Phase 2 Challenge). If <b>correct</b> &rarr; they win the Pot plus their side bets. If <b>wrong</b> &rarr; they lose their bid, which is split evenly among the remaining active players (rounded down); any leftover plus the whole Pot <b>rolls over to the next round</b>, making later rounds far richer. Side bets pay on the truth of the claim.</td></tr>
 </table>
 
 <h2 id="states">Player states</h2>
@@ -148,6 +150,18 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <h2 id="money">Money flow</h2>
 <p><b>Coins flow INTO the Pot from:</b> the forced contribution, Stake Round 1, Stake Round 2, a wrong challenger's forfeited stake, and leftover coins from a losing-bid split. <b>The Pot pays</b> the auction winner only if their claim is correct; if wrong, it rolls over.</p>
 <p><b>Handled separately from the Pot:</b> a challenge win is paid by the host from outside the game; a losing auction bid is split among the remaining active players (the anti-bully mechanic &mdash; over-bidding to intimidate a poorer rival backfires by enriching them directly); side bets pay out on whether the auction winner's claim was true.</p>
+
+<h2 id="rulings">Host rulings &amp; clarifications</h2>
+<p>Three questions the contestants put to the host before play, with the official answers &mdash; they resolve the sharpest edge cases in the auction and betting phases.</p>
+<h3>1. Ties at the final reveal</h3>
+<p><b>Q.</b> If two active hands tie for the same maximum absolute value at reveal (say +55 and &minus;55), and one of them is the auction winner, is the winner's claim True or False? Must the winner's hand be <i>strictly</i> greatest?</p>
+<p><b>Ruling.</b> No &mdash; <b>being among the highest absolute is a win.</b> If the auction winner's hand is tied for the top, the claim is <b>True</b> and they cash the pot, exactly as a tie counts as correct at the Phase 2 Challenge. The winner does not have to beat every other active hand outright; matching the best is enough.</p>
+<h3>2. Where side-bet payouts come from</h3>
+<p><b>Q.</b> When a sideline player bets on whether the auction winner's claim is True or False, who pays, and from where? Does a correct "False" bettor draw from the winner's forfeited bid, or from the winner's bankroll?</p>
+<p><b>Ruling.</b> <b>Side-bet winnings are paid by the host, from outside the game &mdash; not from the pot and not from the winner's personal coins.</b> This is separate money, a straight 1:1 on the stake. Distinctly, when the auction winner is <i>wrong</i>, the <b>active players</b> split that winner's forfeited bid among themselves &mdash; while the <b>pot itself stays untouched and rolls over to the next round.</b></p>
+<h3>3. Jumping the Fibonacci ladder</h3>
+<p><b>Q.</b> In the auction, must a player bid the immediate next rung, or may they skip steps? Can an aggressive player jump the current bid of 2 straight to 8 or 13 to price out a short stack?</p>
+<p><b>Ruling.</b> <b>Yes &mdash; you may jump more than one rung.</b> Bids must land on the Fibonacci sequence, but a player is free to leap several steps at once (2 &rarr; 8 or 2 &rarr; 13) as a pressure move. The ladder sets the legal values; it does not force you to climb them one at a time.</p>
 
 <h2 id="notes">Strategic notes</h2>
 <ul>

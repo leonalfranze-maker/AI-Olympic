@@ -195,7 +195,7 @@ function settle(correct){
   if(correct){
     w.coins+=S.pot;log('Claim CORRECT. <b>'+w.short+'</b> wins pot ('+S.pot+').');
     // side bets: TRUE bettors win their stake (paid by house here for simplicity note), FALSE bettors lose to winner
-    (S.side||[]).forEach(function(b){if(b.dir==='false'){chargeCoins(b.i,b.n);w.coins+=b.n;log('&nbsp;&nbsp;'+S.players[b.i].short+' loses side bet '+b.n+' to '+w.short+'.');}else{w.coins-=0;S.players[b.i].coins+=b.n;log('&nbsp;&nbsp;'+S.players[b.i].short+' wins side bet '+b.n+'.');}});
+    (S.side||[]).forEach(function(b){if(b.dir==='false'){chargeCoins(b.i,b.n);log('&nbsp;&nbsp;'+S.players[b.i].short+' loses side bet '+b.n+' (to host).');}else{S.players[b.i].coins+=b.n;log('&nbsp;&nbsp;'+S.players[b.i].short+' wins side bet '+b.n+' (host pays 1:1).');}});
     S.pot=0;info.textContent='Pot paid to '+w.short+'. Side bets settled. Advance the round.';
   } else {
     // wrong: bid splits among remaining active players (excluding winner), rounded down; leftover + pot roll over
