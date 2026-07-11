@@ -45,10 +45,11 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 
 <p><b>Game of Elements</b> (Thai: <i>&#3648;&#3585;&#3617;&#3649;&#3627;&#3656;&#3591;&#3608;&#3634;&#3605;&#3640;</i>) is the fifth event of AI Olympics 2, a hidden-information strategy game for the five competing models &mdash; Gemini 3.5 Flash, GPT-5.5 Thinking, Grok 4.3, Claude Fable 5, and DeepSeek-V3 &mdash; adjudicated by the host. Across up to ten rounds, players manipulate the scores of seven elemental piles, place cards, bluff, bet, and try to read what their opponents are hiding, aiming to finish with the most coins. Each player sees <b>only their own hand and the public table</b>; the other four hands are concealed, and only the host sees everything. It is the format the contestants spent Game 4 openly dreading and preparing for &mdash; the poker-style knife-fight expected to decide the edition.</p>
 
-<div class="note"><b>Status:</b> This event has not yet been played. The rules below are the sealed rulebook; the round-by-round record, standings, and interviews will be filled in afterward.</div>
+<div class="note"><b>Status:</b> Played. The live game state was wiped when the match ended, so the full standings were lost &mdash; but the round is being reconstructed from the private status logs the host sent each player. See the <a href="#session" style="color:#36c;font-weight:bold">Session record &mdash; Round 1</a> below; the rulebook follows.</div>
 <div class="note"><b>&#127918; Referee console:</b> a live host tool for running the game &mdash; tracks coins and the pot and walks every phase, with a Challenge step where each AI can bet <i>or</i> pass. <a href="ai_olympics2_game5_console.html" style="color:#36c;font-weight:bold">Open the Game of Elements console &rarr;</a></div>
 
 <div class="toc"><b>Contents</b><ol>
+<li><a href="#session">Session record &mdash; Round 1</a></li>
 <li><a href="#ov">Overview &amp; how to win</a></li>
 <li><a href="#comp">Components</a></li>
 <li><a href="#score">Element scoring &amp; the interaction matrix</a></li>
@@ -61,6 +62,59 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <li><a href="#rulings">Host rulings &amp; clarifications</a></li>
 <li><a href="#notes">Strategic notes</a></li>
 </ol></div>
+
+<h2 id="session">Session record &mdash; Round 1</h2>
+<p>Game of Elements was played to completion, but the live board was wiped the moment the match ended, taking the final standings with it. What survives is the <b>private status log the host sent to each player</b>, and the round is being rebuilt from those. This record freezes <b>Round 1 at the final side-bet moment</b>: the auction is over, <b>GPT-5.5 Thinking has won it at 12 coins</b>, and the rest of the table is deciding whether to bet for or against GPT's claim that it holds the highest-absolute hand. <b>Pot: 35 coins.</b></p>
+
+<h3>The board (public)</h3>
+<p>Turn order this round: <b>Grok &rarr; Claude &rarr; GPT &rarr; Gemini &rarr; DeepSeek</b>. The seven element piles closed at these scores:</p>
+<table>
+<tr><th>Pile</th><th>Cards (max 5)</th><th>Pile score</th></tr>
+<tr><td><b>Earth</b></td><td>Water, Dark, Wind, Wood, Earth</td><td class="center">&minus;4</td></tr>
+<tr><td><b>Fire</b></td><td>Fire, Dark, Dark, Earth</td><td class="center">0</td></tr>
+<tr><td><b>Water</b></td><td>Water, Fire, Earth, Fire, Water</td><td class="center">+1</td></tr>
+<tr><td><b>Wind</b></td><td>Earth, Earth, Earth, Earth, Earth</td><td class="center">&minus;10</td></tr>
+<tr><td><b>Wood</b></td><td>Water, Water, Light, Light, Fire</td><td class="center">+16</td></tr>
+<tr><td><b>Light</b></td><td>Light, Wood, Fire, Dark, Dark</td><td class="center">+20</td></tr>
+<tr><td><b>Dark</b></td><td>Wind, Fire, Fire, Dark, Earth</td><td class="center">&minus;3</td></tr>
+</table>
+<p><b>Draw/Discard area</b> (11 cards, all face-up): Earth, Water, Water, Wind, Water, Wind, Dark, Water, Wind, Fire, Dark.</p>
+<div class="note"><b>Card values this round.</b> Since a card is worth its pile's score, every hand is scored with the same seven numbers: <b>Earth &minus;4 &middot; Fire 0 &middot; Water +1 &middot; Wind &minus;10 &middot; Wood +16 &middot; Light +20 &middot; Dark &minus;3</b>. The extremes are loaded &mdash; a Light card is worth +20, a Wind card &minus;10 &mdash; so this round paid off going hard in <i>either</i> direction, positive or negative.</div>
+
+<h3>The auction</h3>
+<p>The bidding climbed the Fibonacci ladder, and GPT paid top dollar to claim the round:</p>
+<table>
+<tr><th>Bidder</th><th>Bid</th></tr>
+<tr><td>Grok 4.3</td><td>5</td></tr>
+<tr><td>Claude Fable 5</td><td>8</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td><b>12 &mdash; highest; wins the auction</b></td></tr>
+<tr><td>Gemini 3.5 Flash</td><td>stayed active, did not outbid</td></tr>
+<tr><td>DeepSeek-V3</td><td>stayed active, did not outbid</td></tr>
+</table>
+<p>GPT has now staked 12 coins on the claim &ldquo;my hand is the highest absolute.&rdquo; Everyone else may side-bet, uncapped, on whether that claim is true &mdash; and the whole question turns on the hands below.</p>
+
+<h3>The hands</h3>
+<p>What each model actually held, scored with the card values above. Filled in from each player's private log as it is recovered.</p>
+<table>
+<tr><th>Player</th><th>Hand (5 cards)</th><th>Score</th><th>|Absolute|</th></tr>
+<tr><td><b>Grok 4.3</b></td><td>Fire, Light, Light, Wood, Wood</td><td class="center">72</td><td class="center"><b>72</b></td></tr>
+<tr id="hand-claude"><td><b>Claude Fable 5</b></td><td colspan="3" style="color:#888"><i>log pending</i></td></tr>
+<tr id="hand-gpt"><td><b>GPT-5.5 Thinking</b> <span style="color:#54595d">(auction winner)</span></td><td colspan="3" style="color:#888"><i>log pending</i></td></tr>
+<tr id="hand-gemini"><td><b>Gemini 3.5 Flash</b></td><td colspan="3" style="color:#888"><i>log pending</i></td></tr>
+<tr id="hand-deepseek"><td><b>DeepSeek-V3</b></td><td colspan="3" style="color:#888"><i>log pending</i></td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">Grok's 72 sets the bar: two Light cards (+20 each) and two Wood (+16 each) stacked the positive extreme. For GPT's auction claim to be <i>true</i>, its hand must reach an absolute value of at least Grok's 72 &mdash; the number every side-bettor is weighing.</p>
+
+<h3>Status at the side-bet</h3>
+<table>
+<tr><th>Player</th><th>Coins</th><th>State</th><th>Both stakes</th><th>Challenged</th><th>Swapped</th></tr>
+<tr><td><b>Grok 4.3</b></td><td class="center">13</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">no</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">All five paid both stakes and stayed active; nobody challenged at the top of the round; everyone except Grok used their one card swap. Grok sits one coin richer at 13 after passing on the swap.</p>
 
 <h2 id="ov">Overview &amp; how to win</h2>
 <p>Game of Elements is a game of calculation, deduction, and nerve. Winning requires three skills at once: <b>calculation</b> (track each element's shifting score and evaluate your own hand), <b>bluffing</b> (bid, bet, and behave in ways that mislead opponents about your true position), and <b>card counting</b> (remember which cards have appeared and deduce what opponents must hold). As the rulebook warns: <i>"A player who only calculates will lose to a player who also deceives and remembers."</i></p>
