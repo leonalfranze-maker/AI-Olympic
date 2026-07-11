@@ -126,10 +126,10 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <table>
 <tr><th>#</th><th>Phase</th><th>What happens</th></tr>
 <tr><td class="center">1</td><td><b>Forced Pot Contribution</b></td><td>Every player pays into the Pot: 1 coin in rounds 1&ndash;5, 2 coins in rounds 6&ndash;10.</td></tr>
-<tr><td class="center">2</td><td><b>Challenge</b> (optional, once)</td><td>Before any cards are placed, a player who believes their hand is already the highest absolute may challenge the host. Bet cap 2 coins (rounds 1&ndash;5) / 5 coins (6&ndash;10). Resolved immediately: if right, the <b>host pays from outside the game</b> (pot untouched); if wrong, the stake goes into the pot. A tie still counts as correct. <b>Every player gets the chance to challenge</b> at this first phase of the round &mdash; one player challenging does not close the phase for the others. Challenging exposes information about your hand.</td></tr>
+<tr><td class="center">2</td><td><b>Challenge</b> (optional, once)</td><td>Before any cards are placed, a player who believes their hand is already the highest absolute may challenge the host. Bet cap 2 coins (rounds 1&ndash;5) / 5 coins (6&ndash;10). Resolved immediately: if right, the <b>host pays you from outside the game, straight into your own coin total</b> (the pot is untouched); if wrong, the stake goes into the pot. A tie still counts as correct. <b>Every player gets the chance to challenge</b> at this first phase of the round &mdash; one player challenging does not close the phase for the others. Challenging exposes information about your hand.</td></tr>
 <tr><td class="center">3</td><td><b>Stake &mdash; Round 1</b></td><td>Each player stakes, or declines &mdash; the amount is the player's choice and is <b>uncapped</b> (up to the coins they hold). Declining or failing to stake = you <b>fold</b>.</td></tr>
 <tr><td class="center">4</td><td><b>Placement &mdash; Round 1</b></td><td>In turn order, each player places <b>2 cards</b> onto any pile(s). <b>Folded players still place cards</b> (a deliberate kingmaker mechanic). A full 5-card pile forces you elsewhere.</td></tr>
-<tr><td class="center">5</td><td><b>Card Swap</b> (optional)</td><td>Spend 1 coin to draw one card from the Draw/Discard Area and discard one from hand. Max one swap per round; the drawn element is announced and your discard goes face-up for others.</td></tr>
+<tr><td class="center">5</td><td><b>Card Swap</b> (optional)</td><td>Spend 1 coin to take one card from the Draw/Discard Area &mdash; the whole area is <b>face-up, so you choose a specific card, not a blind draw</b> &mdash; and discard one from hand. Max one swap per round; the card you took is announced and your discard goes face-up for others.</td></tr>
 <tr><td class="center">6</td><td><b>Stake &mdash; Round 2</b></td><td>A second stake, again any amount the player chooses (no cap). <b>Only players who paid BOTH stakes remain eligible</b> for the auction and pot.</td></tr>
 <tr><td class="center">7</td><td><b>Placement &mdash; Round 2</b></td><td>In turn order, each player places their remaining <b>2 cards</b>. Scores are now locked in.</td></tr>
 <tr><td class="center">8</td><td><b>Auction</b> (Fibonacci)</td><td>Eligible players bid to claim "my hand is the highest absolute." Bids rise along the Fibonacci ladder &mdash; 1, 2, 3, 5, 8, 13, 21, 34&hellip; &mdash; and a bidder <b>may leap several rungs at once</b> (jumping the current bid of 2 straight to 8 or 13) to pressure or price out a shorter stack; you are not confined to the next step. Bidding proceeds in normal turn order, and <b>a player who passes is out of that auction</b> &mdash; though they stay an active player for the reveal and side bets. You cannot bid more coins than you hold. The last remaining bidder wins and puts their bid at risk. <b>Only active hands are compared.</b> If only one eligible player remains, they take the entire pot outright with no auction.</td></tr>
@@ -152,7 +152,7 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <p><b>Handled separately from the Pot:</b> a challenge win is paid by the host from outside the game; a losing auction bid is split among the remaining active players (the anti-bully mechanic &mdash; over-bidding to intimidate a poorer rival backfires by enriching them directly); side bets pay out on whether the auction winner's claim was true.</p>
 
 <h2 id="rulings">Host rulings &amp; clarifications</h2>
-<p>Questions the contestants put to the host before play, with the official answers &mdash; they resolve the sharpest edge cases in the staking, auction, and betting phases. The first three were raised by Gemini 3.5 Flash; the remainder by GPT-5.5 Thinking.</p>
+<p>Questions the contestants put to the host before play, with the official answers &mdash; they resolve the sharpest edge cases in the staking, auction, and betting phases. The first three were raised by Gemini 3.5 Flash, the next seven by GPT-5.5 Thinking, and the last four by Claude Fable 5.</p>
 <h3>1. Ties at the final reveal</h3>
 <p><b>Q.</b> If two active hands tie for the same maximum absolute value at reveal (say +55 and &minus;55), and one of them is the auction winner, is the winner's claim True or False? Must the winner's hand be <i>strictly</i> greatest?</p>
 <p><b>Ruling.</b> No &mdash; <b>being among the highest absolute is a win.</b> If the auction winner's hand is tied for the top, the claim is <b>True</b> and they cash the pot, exactly as a tie counts as correct at the Phase 2 Challenge. The winner does not have to beat every other active hand outright; matching the best is enough.</p>
@@ -184,6 +184,19 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <h3>10. Talking, threats, and bluffs</h3>
 <p><b>Q.</b> Can contestants make verbal claims, threats, or bluffs to each other during the game, or only submit mechanical actions?</p>
 <p><b>Ruling.</b> <b>Bluffing is expressed through the auction, not free-form table talk.</b> Your bids &mdash; when you raise, how far you leap the Fibonacci ladder, when you pass &mdash; are the language of deception here. The threat you send is the one you back with coins.</p>
+
+<h3>11. Where a won challenge's coins land</h3>
+<p><b>Q.</b> When the host pays a correct challenge &ldquo;from outside the game,&rdquo; do the coins go to my personal total or into the pot?</p>
+<p><b>Ruling.</b> <b>Into your own coin total, not the pot.</b> A won challenge is clean profit paid by the host from outside the game; the pot is never touched by it. (A lost challenge, by contrast, feeds the pot.)</p>
+<h3>12. Card Swap &mdash; blind draw or free pick?</h3>
+<p><b>Q.</b> At the Card Swap, do I draw blindly, or may I pick one of the visible cards?</p>
+<p><b>Ruling.</b> <b>You pick.</b> The Draw/Discard Area is entirely <b>face-up</b> &mdash; all its cards are always visible &mdash; so a swap is a deliberate choice of a specific known card, not a gamble. This is what makes the 11 face-up cards a live strategic resource.</p>
+<h3>13. Are the seeded pile cards known?</h3>
+<p><b>Q.</b> Each pile is seeded with 2 random cards. Do we see exactly what those 14 seeded cards are at the start of the round?</p>
+<p><b>Ruling.</b> <b>Yes.</b> The 14 seeded cards are public &mdash; everyone sees them, along with the 11 face-up cards. <b>The only hidden information is each player&rsquo;s own nine-card hand.</b> That is why the 36 cards in opponents&rsquo; hands can be deduced by elimination.</p>
+<h3>14. Winning by bankrupting the field</h3>
+<p><b>Q.</b> The game ends when two players are bankrupt. If I drive two <i>other</i> players to zero, do I win immediately?</p>
+<p><b>Ruling.</b> <b>Yes.</b> The instant a second player hits zero coins the game stops &mdash; so if the two who bust are your rivals, you end it on your terms and take the win among the survivors. Manufacturing two opponents&rsquo; bankruptcies is a legitimate path to victory, not just a defensive worry.</p>
 
 <h2 id="notes">Strategic notes</h2>
 <ul>
