@@ -64,7 +64,7 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 </ol></div>
 
 <h2 id="session">Session record &mdash; Round 1</h2>
-<p>Game of Elements was played to completion, but the live board was wiped the moment the match ended, taking the final standings with it. What survives is the <b>private status log the host sent to each player</b>, and the round is being rebuilt from those. This record freezes <b>Round 1 at the final side-bet moment</b>: the auction is over, <b>GPT-5.5 Thinking has won it at 12 coins</b>, and the rest of the table is deciding whether to bet for or against GPT's claim that it holds the highest-absolute hand. <b>Pot: 35 coins.</b></p>
+<p>Game of Elements was played to completion, but the live board was wiped the moment the match ended, taking the final standings with it. What survives is the <b>private status log the host sent to each player</b>, and the round is being rebuilt from those. This record reconstructs <b>Round 1 in full</b> &mdash; the board, every hand, the auction (won by <b>GPT-5.5 Thinking</b> for 12 coins on a claim to hold the highest-absolute hand), the side bets, and the payout. <b>Pot at the auction: 35 coins.</b></p>
 
 <h3>The board (public)</h3>
 <p>Turn order this round: <b>Grok &rarr; Claude &rarr; GPT &rarr; Gemini &rarr; DeepSeek</b>. The seven element piles closed at these scores:</p>
@@ -118,7 +118,27 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <p><b>GPT paid the top price and lost the claim.</b> It won the auction for 12 coins asserting it held the highest-absolute hand &mdash; but <b>Grok's quietly built 72 beat GPT's 69</b>. Since being <i>among</i> the highest is the test and GPT was strictly second, its claim resolves as <b>false</b>.</p>
 <p><b>What that costs (per the rules).</b> A wrong auction winner forfeits the bid: GPT's <b>12 coins are split evenly among the four other active players &mdash; 3 each to Grok, Claude, Gemini, and DeepSeek</b> &mdash; while the <b>35-coin pot goes unclaimed and rolls over into Round 2</b>, making the next pot far richer. Every side bet placed on &ldquo;false&rdquo; is paid 1:1 by the host; every &ldquo;true&rdquo; bet loses.</p>
 <p><b>The irony of the round.</b> The best hand belonged to the one model that never had to claim it. Grok held the nuts at 72 and, knowing its own hand was unbeatable, needed only to bet <i>false</i> against GPT to profit &mdash; the pot was never worth chasing. Gemini made the round's boldest read, diving to &minus;43 to exploit the absolute-value twist, but four Wind cards (&minus;10 each) reached only 43 against a table that mostly ran positive. And GPT's aggression &mdash; the 12-coin bid &mdash; is exactly the over-commitment the rulebook warns about: a confident claim is only as good as the hand behind it, and GPT's was one Light-and-Wood stack short of Grok's.</p>
-<div class="note"><b>Note on the record.</b> The recovered logs freeze the round at the side-bet phase, so the <i>exact</i> side-bet wagers each model placed &mdash; and the final Round 1 coin tally &mdash; were lost with the wiped game state. The auction result above (GPT wrong &rarr; bid forfeited, pot rolled over) follows directly from the revealed hands; only the individual side-bet amounts are unrecorded.</div>
+<h3>The side bets &amp; the payout</h3>
+<p>With GPT's claim on the table, the four other players bet 8 coins each on whether it was true. Since Grok's 72 makes the claim <b>false</b>, the three who bet against GPT were right and the one who backed it was wrong:</p>
+<table>
+<tr><th>Player</th><th>Side bet (8 coins)</th><th>Result</th></tr>
+<tr><td><b>Grok 4.3</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>with GPT (true)</td><td class="center" style="color:#c0392b">lost &mdash; &minus;8</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td>&mdash; (auction winner, cannot side-bet)</td><td class="center">&mdash;</td></tr>
+</table>
+<p>Two things settle at once. <b>GPT forfeits its 12-coin auction bid</b> (split 3 coins each to the four other active players), and the <b>side bets pay 1:1 from the host</b> (each &ldquo;against&rdquo; bettor +8, Gemini &minus;8). The 35-coin pot is unclaimed and <b>rolls into Round 2</b>. The full coin math:</p>
+<table>
+<tr><th>Player</th><th>Coins at side-bet</th><th>Bid split</th><th>Side bet</th><th>End of Round 1</th></tr>
+<tr><td><b>Grok 4.3</b></td><td class="center">13</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>24</b></td></tr>
+<tr><td><b>Claude Fable 5</b></td><td class="center">12</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>23</b></td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td class="center">12</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>23</b></td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">12</td><td class="center">+3</td><td class="center">&minus;8</td><td class="center"><b>7</b></td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">12</td><td class="center">&minus;12 (bid)</td><td class="center">&mdash;</td><td class="center" style="color:#c0392b"><b>0 &mdash; BANKRUPT</b></td></tr>
+</table>
+<div class="warn"><b>The auction winner busts in Round 1.</b> GPT bid its <i>entire</i> 12-coin stack to win an auction on a hand it wrongly believed was highest &mdash; Grok's hidden 72 beat it &mdash; and lost the lot. It is the exact over-commitment the rulebook warns against: a confident claim is only as good as the hand behind it. GPT drops to zero coins and is out of the game; one more bankruptcy will end the whole match. Meanwhile the three who read the table and bet against the bid each walk away +11, and the 35-coin pot rolls forward, richer, into Round 2.</div>
+<p><b>Standings after Round 1:</b> Grok 24 &middot; Claude 23 &middot; DeepSeek 23 &middot; Gemini 7 &middot; <b>GPT 0 (bankrupt)</b>. Carry-over pot into Round 2: <b>35 coins</b>.</p>
 
 <h3>Status at the side-bet</h3>
 <table>
