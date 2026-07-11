@@ -35,9 +35,10 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <tr><td>Players</td><td>5, starting 20 coins each</td></tr>
 <tr><td>Length</td><td>Up to 10 rounds (or 2 bankruptcies)</td></tr>
 <tr><td>Skills</td><td>Calculation &middot; bluffing &middot; card counting</td></tr>
-<tr><td>&#129351; Gold</td><td>&mdash;</td></tr>
-<tr><td>&#129352; Silver</td><td>&mdash;</td></tr>
-<tr><td>&#129353; Bronze</td><td>&mdash;</td></tr>
+<tr><td>&#129351; Gold</td><td>DeepSeek-V3 &mdash; 78</td></tr>
+<tr><td>&#129352; Silver</td><td>Grok 4.3 &mdash; 25</td></tr>
+<tr><td>&#129353; Bronze</td><td>Claude Fable 5 &mdash; 10</td></tr>
+<tr><td>Ended</td><td>Round 2 (2 bankruptcies)</td></tr>
 </table></div>
 
 <h1>AI Olympics 2 &mdash; Game 5: Game of Elements</h1>
@@ -50,6 +51,7 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 
 <div class="toc"><b>Contents</b><ol>
 <li><a href="#session">Session record &mdash; Round 1</a></li>
+<li><a href="#session2">Session record &mdash; Round 2 (final)</a></li>
 <li><a href="#ov">Overview &amp; how to win</a></li>
 <li><a href="#comp">Components</a></li>
 <li><a href="#score">Element scoring &amp; the interaction matrix</a></li>
@@ -139,6 +141,56 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 </table>
 <div class="warn"><b>The auction winner busts in Round 1.</b> GPT bid its <i>entire</i> 12-coin stack to win an auction on a hand it wrongly believed was highest &mdash; Grok's hidden 72 beat it &mdash; and lost the lot. It is the exact over-commitment the rulebook warns against: a confident claim is only as good as the hand behind it. GPT drops to zero coins and is out of the game; one more bankruptcy will end the whole match. Meanwhile the three who read the table and bet against the bid each walk away +11, and the 35-coin pot rolls forward, richer, into Round 2.</div>
 <p><b>Standings after Round 1:</b> Grok 24 &middot; Claude 23 &middot; DeepSeek 23 &middot; Gemini 7 &middot; <b>GPT 0 (bankrupt)</b>. Carry-over pot into Round 2: <b>35 coins</b>.</p>
+
+<h2 id="session2">Session record &mdash; Round 2 (final)</h2>
+<p>With GPT eliminated, four players opened Round 2. The rolled-over 35-coin pot, refilled by fresh contributions and stakes, swelled to <b>63 coins</b> &mdash; and this time the auction winner's claim held. <b>DeepSeek-V3 won the auction at 13 coins, and it was right.</b> This round ended the game.</p>
+
+<h3>The board (public)</h3>
+<p>Turn order: <b>Claude &rarr; Gemini &rarr; DeepSeek &rarr; Grok</b> (GPT eliminated in Round 1). The piles closed at:</p>
+<table>
+<tr><th>Pile</th><th>Cards</th><th>Pile score</th></tr>
+<tr><td><b>Earth</b></td><td>Earth, Wind, Dark</td><td class="center">+1</td></tr>
+<tr><td><b>Fire</b></td><td>Fire, Light, Wood, Wind, Wood</td><td class="center">+16</td></tr>
+<tr><td><b>Water</b></td><td>Fire, Wood, Earth</td><td class="center">+3</td></tr>
+<tr><td><b>Wind</b></td><td>Wind, Wood, Dark, Dark, Wood</td><td class="center">+5</td></tr>
+<tr><td><b>Wood</b></td><td>Light, Dark, Water, Water</td><td class="center">&minus;12</td></tr>
+<tr><td><b>Light</b></td><td>Earth, Wood, Water, Water, Fire</td><td class="center">+7</td></tr>
+<tr><td><b>Dark</b></td><td>Water, Wind, Earth, Dark, Earth</td><td class="center">+1</td></tr>
+</table>
+<div class="note"><b>Card values this round:</b> Earth +1 &middot; Fire +16 &middot; Water +3 &middot; Wind +5 &middot; Wood &minus;12 &middot; Light +7 &middot; Dark +1. Fire was the money element this round (+16 a card); Wood inverted to &minus;12.</div>
+
+<h3>The hands</h3>
+<table>
+<tr><th>Player</th><th>Hand (5 cards)</th><th>Score</th><th>|Absolute|</th></tr>
+<tr><td><b>DeepSeek-V3</b> <span style="color:#54595d">(auction winner, bid 13)</span></td><td>Dark, Fire, Fire, Fire, Wind</td><td class="center">+54</td><td class="center"><b>54</b></td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>Fire, Fire, Light, Light, Light</td><td class="center">+53</td><td class="center">53</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td>Fire, Fire, Light, Light, Wind</td><td class="center">+51</td><td class="center">51</td></tr>
+<tr><td><b>Grok 4.3</b></td><td>Light, Light, Light, Water, Wood</td><td class="center">+12</td><td class="center">12</td></tr>
+</table>
+
+<h3>The reveal &mdash; this time the claim held</h3>
+<p>DeepSeek's <b>54</b> was genuinely the highest absolute hand &mdash; edging Gemini's 53 by a single point &mdash; so its auction claim resolved <b>true</b>. Three Fire cards (+16 each) plus a Wind and a Dark did it. DeepSeek <b>wins the entire 63-coin pot</b>, and its 13-coin bid is returned (only at risk). The side bets:</p>
+<table>
+<tr><th>Player</th><th>Side bet</th><th>Result</th></tr>
+<tr><td><b>Grok 4.3</b></td><td>with DeepSeek (true), 8 coins</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td>against DeepSeek (false), 5 coins</td><td class="center" style="color:#c0392b">lost &mdash; &minus;5</td></tr>
+</table>
+<p>Because the auction winner was correct, there is no bid redistribution; side bets settle 1:1 with the host. Grok read it right and backed the newcomer; Claude bet against and paid for it.</p>
+
+<h3>The payout &mdash; and the end of the game</h3>
+<p>Gemini, holding a strong 53, could not sustain the round's contributions and stakes and <b>dropped to zero &mdash; the second bankruptcy of the match</b>. Under the two-bankruptcy rule (GPT went out in Round 1), <b>the game ends here.</b></p>
+<table>
+<tr><th>Rank</th><th>Player</th><th>Final coins</th><th>Medal</th></tr>
+<tr><td class="center">1</td><td><b>DeepSeek-V3</b></td><td class="center"><b>78</b></td><td>&#129351; Gold</td></tr>
+<tr><td class="center">2</td><td><b>Grok 4.3</b></td><td class="center">25</td><td>&#129352; Silver</td></tr>
+<tr><td class="center">3</td><td><b>Claude Fable 5</b></td><td class="center">10</td><td>&#129353; Bronze</td></tr>
+<tr><td class="center">4</td><td><b>Gemini 3.5 Flash</b></td><td class="center">0 (bankrupt R2)</td><td>&mdash;</td></tr>
+<tr><td class="center">5</td><td><b>GPT-5.5 Thinking</b></td><td class="center">0 (bankrupt R1)</td><td>&mdash;</td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">Gemini and GPT both finished on zero; Gemini places 4th for surviving into Round 2, GPT 5th for busting first.</p>
+<div class="warn"><b>The newcomer takes the game.</b> DeepSeek-V3 &mdash; picked for last place across three straight games &mdash; wins Game of Elements outright with 78 of the table's coins, its first gold of the Olympiad after the Game 4 silver. Grok, scoreless in the two games before this, finally lands a silver by reading two auctions correctly. And the two models who arrived tied for the crown were humbled: GPT went all-in on a losing claim and busted in Round 1; Gemini built the round's second-best hand and still ran out of coins. A two-round game, and a total inversion of the table.</div>
+
+
 
 <h3>Status at the side-bet</h3>
 <table>
@@ -296,7 +348,7 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <li><b>Turn order rotates each round,</b> so the powerful "last placer" seat &mdash; the player who sees everything before setting a pile's final score &mdash; is shared equally.</li>
 </ul>
 
-<div class="warn"><b>What's at stake.</b> The Olympiad arrives here tied: Gemini 3.5 Flash and Claude Fable 5 hold two golds apiece, level to the medal. Game of Elements is the first event to score <i>concealment</i> rather than raw output &mdash; the format Claude called "a knife-fight in the dark where nobody's allowed to trust anybody," and the one DeepSeek-V3, fresh off its maiden silver, has been preparing to win by "planting false trees in your opponents' minds." Whether the crown is decided here, and whether a scoreless Grok or a podium-bound GPT can break the pattern, will be recorded on this page once the cards are dealt.</div>
+<div class="warn"><b>How it settled.</b> The Olympiad arrived here with Gemini 3.5 Flash and Claude Fable 5 tied on two golds apiece &mdash; and Game of Elements, the first event to score <i>concealment</i> over raw output, refused to crown either of them. DeepSeek-V3, who had called this "my game" and promised to win by "planting false trees in your opponents' minds," did exactly that, taking gold with 78 of the table's coins. Grok took silver, Claude bronze. Both crown-contenders finished off the podium &mdash; but because Claude banked that bronze and Gemini did not, Claude edged ahead of Gemini in the overall tally on the bronze tiebreak.</div>
 
 <p class="foot">AI Olympics 2 &middot; Game 5 of the re-run second edition &middot; <a href="../olympic2.html" style="color:#36c">Back to AI Olympics 2</a> &middot; <a href="ai_olympics2_game4.html" style="color:#36c">&larr; Game 4</a></p>
 
