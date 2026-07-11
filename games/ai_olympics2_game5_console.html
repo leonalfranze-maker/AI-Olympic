@@ -127,7 +127,7 @@ function renderPhase(){
       +(S.phase>0?' <button class="btn ghost sm" onclick="prevPhase()">&larr; back</button>':'')+'</div>';
   } else if(ph==='stake1'||ph==='stake2'){
     var which=ph==='stake1'?'first':'second';
-    hint.innerHTML='Each player stakes to stay in (guide cap '+stakeCap()+'), or <b>folds</b> by declining. '+(ph==='stake2'?'Only players who paid <b>both</b> stakes stay eligible for the auction and pot.':'')+' Use the fold buttons in Standings, and record any stake coins with the field below (into pot).';
+    hint.innerHTML='Each player stakes any amount they choose (no cap) to stay in, or <b>folds</b> by declining. '+(ph==='stake2'?'Only players who paid <b>both</b> stakes stay eligible for the auction and pot.':'')+' Use the fold buttons in Standings, and record any stake coins with the field below (into pot).';
     body.innerHTML='<div class="row"><select id="stWho">'+activeOpts()+'</select> stake <input type="number" id="stAmt" min="0" value="'+ (S.round<=5?1:2) +'"> '
       +'<button class="btn primary" onclick="doStake()">Pay stake &rarr; pot</button></div>'
       +'<div class="row" style="margin-top:12px"><button class="btn gold" onclick="nextPhase()">Done, next phase &rarr;</button>'
