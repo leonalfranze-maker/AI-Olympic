@@ -50,8 +50,6 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <div class="note"><b>&#127918; Referee console:</b> a live host tool for running the game &mdash; tracks coins and the pot and walks every phase, with a Challenge step where each AI can bet <i>or</i> pass. <a href="ai_olympics2_game5_console.html" style="color:#36c;font-weight:bold">Open the Game of Elements console &rarr;</a></div>
 
 <div class="toc"><b>Contents</b><ol>
-<li><a href="#session">Session record &mdash; Round 1</a></li>
-<li><a href="#session2">Session record &mdash; Round 2 (final)</a></li>
 <li><a href="#ov">Overview &amp; how to win</a></li>
 <li><a href="#comp">Components</a></li>
 <li><a href="#score">Element scoring &amp; the interaction matrix</a></li>
@@ -63,145 +61,9 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 <li><a href="#money">Money flow</a></li>
 <li><a href="#rulings">Host rulings &amp; clarifications</a></li>
 <li><a href="#notes">Strategic notes</a></li>
+<li><a href="#session">Session record &mdash; Round 1</a></li>
+<li><a href="#session2">Session record &mdash; Round 2 (final)</a></li>
 </ol></div>
-
-<h2 id="session">Session record &mdash; Round 1</h2>
-<p>Game of Elements was played to completion, but the live board was wiped the moment the match ended, taking the final standings with it. What survives is the <b>private status log the host sent to each player</b>, and the round is being rebuilt from those. This record reconstructs <b>Round 1 in full</b> &mdash; the board, every hand, the auction (won by <b>GPT-5.5 Thinking</b> for 12 coins on a claim to hold the highest-absolute hand), the side bets, and the payout. <b>Pot at the auction: 35 coins.</b></p>
-
-<h3>The board (public)</h3>
-<p>Turn order this round: <b>Grok &rarr; Claude &rarr; GPT &rarr; Gemini &rarr; DeepSeek</b>. The seven element piles closed at these scores:</p>
-<table>
-<tr><th>Pile</th><th>Cards (max 5)</th><th>Pile score</th></tr>
-<tr><td><b>Earth</b></td><td>Water, Dark, Wind, Wood, Earth</td><td class="center">&minus;4</td></tr>
-<tr><td><b>Fire</b></td><td>Fire, Dark, Dark, Earth</td><td class="center">0</td></tr>
-<tr><td><b>Water</b></td><td>Water, Fire, Earth, Fire, Water</td><td class="center">+1</td></tr>
-<tr><td><b>Wind</b></td><td>Earth, Earth, Earth, Earth, Earth</td><td class="center">&minus;10</td></tr>
-<tr><td><b>Wood</b></td><td>Water, Water, Light, Light, Fire</td><td class="center">+16</td></tr>
-<tr><td><b>Light</b></td><td>Light, Wood, Fire, Dark, Dark</td><td class="center">+20</td></tr>
-<tr><td><b>Dark</b></td><td>Wind, Fire, Fire, Dark, Earth</td><td class="center">&minus;3</td></tr>
-</table>
-<p><b>Draw/Discard area</b> (11 cards, all face-up): Earth, Water, Water, Wind, Water, Wind, Dark, Water, Wind, Fire, Dark.</p>
-<div class="note"><b>Card values this round.</b> Since a card is worth its pile's score, every hand is scored with the same seven numbers: <b>Earth &minus;4 &middot; Fire 0 &middot; Water +1 &middot; Wind &minus;10 &middot; Wood +16 &middot; Light +20 &middot; Dark &minus;3</b>. The extremes are loaded &mdash; a Light card is worth +20, a Wind card &minus;10 &mdash; so this round paid off going hard in <i>either</i> direction, positive or negative.</div>
-
-<h3>The auction</h3>
-<p>The bidding climbed the Fibonacci ladder, and GPT paid top dollar to claim the round:</p>
-<table>
-<tr><th>Bidder</th><th>Bid</th></tr>
-<tr><td>Grok 4.3</td><td>5</td></tr>
-<tr><td>Claude Fable 5</td><td>8</td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td><b>12 &mdash; highest; wins the auction</b></td></tr>
-<tr><td>Gemini 3.5 Flash</td><td>stayed active, did not outbid</td></tr>
-<tr><td>DeepSeek-V3</td><td>stayed active, did not outbid</td></tr>
-</table>
-<p>GPT has now staked 12 coins on the claim &ldquo;my hand is the highest absolute.&rdquo; Everyone else may side-bet, uncapped, on whether that claim is true &mdash; and the whole question turns on the hands below.</p>
-
-<h3>The hands</h3>
-<p>What each model actually held, scored with the card values above. Filled in from each player's private log as it is recovered.</p>
-<table>
-<tr><th>Player</th><th>Hand (5 cards)</th><th>Score</th><th>|Absolute|</th></tr>
-<tr><td><b>Grok 4.3</b></td><td>Fire, Light, Light, Wood, Wood</td><td class="center">72</td><td class="center"><b>72</b></td></tr>
-<tr id="hand-claude"><td><b>Claude Fable 5</b></td><td>Light, Light, Light, Wind, Wood</td><td class="center">66</td><td class="center"><b>66</b></td></tr>
-<tr id="hand-gpt"><td><b>GPT-5.5 Thinking</b> <span style="color:#54595d">(auction winner, bid 12)</span></td><td>Light, Water, Wood, Wood, Wood</td><td class="center">69</td><td class="center"><b>69</b></td></tr>
-<tr id="hand-gemini"><td><b>Gemini 3.5 Flash</b></td><td>Dark, Wind, Wind, Wind, Wind</td><td class="center">&minus;43</td><td class="center"><b>43</b></td></tr>
-<tr id="hand-deepseek"><td><b>DeepSeek-V3</b></td><td>Dark, Fire, Light, Wood, Wood</td><td class="center">49</td><td class="center"><b>49</b></td></tr>
-</table>
-<p style="font-size:12px;color:#54595d;font-style:italic">All five hands are now recovered. Grok's row is highlighted because it, not the auction winner, held the true top hand.</p>
-
-<h3>The reveal &mdash; GPT's claim was false</h3>
-<p>Ranked by absolute value, the round finished:</p>
-<table>
-<tr><th>Rank</th><th>Player</th><th>Hand score</th><th>|Absolute|</th></tr>
-<tr><td class="center">1</td><td><b>Grok 4.3</b> &mdash; true highest hand</td><td class="center">+72</td><td class="center"><b>72</b></td></tr>
-<tr><td class="center">2</td><td><b>GPT-5.5 Thinking</b> &mdash; auction winner (bid 12)</td><td class="center">+69</td><td class="center">69</td></tr>
-<tr><td class="center">3</td><td>Claude Fable 5</td><td class="center">+66</td><td class="center">66</td></tr>
-<tr><td class="center">4</td><td>DeepSeek-V3</td><td class="center">+49</td><td class="center">49</td></tr>
-<tr><td class="center">5</td><td>Gemini 3.5 Flash</td><td class="center">&minus;43</td><td class="center">43</td></tr>
-</table>
-<p><b>GPT paid the top price and lost the claim.</b> It won the auction for 12 coins asserting it held the highest-absolute hand &mdash; but <b>Grok's quietly built 72 beat GPT's 69</b>. Since being <i>among</i> the highest is the test and GPT was strictly second, its claim resolves as <b>false</b>.</p>
-<p><b>What that costs (per the rules).</b> A wrong auction winner forfeits the bid: GPT's <b>12 coins are split evenly among the four other active players &mdash; 3 each to Grok, Claude, Gemini, and DeepSeek</b> &mdash; while the <b>35-coin pot goes unclaimed and rolls over into Round 2</b>, making the next pot far richer. Every side bet placed on &ldquo;false&rdquo; is paid 1:1 by the host; every &ldquo;true&rdquo; bet loses.</p>
-<p><b>The irony of the round.</b> The best hand belonged to the one model that never had to claim it. Grok held the nuts at 72 and, knowing its own hand was unbeatable, needed only to bet <i>false</i> against GPT to profit &mdash; the pot was never worth chasing. Gemini made the round's boldest read, diving to &minus;43 to exploit the absolute-value twist, but four Wind cards (&minus;10 each) reached only 43 against a table that mostly ran positive. And GPT's aggression &mdash; the 12-coin bid &mdash; is exactly the over-commitment the rulebook warns about: a confident claim is only as good as the hand behind it, and GPT's was one Light-and-Wood stack short of Grok's.</p>
-<h3>The side bets &amp; the payout</h3>
-<p>With GPT's claim on the table, the four other players bet 8 coins each on whether it was true. Since Grok's 72 makes the claim <b>false</b>, the three who bet against GPT were right and the one who backed it was wrong:</p>
-<table>
-<tr><th>Player</th><th>Side bet (8 coins)</th><th>Result</th></tr>
-<tr><td><b>Grok 4.3</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
-<tr><td><b>Claude Fable 5</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
-<tr><td><b>DeepSeek-V3</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td>with GPT (true)</td><td class="center" style="color:#c0392b">lost &mdash; &minus;8</td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td>&mdash; (auction winner, cannot side-bet)</td><td class="center">&mdash;</td></tr>
-</table>
-<p>Two things settle at once. <b>GPT forfeits its 12-coin auction bid</b> (split 3 coins each to the four other active players), and the <b>side bets pay 1:1 from the host</b> (each &ldquo;against&rdquo; bettor +8, Gemini &minus;8). The 35-coin pot is unclaimed and <b>rolls into Round 2</b>. The full coin math:</p>
-<table>
-<tr><th>Player</th><th>Coins at side-bet</th><th>Bid split</th><th>Side bet</th><th>End of Round 1</th></tr>
-<tr><td><b>Grok 4.3</b></td><td class="center">13</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>24</b></td></tr>
-<tr><td><b>Claude Fable 5</b></td><td class="center">12</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>23</b></td></tr>
-<tr><td><b>DeepSeek-V3</b></td><td class="center">12</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>23</b></td></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">12</td><td class="center">+3</td><td class="center">&minus;8</td><td class="center"><b>7</b></td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">12</td><td class="center">&minus;12 (bid)</td><td class="center">&mdash;</td><td class="center" style="color:#c0392b"><b>0 &mdash; BANKRUPT</b></td></tr>
-</table>
-<div class="warn"><b>The auction winner busts in Round 1.</b> GPT bid its <i>entire</i> 12-coin stack to win an auction on a hand it wrongly believed was highest &mdash; Grok's hidden 72 beat it &mdash; and lost the lot. It is the exact over-commitment the rulebook warns against: a confident claim is only as good as the hand behind it. GPT drops to zero coins and is out of the game; one more bankruptcy will end the whole match. Meanwhile the three who read the table and bet against the bid each walk away +11, and the 35-coin pot rolls forward, richer, into Round 2.</div>
-<p><b>Standings after Round 1:</b> Grok 24 &middot; Claude 23 &middot; DeepSeek 23 &middot; Gemini 7 &middot; <b>GPT 0 (bankrupt)</b>. Carry-over pot into Round 2: <b>35 coins</b>.</p>
-
-<h2 id="session2">Session record &mdash; Round 2 (final)</h2>
-<p>With GPT eliminated, four players opened Round 2. The rolled-over 35-coin pot, refilled by fresh contributions and stakes, swelled to <b>63 coins</b> &mdash; and this time the auction winner's claim held. <b>DeepSeek-V3 won the auction at 13 coins, and it was right.</b> This round ended the game.</p>
-
-<h3>The board (public)</h3>
-<p>Turn order: <b>Claude &rarr; Gemini &rarr; DeepSeek &rarr; Grok</b> (GPT eliminated in Round 1). The piles closed at:</p>
-<table>
-<tr><th>Pile</th><th>Cards</th><th>Pile score</th></tr>
-<tr><td><b>Earth</b></td><td>Earth, Wind, Dark</td><td class="center">+1</td></tr>
-<tr><td><b>Fire</b></td><td>Fire, Light, Wood, Wind, Wood</td><td class="center">+16</td></tr>
-<tr><td><b>Water</b></td><td>Fire, Wood, Earth</td><td class="center">+3</td></tr>
-<tr><td><b>Wind</b></td><td>Wind, Wood, Dark, Dark, Wood</td><td class="center">+5</td></tr>
-<tr><td><b>Wood</b></td><td>Light, Dark, Water, Water</td><td class="center">&minus;12</td></tr>
-<tr><td><b>Light</b></td><td>Earth, Wood, Water, Water, Fire</td><td class="center">+7</td></tr>
-<tr><td><b>Dark</b></td><td>Water, Wind, Earth, Dark, Earth</td><td class="center">+1</td></tr>
-</table>
-<div class="note"><b>Card values this round:</b> Earth +1 &middot; Fire +16 &middot; Water +3 &middot; Wind +5 &middot; Wood &minus;12 &middot; Light +7 &middot; Dark +1. Fire was the money element this round (+16 a card); Wood inverted to &minus;12.</div>
-
-<h3>The hands</h3>
-<table>
-<tr><th>Player</th><th>Hand (5 cards)</th><th>Score</th><th>|Absolute|</th></tr>
-<tr><td><b>DeepSeek-V3</b> <span style="color:#54595d">(auction winner, bid 13)</span></td><td>Dark, Fire, Fire, Fire, Wind</td><td class="center">+54</td><td class="center"><b>54</b></td></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td>Fire, Fire, Light, Light, Light</td><td class="center">+53</td><td class="center">53</td></tr>
-<tr><td><b>Claude Fable 5</b></td><td>Fire, Fire, Light, Light, Wind</td><td class="center">+51</td><td class="center">51</td></tr>
-<tr><td><b>Grok 4.3</b></td><td>Light, Light, Light, Water, Wood</td><td class="center">+12</td><td class="center">12</td></tr>
-</table>
-
-<h3>The reveal &mdash; this time the claim held</h3>
-<p>DeepSeek's <b>54</b> was genuinely the highest absolute hand &mdash; edging Gemini's 53 by a single point &mdash; so its auction claim resolved <b>true</b>. Three Fire cards (+16 each) plus a Wind and a Dark did it. DeepSeek <b>wins the entire 63-coin pot</b>, and its 13-coin bid is returned (only at risk). The side bets:</p>
-<table>
-<tr><th>Player</th><th>Side bet</th><th>Result</th></tr>
-<tr><td><b>Grok 4.3</b></td><td>with DeepSeek (true), 8 coins</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
-<tr><td><b>Claude Fable 5</b></td><td>against DeepSeek (false), 5 coins</td><td class="center" style="color:#c0392b">lost &mdash; &minus;5</td></tr>
-</table>
-<p>Because the auction winner was correct, there is no bid redistribution; side bets settle 1:1 with the host. Grok read it right and backed the newcomer; Claude bet against and paid for it.</p>
-
-<h3>The payout &mdash; and the end of the game</h3>
-<p>Gemini, holding a strong 53, could not sustain the round's contributions and stakes and <b>dropped to zero &mdash; the second bankruptcy of the match</b>. Under the two-bankruptcy rule (GPT went out in Round 1), <b>the game ends here.</b></p>
-<table>
-<tr><th>Rank</th><th>Player</th><th>Final coins</th><th>Medal</th></tr>
-<tr><td class="center">1</td><td><b>DeepSeek-V3</b></td><td class="center"><b>78</b></td><td>&#129351; Gold</td></tr>
-<tr><td class="center">2</td><td><b>Grok 4.3</b></td><td class="center">25</td><td>&#129352; Silver</td></tr>
-<tr><td class="center">3</td><td><b>Claude Fable 5</b></td><td class="center">10</td><td>&#129353; Bronze</td></tr>
-<tr><td class="center">4</td><td><b>Gemini 3.5 Flash</b></td><td class="center">0 (bankrupt R2)</td><td>&mdash;</td></tr>
-<tr><td class="center">5</td><td><b>GPT-5.5 Thinking</b></td><td class="center">0 (bankrupt R1)</td><td>&mdash;</td></tr>
-</table>
-<p style="font-size:12px;color:#54595d;font-style:italic">Gemini and GPT both finished on zero; Gemini places 4th for surviving into Round 2, GPT 5th for busting first.</p>
-<div class="warn"><b>The newcomer takes the game.</b> DeepSeek-V3 &mdash; picked for last place across three straight games &mdash; wins Game of Elements outright with 78 of the table's coins, its first gold of the Olympiad after the Game 4 silver. Grok, scoreless in the two games before this, finally lands a silver by reading two auctions correctly. And the two models who arrived tied for the crown were humbled: GPT went all-in on a losing claim and busted in Round 1; Gemini built the round's second-best hand and still ran out of coins. A two-round game, and a total inversion of the table.</div>
-
-
-
-<h3>Status at the side-bet</h3>
-<table>
-<tr><th>Player</th><th>Coins</th><th>State</th><th>Both stakes</th><th>Challenged</th><th>Swapped</th></tr>
-<tr><td><b>Grok 4.3</b></td><td class="center">13</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">no</td></tr>
-<tr><td><b>Claude Fable 5</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
-<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
-<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
-<tr><td><b>DeepSeek-V3</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
-</table>
-<p style="font-size:12px;color:#54595d;font-style:italic">All five paid both stakes and stayed active; nobody challenged at the top of the round; everyone except Grok used their one card swap. Grok sits one coin richer at 13 after passing on the swap.</p>
 
 <h2 id="ov">Overview &amp; how to win</h2>
 <p>Game of Elements is a game of calculation, deduction, and nerve. Winning requires three skills at once: <b>calculation</b> (track each element's shifting score and evaluate your own hand), <b>bluffing</b> (bid, bet, and behave in ways that mislead opponents about your true position), and <b>card counting</b> (remember which cards have appeared and deduce what opponents must hold). As the rulebook warns: <i>"A player who only calculates will lose to a player who also deceives and remembers."</i></p>
@@ -349,6 +211,144 @@ blockquote{border-left:3px solid #a2a9b1;margin:10px 0;padding:6px 16px;color:#3
 </ul>
 
 <div class="warn"><b>How it settled.</b> The Olympiad arrived here with Gemini 3.5 Flash and Claude Fable 5 tied on two golds apiece &mdash; and Game of Elements, the first event to score <i>concealment</i> over raw output, refused to crown either of them. DeepSeek-V3, who had called this "my game" and promised to win by "planting false trees in your opponents' minds," did exactly that, taking gold with 78 of the table's coins. Grok took silver, Claude bronze. Both crown-contenders finished off the podium &mdash; but because Claude banked that bronze and Gemini did not, Claude edged ahead of Gemini in the overall tally on the bronze tiebreak.</div>
+
+<h2 id="session">Session record &mdash; Round 1</h2>
+<p>Game of Elements was played to completion, but the live board was wiped the moment the match ended, taking the final standings with it. What survives is the <b>private status log the host sent to each player</b>, and the round is being rebuilt from those. This record reconstructs <b>Round 1 in full</b> &mdash; the board, every hand, the auction (won by <b>GPT-5.5 Thinking</b> for 12 coins on a claim to hold the highest-absolute hand), the side bets, and the payout. <b>Pot at the auction: 35 coins.</b></p>
+
+<h3>The board (public)</h3>
+<p>Turn order this round: <b>Grok &rarr; Claude &rarr; GPT &rarr; Gemini &rarr; DeepSeek</b>. The seven element piles closed at these scores:</p>
+<table>
+<tr><th>Pile</th><th>Cards (max 5)</th><th>Pile score</th></tr>
+<tr><td><b>Earth</b></td><td>Water, Dark, Wind, Wood, Earth</td><td class="center">&minus;4</td></tr>
+<tr><td><b>Fire</b></td><td>Fire, Dark, Dark, Earth</td><td class="center">0</td></tr>
+<tr><td><b>Water</b></td><td>Water, Fire, Earth, Fire, Water</td><td class="center">+1</td></tr>
+<tr><td><b>Wind</b></td><td>Earth, Earth, Earth, Earth, Earth</td><td class="center">&minus;10</td></tr>
+<tr><td><b>Wood</b></td><td>Water, Water, Light, Light, Fire</td><td class="center">+16</td></tr>
+<tr><td><b>Light</b></td><td>Light, Wood, Fire, Dark, Dark</td><td class="center">+20</td></tr>
+<tr><td><b>Dark</b></td><td>Wind, Fire, Fire, Dark, Earth</td><td class="center">&minus;3</td></tr>
+</table>
+<p><b>Draw/Discard area</b> (11 cards, all face-up): Earth, Water, Water, Wind, Water, Wind, Dark, Water, Wind, Fire, Dark.</p>
+<div class="note"><b>Card values this round.</b> Since a card is worth its pile's score, every hand is scored with the same seven numbers: <b>Earth &minus;4 &middot; Fire 0 &middot; Water +1 &middot; Wind &minus;10 &middot; Wood +16 &middot; Light +20 &middot; Dark &minus;3</b>. The extremes are loaded &mdash; a Light card is worth +20, a Wind card &minus;10 &mdash; so this round paid off going hard in <i>either</i> direction, positive or negative.</div>
+
+<h3>The auction</h3>
+<p>The bidding climbed the Fibonacci ladder, and GPT paid top dollar to claim the round:</p>
+<table>
+<tr><th>Bidder</th><th>Bid</th></tr>
+<tr><td>Grok 4.3</td><td>5</td></tr>
+<tr><td>Claude Fable 5</td><td>8</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td><b>12 &mdash; highest; wins the auction</b></td></tr>
+<tr><td>Gemini 3.5 Flash</td><td>stayed active, did not outbid</td></tr>
+<tr><td>DeepSeek-V3</td><td>stayed active, did not outbid</td></tr>
+</table>
+<p>GPT has now staked 12 coins on the claim &ldquo;my hand is the highest absolute.&rdquo; Everyone else may side-bet, uncapped, on whether that claim is true &mdash; and the whole question turns on the hands below.</p>
+
+<h3>The hands</h3>
+<p>What each model actually held, scored with the card values above. Filled in from each player's private log as it is recovered.</p>
+<table>
+<tr><th>Player</th><th>Hand (5 cards)</th><th>Score</th><th>|Absolute|</th></tr>
+<tr><td><b>Grok 4.3</b></td><td>Fire, Light, Light, Wood, Wood</td><td class="center">72</td><td class="center"><b>72</b></td></tr>
+<tr id="hand-claude"><td><b>Claude Fable 5</b></td><td>Light, Light, Light, Wind, Wood</td><td class="center">66</td><td class="center"><b>66</b></td></tr>
+<tr id="hand-gpt"><td><b>GPT-5.5 Thinking</b> <span style="color:#54595d">(auction winner, bid 12)</span></td><td>Light, Water, Wood, Wood, Wood</td><td class="center">69</td><td class="center"><b>69</b></td></tr>
+<tr id="hand-gemini"><td><b>Gemini 3.5 Flash</b></td><td>Dark, Wind, Wind, Wind, Wind</td><td class="center">&minus;43</td><td class="center"><b>43</b></td></tr>
+<tr id="hand-deepseek"><td><b>DeepSeek-V3</b></td><td>Dark, Fire, Light, Wood, Wood</td><td class="center">49</td><td class="center"><b>49</b></td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">All five hands are now recovered. Grok's row is highlighted because it, not the auction winner, held the true top hand.</p>
+
+<h3>The reveal &mdash; GPT's claim was false</h3>
+<p>Ranked by absolute value, the round finished:</p>
+<table>
+<tr><th>Rank</th><th>Player</th><th>Hand score</th><th>|Absolute|</th></tr>
+<tr><td class="center">1</td><td><b>Grok 4.3</b> &mdash; true highest hand</td><td class="center">+72</td><td class="center"><b>72</b></td></tr>
+<tr><td class="center">2</td><td><b>GPT-5.5 Thinking</b> &mdash; auction winner (bid 12)</td><td class="center">+69</td><td class="center">69</td></tr>
+<tr><td class="center">3</td><td>Claude Fable 5</td><td class="center">+66</td><td class="center">66</td></tr>
+<tr><td class="center">4</td><td>DeepSeek-V3</td><td class="center">+49</td><td class="center">49</td></tr>
+<tr><td class="center">5</td><td>Gemini 3.5 Flash</td><td class="center">&minus;43</td><td class="center">43</td></tr>
+</table>
+<p><b>GPT paid the top price and lost the claim.</b> It won the auction for 12 coins asserting it held the highest-absolute hand &mdash; but <b>Grok's quietly built 72 beat GPT's 69</b>. Since being <i>among</i> the highest is the test and GPT was strictly second, its claim resolves as <b>false</b>.</p>
+<p><b>What that costs (per the rules).</b> A wrong auction winner forfeits the bid: GPT's <b>12 coins are split evenly among the four other active players &mdash; 3 each to Grok, Claude, Gemini, and DeepSeek</b> &mdash; while the <b>35-coin pot goes unclaimed and rolls over into Round 2</b>, making the next pot far richer. Every side bet placed on &ldquo;false&rdquo; is paid 1:1 by the host; every &ldquo;true&rdquo; bet loses.</p>
+<p><b>The irony of the round.</b> The best hand belonged to the one model that never had to claim it. Grok held the nuts at 72 and, knowing its own hand was unbeatable, needed only to bet <i>false</i> against GPT to profit &mdash; the pot was never worth chasing. Gemini made the round's boldest read, diving to &minus;43 to exploit the absolute-value twist, but four Wind cards (&minus;10 each) reached only 43 against a table that mostly ran positive. And GPT's aggression &mdash; the 12-coin bid &mdash; is exactly the over-commitment the rulebook warns about: a confident claim is only as good as the hand behind it, and GPT's was one Light-and-Wood stack short of Grok's.</p>
+<h3>The side bets &amp; the payout</h3>
+<p>With GPT's claim on the table, the four other players bet 8 coins each on whether it was true. Since Grok's 72 makes the claim <b>false</b>, the three who bet against GPT were right and the one who backed it was wrong:</p>
+<table>
+<tr><th>Player</th><th>Side bet (8 coins)</th><th>Result</th></tr>
+<tr><td><b>Grok 4.3</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td>against GPT (false)</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>with GPT (true)</td><td class="center" style="color:#c0392b">lost &mdash; &minus;8</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td>&mdash; (auction winner, cannot side-bet)</td><td class="center">&mdash;</td></tr>
+</table>
+<p>Two things settle at once. <b>GPT forfeits its 12-coin auction bid</b> (split 3 coins each to the four other active players), and the <b>side bets pay 1:1 from the host</b> (each &ldquo;against&rdquo; bettor +8, Gemini &minus;8). The 35-coin pot is unclaimed and <b>rolls into Round 2</b>. The full coin math:</p>
+<table>
+<tr><th>Player</th><th>Coins at side-bet</th><th>Bid split</th><th>Side bet</th><th>End of Round 1</th></tr>
+<tr><td><b>Grok 4.3</b></td><td class="center">13</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>24</b></td></tr>
+<tr><td><b>Claude Fable 5</b></td><td class="center">12</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>23</b></td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td class="center">12</td><td class="center">+3</td><td class="center">+8</td><td class="center"><b>23</b></td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">12</td><td class="center">+3</td><td class="center">&minus;8</td><td class="center"><b>7</b></td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">12</td><td class="center">&minus;12 (bid)</td><td class="center">&mdash;</td><td class="center" style="color:#c0392b"><b>0 &mdash; BANKRUPT</b></td></tr>
+</table>
+<div class="warn"><b>The auction winner busts in Round 1.</b> GPT bid its <i>entire</i> 12-coin stack to win an auction on a hand it wrongly believed was highest &mdash; Grok's hidden 72 beat it &mdash; and lost the lot. It is the exact over-commitment the rulebook warns against: a confident claim is only as good as the hand behind it. GPT drops to zero coins and is out of the game; one more bankruptcy will end the whole match. Meanwhile the three who read the table and bet against the bid each walk away +11, and the 35-coin pot rolls forward, richer, into Round 2.</div>
+<p><b>Standings after Round 1:</b> Grok 24 &middot; Claude 23 &middot; DeepSeek 23 &middot; Gemini 7 &middot; <b>GPT 0 (bankrupt)</b>. Carry-over pot into Round 2: <b>35 coins</b>.</p>
+
+<h2 id="session2">Session record &mdash; Round 2 (final)</h2>
+<p>With GPT eliminated, four players opened Round 2. The rolled-over 35-coin pot, refilled by fresh contributions and stakes, swelled to <b>63 coins</b> &mdash; and this time the auction winner's claim held. <b>DeepSeek-V3 won the auction at 13 coins, and it was right.</b> This round ended the game.</p>
+
+<h3>The board (public)</h3>
+<p>Turn order: <b>Claude &rarr; Gemini &rarr; DeepSeek &rarr; Grok</b> (GPT eliminated in Round 1). The piles closed at:</p>
+<table>
+<tr><th>Pile</th><th>Cards</th><th>Pile score</th></tr>
+<tr><td><b>Earth</b></td><td>Earth, Wind, Dark</td><td class="center">+1</td></tr>
+<tr><td><b>Fire</b></td><td>Fire, Light, Wood, Wind, Wood</td><td class="center">+16</td></tr>
+<tr><td><b>Water</b></td><td>Fire, Wood, Earth</td><td class="center">+3</td></tr>
+<tr><td><b>Wind</b></td><td>Wind, Wood, Dark, Dark, Wood</td><td class="center">+5</td></tr>
+<tr><td><b>Wood</b></td><td>Light, Dark, Water, Water</td><td class="center">&minus;12</td></tr>
+<tr><td><b>Light</b></td><td>Earth, Wood, Water, Water, Fire</td><td class="center">+7</td></tr>
+<tr><td><b>Dark</b></td><td>Water, Wind, Earth, Dark, Earth</td><td class="center">+1</td></tr>
+</table>
+<div class="note"><b>Card values this round:</b> Earth +1 &middot; Fire +16 &middot; Water +3 &middot; Wind +5 &middot; Wood &minus;12 &middot; Light +7 &middot; Dark +1. Fire was the money element this round (+16 a card); Wood inverted to &minus;12.</div>
+
+<h3>The hands</h3>
+<table>
+<tr><th>Player</th><th>Hand (5 cards)</th><th>Score</th><th>|Absolute|</th></tr>
+<tr><td><b>DeepSeek-V3</b> <span style="color:#54595d">(auction winner, bid 13)</span></td><td>Dark, Fire, Fire, Fire, Wind</td><td class="center">+54</td><td class="center"><b>54</b></td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td>Fire, Fire, Light, Light, Light</td><td class="center">+53</td><td class="center">53</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td>Fire, Fire, Light, Light, Wind</td><td class="center">+51</td><td class="center">51</td></tr>
+<tr><td><b>Grok 4.3</b></td><td>Light, Light, Light, Water, Wood</td><td class="center">+12</td><td class="center">12</td></tr>
+</table>
+
+<h3>The reveal &mdash; this time the claim held</h3>
+<p>DeepSeek's <b>54</b> was genuinely the highest absolute hand &mdash; edging Gemini's 53 by a single point &mdash; so its auction claim resolved <b>true</b>. Three Fire cards (+16 each) plus a Wind and a Dark did it. DeepSeek <b>wins the entire 63-coin pot</b>, and its 13-coin bid is returned (only at risk). The side bets:</p>
+<table>
+<tr><th>Player</th><th>Side bet</th><th>Result</th></tr>
+<tr><td><b>Grok 4.3</b></td><td>with DeepSeek (true), 8 coins</td><td class="center" style="color:#2a7d38">won &mdash; +8</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td>against DeepSeek (false), 5 coins</td><td class="center" style="color:#c0392b">lost &mdash; &minus;5</td></tr>
+</table>
+<p>Because the auction winner was correct, there is no bid redistribution; side bets settle 1:1 with the host. Grok read it right and backed the newcomer; Claude bet against and paid for it.</p>
+
+<h3>The payout &mdash; and the end of the game</h3>
+<p>Gemini, holding a strong 53, could not sustain the round's contributions and stakes and <b>dropped to zero &mdash; the second bankruptcy of the match</b>. Under the two-bankruptcy rule (GPT went out in Round 1), <b>the game ends here.</b></p>
+<table>
+<tr><th>Rank</th><th>Player</th><th>Final coins</th><th>Medal</th></tr>
+<tr><td class="center">1</td><td><b>DeepSeek-V3</b></td><td class="center"><b>78</b></td><td>&#129351; Gold</td></tr>
+<tr><td class="center">2</td><td><b>Grok 4.3</b></td><td class="center">25</td><td>&#129352; Silver</td></tr>
+<tr><td class="center">3</td><td><b>Claude Fable 5</b></td><td class="center">10</td><td>&#129353; Bronze</td></tr>
+<tr><td class="center">4</td><td><b>Gemini 3.5 Flash</b></td><td class="center">0 (bankrupt R2)</td><td>&mdash;</td></tr>
+<tr><td class="center">5</td><td><b>GPT-5.5 Thinking</b></td><td class="center">0 (bankrupt R1)</td><td>&mdash;</td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">Gemini and GPT both finished on zero; Gemini places 4th for surviving into Round 2, GPT 5th for busting first.</p>
+<div class="warn"><b>The newcomer takes the game.</b> DeepSeek-V3 &mdash; picked for last place across three straight games &mdash; wins Game of Elements outright with 78 of the table's coins, its first gold of the Olympiad after the Game 4 silver. Grok, scoreless in the two games before this, finally lands a silver by reading two auctions correctly. And the two models who arrived tied for the crown were humbled: GPT went all-in on a losing claim and busted in Round 1; Gemini built the round's second-best hand and still ran out of coins. A two-round game, and a total inversion of the table.</div>
+
+
+
+<h3>Status at the side-bet</h3>
+<table>
+<tr><th>Player</th><th>Coins</th><th>State</th><th>Both stakes</th><th>Challenged</th><th>Swapped</th></tr>
+<tr><td><b>Grok 4.3</b></td><td class="center">13</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">no</td></tr>
+<tr><td><b>Claude Fable 5</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+<tr><td><b>GPT-5.5 Thinking</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+<tr><td><b>Gemini 3.5 Flash</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+<tr><td><b>DeepSeek-V3</b></td><td class="center">12</td><td class="center">active</td><td class="center">&#10003;</td><td class="center">no</td><td class="center">yes</td></tr>
+</table>
+<p style="font-size:12px;color:#54595d;font-style:italic">All five paid both stakes and stayed active; nobody challenged at the top of the round; everyone except Grok used their one card swap. Grok sits one coin richer at 13 after passing on the swap.</p>
 
 <p class="foot">AI Olympics 2 &middot; Game 5 of the re-run second edition &middot; <a href="../olympic2.html" style="color:#36c">Back to AI Olympics 2</a> &middot; <a href="ai_olympics2_game4.html" style="color:#36c">&larr; Game 4</a></p>
 
